@@ -67,7 +67,8 @@ NSString *const kMidtransCheckoutResponsePromo = @"promos";
                     [parsedMidtransPaymentRequestV2EnabledPayments addObject:[MidtransPaymentRequestV2EnabledPayments modelObjectWithDictionary:item]];
                 }
             }
-        } else if ([receivedMidtransPaymentRequestV2EnabledPayments isKindOfClass:[NSDictionary class]]) {
+        }
+        else if ([receivedMidtransPaymentRequestV2EnabledPayments isKindOfClass:[NSDictionary class]]) {
             [parsedMidtransPaymentRequestV2EnabledPayments addObject:[MidtransPaymentRequestV2EnabledPayments modelObjectWithDictionary:(NSDictionary *)receivedMidtransPaymentRequestV2EnabledPayments]];
         }
         
@@ -83,7 +84,8 @@ NSString *const kMidtransCheckoutResponsePromo = @"promos";
                     [parsedMidtransPaymentRequestV2ItemDetails addObject:[MidtransPaymentRequestV2ItemDetails modelObjectWithDictionary:item]];
                 }
             }
-        } else if ([receivedMidtransPaymentRequestV2ItemDetails isKindOfClass:[NSDictionary class]]) {
+        }
+        else if ([receivedMidtransPaymentRequestV2ItemDetails isKindOfClass:[NSDictionary class]]) {
             [parsedMidtransPaymentRequestV2ItemDetails addObject:[MidtransPaymentRequestV2ItemDetails modelObjectWithDictionary:(NSDictionary *)receivedMidtransPaymentRequestV2ItemDetails]];
         }
         
@@ -102,7 +104,8 @@ NSString *const kMidtransCheckoutResponsePromo = @"promos";
                 [parsedMidtransPromo addObject:[MidtransPromo modelObjectWithDictionary:item]];
             }
         }
-    } else if ([receivedMidtransPromo isKindOfClass:[NSDictionary class]]) {
+    }
+        else if ([receivedMidtransPromo isKindOfClass:[NSDictionary class]]) {
         [parsedMidtransPromo addObject:[MidtransPromo modelObjectWithDictionary:(NSDictionary *)receivedMidtransPromo]];
     }
     self.promos = [NSArray arrayWithArray:parsedMidtransPromo];
@@ -120,7 +123,8 @@ NSString *const kMidtransCheckoutResponsePromo = @"promos";
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
             [tempArrayForEnabledPayments addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
+        }
+        else {
             // Generic object
             [tempArrayForEnabledPayments addObject:subArrayObject];
         }
@@ -134,7 +138,8 @@ NSString *const kMidtransCheckoutResponsePromo = @"promos";
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
             [tempArrayForItemDetails addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
+        }
+        else {
             // Generic object
             [tempArrayForItemDetails addObject:subArrayObject];
         }
@@ -148,7 +153,8 @@ NSString *const kMidtransCheckoutResponsePromo = @"promos";
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
             [tempArrayForPromo addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
+        }
+        else {
             // Generic object
             [tempArrayForPromo addObject:subArrayObject];
         }

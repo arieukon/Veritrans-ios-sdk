@@ -2,7 +2,7 @@
 //  MidtransPromo.m
 //
 //  Created by Nanang  on 2/6/17
-//  Copyright (c) 2017 Zahir. All rights reserved.
+//  Copyright (c) 2017 Midtrans. All rights reserved.
 //
 
 #import "MidtransPromo.h"
@@ -82,7 +82,8 @@ NSString *const kMidtransPromoEndDate = @"end_date";
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
             [tempArrayForBins addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
+        }
+        else {
             // Generic object
             [tempArrayForBins addObject:subArrayObject];
         }

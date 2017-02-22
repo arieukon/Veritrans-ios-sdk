@@ -19,7 +19,8 @@
     NSInteger startIndex = [cardNumber length] - 10;
     if (startIndex > 0) {
         return [cardNumber substringFromIndex:startIndex];
-    } else {
+    }
+        else {
         return cardNumber;
     }
 }

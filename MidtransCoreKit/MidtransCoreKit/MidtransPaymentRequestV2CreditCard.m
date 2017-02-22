@@ -51,7 +51,8 @@ NSString *const kMidtransPaymentRequestV2CreditCardInstallments = @"installment"
                 [parsedMidtransPaymentRequestV2SavedTokens addObject:[MidtransPaymentRequestV2SavedTokens modelObjectWithDictionary:item]];
             }
        }
-    } else if ([receivedMidtransPaymentRequestV2SavedTokens isKindOfClass:[NSDictionary class]]) {
+    }
+        else if ([receivedMidtransPaymentRequestV2SavedTokens isKindOfClass:[NSDictionary class]]) {
        [parsedMidtransPaymentRequestV2SavedTokens addObject:[MidtransPaymentRequestV2SavedTokens modelObjectWithDictionary:(NSDictionary *)receivedMidtransPaymentRequestV2SavedTokens]];
     }
         self.installments = [MidtransPaymentRequestV2Installment modelObjectWithDictionary:[dict objectForKey:kMidtransPaymentRequestV2CreditCardInstallments]];
@@ -74,7 +75,8 @@ NSString *const kMidtransPaymentRequestV2CreditCardInstallments = @"installment"
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
             [tempArrayForSavedTokens addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
+        }
+        else {
             // Generic object
             [tempArrayForSavedTokens addObject:subArrayObject];
         }
@@ -85,7 +87,8 @@ NSString *const kMidtransPaymentRequestV2CreditCardInstallments = @"installment"
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
             [tempArrayForWhitelistBins addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
+        }
+        else {
             // Generic object
             [tempArrayForWhitelistBins addObject:subArrayObject];
         }

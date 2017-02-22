@@ -59,7 +59,8 @@ NSString *const kMidtransPaymentRequestV2TermsOffline = @"offline";
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
             [tempArrayForMandiri addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
+        }
+        else {
             // Generic object
             [tempArrayForMandiri addObject:subArrayObject];
         }
@@ -70,7 +71,8 @@ NSString *const kMidtransPaymentRequestV2TermsOffline = @"offline";
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
             [tempArrayForBni addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
+        }
+        else {
             // Generic object
             [tempArrayForBni addObject:subArrayObject];
         }
@@ -81,7 +83,8 @@ NSString *const kMidtransPaymentRequestV2TermsOffline = @"offline";
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
             [tempArrayForBca addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
+        }
+        else {
             // Generic object
             [tempArrayForBca addObject:subArrayObject];
         }
@@ -92,7 +95,8 @@ NSString *const kMidtransPaymentRequestV2TermsOffline = @"offline";
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
             [tempArrayForOffline addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
+        }
+        else {
             // Generic object
             [tempArrayForOffline addObject:subArrayObject];
         }

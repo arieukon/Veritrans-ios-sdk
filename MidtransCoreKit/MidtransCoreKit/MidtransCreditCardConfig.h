@@ -33,6 +33,7 @@ typedef NS_ENUM(NSUInteger, MTAcquiringBank) {
 @property (nonatomic, readonly) BOOL secureSnapEnabled;
 
 @property (nonatomic) MTCreditCardPaymentType paymentType;
+
 @property (nonatomic) BOOL setDefaultCreditSaveCardEnabled;
 
 /*

@@ -85,7 +85,8 @@ NSString *const REGISTER_CARD_URL = @"card/register";
                                                          secureProtocol:NO
                                                      withPaymentFeature:0 paymentMethod:@"credit card" value:nil];
             if (completion) completion(nil, error);
-        } else {
+        }
+        else {
             NSString *redirectURL = response[@"redirect_url"];
             NSString *token = response[@"token_id"];
             if (redirectURL) {
@@ -98,11 +99,13 @@ NSString *const REGISTER_CARD_URL = @"card/register";
                 [secureController showWithCompletion:^(NSError *error) {
                     if (error) {
                         if (completion) completion(nil, error);
-                    } else {
+                    }
+        else {
                         if (completion) completion(token, error);
                     }
                 }];
-            } else {
+            }
+        else {
                 [[MidtransTrackingManager shared] trackAppSuccessGenerateToken:token
                                                                 secureProtocol:NO
                                                             withPaymentFeature:0 paymentMethod:@"credit card" value:nil];
@@ -124,7 +127,8 @@ NSString *const REGISTER_CARD_URL = @"card/register";
         if (response) {
             MidtransMaskedCreditCard *maskedCreditCard = [[MidtransMaskedCreditCard alloc] initWithData:response];
             if (completion) completion(maskedCreditCard, error);
-        } else {
+        }
+        else {
             if (completion) completion(nil, error);
         }
     }];

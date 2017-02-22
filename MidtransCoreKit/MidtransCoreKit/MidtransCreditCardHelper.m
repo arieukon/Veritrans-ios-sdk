@@ -24,7 +24,8 @@
     
     if (valid) {
         return YES;
-    } else {
+    }
+        else {
         NSString *errorMessage = NSLocalizedString(MIDTRANS_MESSAGE_CARD_CVV_INVALID, nil);
         *error = [NSError errorWithDomain:MIDTRANS_ERROR_DOMAIN code:MIDTRANS_ERROR_CODE_INVALIDCVV userInfo:@{NSLocalizedDescriptionKey:errorMessage}];
         return NO;
@@ -53,7 +54,8 @@
     BOOL valid = ([self length] == 2) || ([self length] == 4);
     if (valid) {
         return YES;
-    } else {
+    }
+        else {
         NSString *errorMessage = NSLocalizedString(MIDTRANS_MESSAGE_EXPIRE_MONTH_INVALID, nil);
         *error = [NSError errorWithDomain:MIDTRANS_ERROR_DOMAIN code:MIDTRANS_ERROR_CODE_INVALID_EXPIRY_DATE userInfo:@{NSLocalizedDescriptionKey:errorMessage}];
         return NO;
@@ -67,16 +69,19 @@
     
     if ([expMonth isValidMonthExpiryDate:error] == NO) {
         return NO;
-    } else if ([expYear isValidYearExpiryDate:error] == NO) {
+    }
+        else if ([expYear isValidYearExpiryDate:error] == NO) {
         return NO;
-    } else {
+    }
+        else {
         return YES;
     }
 }
 - (BOOL)isValidValue:(NSError **)error {
     if (!self.isEmpty) {
         return YES;
-    } else {
+    }
+        else {
         NSString *errorMessage = NSLocalizedString(MIDTRANS_MESSAGE_INPUT_VALUE_INVALID, nil);
         *error = [NSError errorWithDomain:MIDTRANS_ERROR_DOMAIN code:MIDTRANS_ERROR_CODE_INVALID_VALUE userInfo:@{NSLocalizedDescriptionKey:errorMessage}];
         return NO;
@@ -85,7 +90,8 @@
 - (BOOL)isValidCreditCardNumber:(NSError **)error {
     if ([MidtransLuhn validateString:self]) {
         return YES;
-    } else {
+    }
+        else {
         NSString *errorMessage = NSLocalizedString(MIDTRANS_MESSAGE_CARD_INVALID, nil);
         *error = [NSError errorWithDomain:MIDTRANS_ERROR_DOMAIN code:MIDTRANS_ERROR_CODE_INVALID_CC_NUMBER userInfo:@{NSLocalizedDescriptionKey:errorMessage}];
         return NO;

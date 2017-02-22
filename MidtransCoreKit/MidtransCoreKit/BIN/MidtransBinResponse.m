@@ -51,7 +51,8 @@ NSString *const kMidtransBinResponseBank = @"bank";
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
             [tempArrayForBins addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
+        }
+        else {
             // Generic object
             [tempArrayForBins addObject:subArrayObject];
         }

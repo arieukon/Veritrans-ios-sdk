@@ -42,7 +42,8 @@
         id value = [self objectForKey:key];
         if ([value isKindOfClass:[NSArray class]]) {
             [pairs addObjectsFromArray:[self pairsOfArray:value key:key]];
-        } else {
+        }
+        else {
             NSString *escapedValue;
             
             if ([value isKindOfClass:[NSNumber class]])
@@ -66,7 +67,8 @@
         if ([value isKindOfClass:[NSArray class]]) {
             NSArray *pairs = [self pairsOfArray:value key:key];
             [result addObjectsFromArray:pairs];
-        } else {
+        }
+        else {
             NSString *escapedValue = [value isKindOfClass:[NSNumber class]] ? value : [value URLEncodedString];
             [result addObject:[NSString stringWithFormat:@"%@[]=%@", key, escapedValue]];
         }
@@ -195,7 +197,8 @@
     
     if (code == 200) {
         _response = response;
-    } else {
+    }
+        else {
         error = [[NSError alloc] initWithDomain:MIDTRANS_ERROR_DOMAIN code:code userInfo:@{NSLocalizedDescriptionKey:message}];
     }
     

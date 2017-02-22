@@ -2,7 +2,7 @@
 //  MidtransObtainedPromo.h
 //
 //  Created by Nanang  on 2/6/17
-//  Copyright (c) 2017 Zahir. All rights reserved.
+//  Copyright (c) 2017 Midtrans. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

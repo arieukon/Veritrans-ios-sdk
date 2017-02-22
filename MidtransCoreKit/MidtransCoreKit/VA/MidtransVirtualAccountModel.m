@@ -54,7 +54,8 @@ NSString *const kVirtualAccountModelGuides = @"guides";
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
             [tempArrayForGuides addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
+        }
+        else {
             // Generic object
             [tempArrayForGuides addObject:subArrayObject];
         }

@@ -16,7 +16,8 @@ NSString *const MIdtransMaskedCardsUpdated = @"vt_masked_cards_updated";
 + (id)nullifyIfNil:(id)object {
     if (object) {
         return object;
-    } else {
+    }
+        else {
         return [NSNull new];
     }
 }

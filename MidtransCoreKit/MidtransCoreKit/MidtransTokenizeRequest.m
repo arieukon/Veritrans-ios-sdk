@@ -136,7 +136,6 @@
     if (self.installment) {
         [result setObject:@"true" forKey:@"installment"];
         [result setObject:self.installmentTerm forKey:@"installment_term"];
-        
     }
     
     if (CC_CONFIG.preauthEnabled) {
