@@ -20,10 +20,8 @@
 		00F0DA9B1D76EB9D005B117E /* PaymentCreditCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F0DA991D76EB9D005B117E /* PaymentCreditCardViewController.xib */; };
 		0C43B4C81E0A4446000A583C /* UIFlowSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C43B4C61E0A4446000A583C /* UIFlowSampleViewController.m */; };
 		0C43B4C91E0A4446000A583C /* UIFlowSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C43B4C71E0A4446000A583C /* UIFlowSampleViewController.xib */; };
-
 		0C48E3641E52D9C0005379EF /* BankTransferDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C48E3621E52D9C0005379EF /* BankTransferDetailViewController.m */; };
 		0C48E3651E52D9C0005379EF /* BankTransferDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C48E3631E52D9C0005379EF /* BankTransferDetailViewController.xib */; };
-
 		0C88856B1E4D877300E0034E /* PaymentCreditCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C88856A1E4D877300E0034E /* PaymentCreditCardView.m */; };
 		302F71C31C73163C00FE73FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 302F71C21C73163C00FE73FE /* main.m */; };
 		302F71C61C73163C00FE73FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 302F71C51C73163C00FE73FE /* AppDelegate.m */; };
@@ -46,6 +44,7 @@
 		E52940861CFEC705000180D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52940851CFEC705000180D3 /* QuartzCore.framework */; };
 		E52940881CFEC70B000180D3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52940871CFEC70B000180D3 /* Security.framework */; };
 		E542D3331E27378600B9D044 /* AcquiringBankTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E542D3321E27378600B9D044 /* AcquiringBankTableViewController.m */; };
+		E54421DF1E5D9E96001FBFDA /* NewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54421DE1E5D9E96001FBFDA /* NewDemoViewController.m */; };
 		E553BA801D66AF530091E403 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E553BA7F1D66AF530091E403 /* Settings.bundle */; };
 		E57A161E1DAB012C00324B9C /* MidtransKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E57A161D1DAB012C00324B9C /* MidtransKit.bundle */; };
 		E5AA566A1DA2333F00DAD851 /* libMidtransKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5AA56691DA2333F00DAD851 /* libMidtransKit.a */; };
@@ -105,11 +104,9 @@
 		0C43B4C51E0A4446000A583C /* UIFlowSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFlowSampleViewController.h; sourceTree = "<group>"; };
 		0C43B4C61E0A4446000A583C /* UIFlowSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFlowSampleViewController.m; sourceTree = "<group>"; };
 		0C43B4C71E0A4446000A583C /* UIFlowSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIFlowSampleViewController.xib; sourceTree = "<group>"; };
-
 		0C48E3611E52D9C0005379EF /* BankTransferDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankTransferDetailViewController.h; sourceTree = "<group>"; };
 		0C48E3621E52D9C0005379EF /* BankTransferDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankTransferDetailViewController.m; sourceTree = "<group>"; };
 		0C48E3631E52D9C0005379EF /* BankTransferDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankTransferDetailViewController.xib; sourceTree = "<group>"; };
-
 		0C8885691E4D877300E0034E /* PaymentCreditCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentCreditCardView.h; sourceTree = "<group>"; };
 		0C88856A1E4D877300E0034E /* PaymentCreditCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentCreditCardView.m; sourceTree = "<group>"; };
 		18A2FDE89D2B5AA6DDA21506 /* Pods-VTDirectDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTDirectDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-VTDirectDemo/Pods-VTDirectDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +140,8 @@
 		E52940871CFEC70B000180D3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E542D3311E27378600B9D044 /* AcquiringBankTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcquiringBankTableViewController.h; sourceTree = "<group>"; };
 		E542D3321E27378600B9D044 /* AcquiringBankTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcquiringBankTableViewController.m; sourceTree = "<group>"; };
+		E54421DD1E5D9E96001FBFDA /* NewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewDemoViewController.h; sourceTree = "<group>"; };
+		E54421DE1E5D9E96001FBFDA /* NewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewDemoViewController.m; sourceTree = "<group>"; };
 		E553BA7F1D66AF530091E403 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E57A161D1DAB012C00324B9C /* MidtransKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = MidtransKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5AA56691DA2333F00DAD851 /* libMidtransKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMidtransKit.a; path = "../../../../../Library/Developer/Xcode/DerivedData/VTDirectDemo-fgcjdwnqwitkoyctqedzbpnlobvx/Build/Products/Debug-iphonesimulator/libMidtransKit.a"; sourceTree = "<group>"; };
@@ -462,6 +461,8 @@
 				E50224991CE975D30010C0ED /* IHKeyboardAvoiding.m */,
 				E542D3311E27378600B9D044 /* AcquiringBankTableViewController.h */,
 				E542D3321E27378600B9D044 /* AcquiringBankTableViewController.m */,
+				E54421DD1E5D9E96001FBFDA /* NewDemoViewController.h */,
+				E54421DE1E5D9E96001FBFDA /* NewDemoViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -683,6 +684,7 @@
 				302F71C91C73163C00FE73FE /* ViewController.m in Sources */,
 				E542D3331E27378600B9D044 /* AcquiringBankTableViewController.m in Sources */,
 				30FDCC411C8002B400CEFED3 /* TableViewCell.m in Sources */,
+				E54421DF1E5D9E96001FBFDA /* NewDemoViewController.m in Sources */,
 				00598E911D76AB39006241BF /* SamplePaymentListViewController.m in Sources */,
 				00F0DA8A1D76BFF6005B117E /* SamplePaymentListTableViewCell.m in Sources */,
 				302F71C61C73163C00FE73FE /* AppDelegate.m in Sources */,
