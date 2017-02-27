@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "305494391C759FF800938C17"
-               BuildableName = "libMidtransCoreKit.a"
-               BlueprintName = "MidtransCoreKit"
-               ReferencedContainer = "container:../MidtransCoreKit/MidtransCoreKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3054941A1C759EDF00938C17"
-               BuildableName = "libMidtransKit.a"
-               BlueprintName = "MidtransKit"
-               ReferencedContainer = "container:MidtransKit.xcodeproj">
+               BlueprintIdentifier = "E50939891E644DE800823B7E"
+               BuildableName = "SnapKit.framework"
+               BlueprintName = "SnapKit"
+               ReferencedContainer = "container:MidtransCoreKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -43,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3054941A1C759EDF00938C17"
-            BuildableName = "libMidtransKit.a"
-            BlueprintName = "MidtransKit"
-            ReferencedContainer = "container:MidtransKit.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -68,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3054941A1C759EDF00938C17"
-            BuildableName = "libMidtransKit.a"
-            BlueprintName = "MidtransKit"
-            ReferencedContainer = "container:MidtransKit.xcodeproj">
+            BlueprintIdentifier = "E50939891E644DE800823B7E"
+            BuildableName = "SnapKit.framework"
+            BlueprintName = "SnapKit"
+            ReferencedContainer = "container:MidtransCoreKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -86,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3054941A1C759EDF00938C17"
-            BuildableName = "libMidtransKit.a"
-            BlueprintName = "MidtransKit"
-            ReferencedContainer = "container:MidtransKit.xcodeproj">
+            BlueprintIdentifier = "E50939891E644DE800823B7E"
+            BuildableName = "SnapKit.framework"
+            BlueprintName = "SnapKit"
+            ReferencedContainer = "container:MidtransCoreKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
