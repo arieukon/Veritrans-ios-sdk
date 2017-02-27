@@ -9,9 +9,11 @@
 #import "SNPClient.h"
 #import "SNPSharedConfig.h"
 #import "SNPCreditCardConfig.h"
+#import "SNPCreditCardPayment.h"
 #import "SNPPaymentTokenizeRequest.h"
 #import "SNPCreditCardTokenizeRequest.h"
-#import "SNPCreditCardPayment.h"
+#import "SNPChargeRequest.h"
+#import "SNPPaymentInfoRequest.h"
 
 #import "MidtransTransactionResult.h"
 #import "MidtransItemDetail.h"

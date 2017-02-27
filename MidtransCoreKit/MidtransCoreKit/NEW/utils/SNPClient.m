@@ -12,6 +12,7 @@
 #import "SNPSharedConfig.h"
 #import "SNPSystemConfig.h"
 #import "NSError+SNPUtils.h"
+#import "SNPChargeRequest.h"
 
 @interface SNPClient()
 @property (nonatomic) NSURLSession *session;
@@ -37,11 +38,9 @@
     return self;
 }
 
-- (void)fetchPaymentInfoWithToken:(SNPToken *)token
-                       completion:(void(^)(NSError *error, SNPPaymentInfo *paymentInfo))completion {
-    NSString *endpoint = [NSString stringWithFormat:@"transactions/%@", token.token];
-    NSURL *url = [SYSTEMCONFIG.snapURL URLByAppendingPathComponent:endpoint];
-    [[self.session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+- (void)fetchPaymentInfoWithRequest:(id<SNPRequest>)request
+                         completion:(void(^)(NSError *error, SNPPaymentInfo *paymentInfo))completion {
+    [[self.session dataTaskWithRequest:[request request] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         SNPPaymentInfo *info;
         if (data) {
             NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
@@ -51,15 +50,9 @@
     }] resume];
 }
 
-- (void)chargePayment:(id<SNPPayment>)payment
-                token:(SNPToken *)token
-           completion:(void(^)(NSError *error, SNPPaymentResult *paymentResult))completion {
-    NSString *endPoint = [NSString stringWithFormat:@"transactions/%@/pay", token.token];
-    NSURL *url = [SYSTEMCONFIG.snapURL URLByAppendingPathComponent:endPoint];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    request.HTTPMethod = @"POST";
-    request.HTTPBody = [[payment chargeParameters] httpBody];
-    [[self.session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+- (void)chargePaymentWithRequest:(id<SNPRequest>)request
+                      completion:(void(^)(NSError *error, SNPPaymentResult *paymentResult))completion {
+    [[self.session dataTaskWithRequest:[request request] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         SNPPaymentResult *paymentResult;
         if (data) {
             NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];

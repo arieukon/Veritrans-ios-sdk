@@ -9,7 +9,7 @@
 #import "SNPCreditCardTokenizeRequest.h"
 #import "SNPSystemConfig.h"
 #import "SNPSharedConfig.h"
-#import "SNPCreditCard+Validation.h"
+#import "SNPStringUtils.h"
 #import "SNPCreditCardConfig.h"
 #import "NSDictionary+SNPUtils.h"
 
@@ -74,7 +74,7 @@
                                            @"card_number":self.creditCard.number,
                                            @"card_exp_month":self.creditCard.expiryMonth,
                                            @"card_exp_year":self.creditCard.expiryYear,
-                                           @"card_type":self.creditCard.typeString,
+                                           @"card_type":self.creditCard.number.creditCardTypeString,
                                            @"card_cvv":self.creditCard.cvv
                                            }];
     }

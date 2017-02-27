@@ -93,15 +93,9 @@
 		E50D85061E5BE4B900154327 /* SNPPaymentTokenizeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E50D85041E5BE4B900154327 /* SNPPaymentTokenizeRequest.m */; };
 		E50D85091E5BEA5F00154327 /* SNPCreditCardConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E50D85071E5BEA5F00154327 /* SNPCreditCardConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E50D850A1E5BEA5F00154327 /* SNPCreditCardConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E50D85081E5BEA5F00154327 /* SNPCreditCardConfig.m */; };
-		E50D851A1E5BF0F400154327 /* NSString+SNPValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = E50D85181E5BF0F400154327 /* NSString+SNPValidation.h */; };
-		E50D851B1E5BF0F400154327 /* NSString+SNPValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = E50D85191E5BF0F400154327 /* NSString+SNPValidation.m */; };
 		E50D85201E5BF28700154327 /* SNPErrorConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = E50D851F1E5BF28700154327 /* SNPErrorConstants.h */; };
 		E50D85231E5C037900154327 /* SNPCreditCard.h in Headers */ = {isa = PBXBuildFile; fileRef = E50D85211E5C037900154327 /* SNPCreditCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E50D85241E5C037900154327 /* SNPCreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = E50D85221E5C037900154327 /* SNPCreditCard.m */; };
-		E50D85271E5C11ED00154327 /* SNPCreditCard+Validation.h in Headers */ = {isa = PBXBuildFile; fileRef = E50D85251E5C11ED00154327 /* SNPCreditCard+Validation.h */; };
-		E50D85281E5C11ED00154327 /* SNPCreditCard+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = E50D85261E5C11ED00154327 /* SNPCreditCard+Validation.m */; };
-		E50D852B1E5C132800154327 /* SNPCustomerDetails+Validation.h in Headers */ = {isa = PBXBuildFile; fileRef = E50D85291E5C132800154327 /* SNPCustomerDetails+Validation.h */; };
-		E50D852C1E5C132800154327 /* SNPCustomerDetails+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = E50D852A1E5C132800154327 /* SNPCustomerDetails+Validation.m */; };
 		E50D852F1E5C87F100154327 /* SNPObtainedPromo.h in Headers */ = {isa = PBXBuildFile; fileRef = E50D852D1E5C87F100154327 /* SNPObtainedPromo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E50D85301E5C87F100154327 /* SNPObtainedPromo.m in Sources */ = {isa = PBXBuildFile; fileRef = E50D852E1E5C87F100154327 /* SNPObtainedPromo.m */; };
 		E50D85D41D0EC64E00F26D2E /* MidtransPaymentMandiriECash.h in Headers */ = {isa = PBXBuildFile; fileRef = E50D85D21D0EC64E00F26D2E /* MidtransPaymentMandiriECash.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -131,8 +125,6 @@
 		E54421D01E5D0F0F001FBFDA /* SNPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = E54421CF1E5D0F0F001FBFDA /* SNPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E54421D31E5D94A1001FBFDA /* NSError+SNPUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E54421D11E5D94A1001FBFDA /* NSError+SNPUtils.h */; };
 		E54421D41E5D94A1001FBFDA /* NSError+SNPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E54421D21E5D94A1001FBFDA /* NSError+SNPUtils.m */; };
-		E54421D71E5D95C1001FBFDA /* NSString+SNPUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E54421D51E5D95C1001FBFDA /* NSString+SNPUtils.h */; };
-		E54421D81E5D95C1001FBFDA /* NSString+SNPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E54421D61E5D95C1001FBFDA /* NSString+SNPUtils.m */; };
 		E54421DB1E5D9A62001FBFDA /* SNPPaymentResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E54421D91E5D9A62001FBFDA /* SNPPaymentResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E54421DC1E5D9A62001FBFDA /* SNPPaymentResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E54421DA1E5D9A62001FBFDA /* SNPPaymentResult.m */; };
 		E54421E21E5DC373001FBFDA /* SNPSavedCreditCard.h in Headers */ = {isa = PBXBuildFile; fileRef = E54421E01E5DC373001FBFDA /* SNPSavedCreditCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -231,12 +223,27 @@
 		E5E436381CE31E6500F688ED /* MidtransMaskedCreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E436361CE31E6500F688ED /* MidtransMaskedCreditCard.m */; };
 		E5E4363B1CE31E8D00F688ED /* Midtrans3DSController.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E436391CE31E8D00F688ED /* Midtrans3DSController.h */; };
 		E5E4363C1CE31E8D00F688ED /* Midtrans3DSController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E4363A1CE31E8D00F688ED /* Midtrans3DSController.m */; };
+		E5E7BDE01E63B9E60035B99C /* MidtransCoreKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7BDDF1E63B9E60035B99C /* MidtransCoreKitTests.m */; };
+		E5E7BDE21E63B9E60035B99C /* libMidtransCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3054943A1C759FF800938C17 /* libMidtransCoreKit.a */; };
+		E5E7BDEA1E63C2960035B99C /* SNPStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E7BDE81E63C2960035B99C /* SNPStringUtils.h */; };
+		E5E7BDEB1E63C2960035B99C /* SNPStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7BDE91E63C2960035B99C /* SNPStringUtils.m */; };
+		E5E7BDEF1E63CD9F0035B99C /* SNPChargeRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E7BDED1E63CD9F0035B99C /* SNPChargeRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E7BDF01E63CD9F0035B99C /* SNPChargeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7BDEE1E63CD9F0035B99C /* SNPChargeRequest.m */; };
+		E5E7BDF41E63DD1E0035B99C /* SNPPaymentInfoRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E7BDF21E63DD1E0035B99C /* SNPPaymentInfoRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E7BDF51E63DD1E0035B99C /* SNPPaymentInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7BDF31E63DD1E0035B99C /* SNPPaymentInfoRequest.m */; };
 		E5FBC7F11E39E3FF006B574D /* MidtransNetworkLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = E5FBC7EF1E39E3FF006B574D /* MidtransNetworkLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5FBC7F21E39E3FF006B574D /* MidtransNetworkLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FBC7F01E39E3FF006B574D /* MidtransNetworkLogger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		305494A01C75ABDA00938C17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 305494321C759FF800938C17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 305494391C759FF800938C17;
+			remoteInfo = MidtransCoreKit;
+		};
+		E5E7BDE31E63B9E60035B99C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 305494321C759FF800938C17 /* Project object */;
 			proxyType = 1;
@@ -323,15 +330,9 @@
 		E50D85041E5BE4B900154327 /* SNPPaymentTokenizeRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPPaymentTokenizeRequest.m; path = NEW/models/SNPPaymentTokenizeRequest.m; sourceTree = "<group>"; };
 		E50D85071E5BEA5F00154327 /* SNPCreditCardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPCreditCardConfig.h; path = NEW/configs/SNPCreditCardConfig.h; sourceTree = "<group>"; };
 		E50D85081E5BEA5F00154327 /* SNPCreditCardConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPCreditCardConfig.m; path = NEW/configs/SNPCreditCardConfig.m; sourceTree = "<group>"; };
-		E50D85181E5BF0F400154327 /* NSString+SNPValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SNPValidation.h"; path = "NEW/utils/NSString+SNPValidation.h"; sourceTree = "<group>"; };
-		E50D85191E5BF0F400154327 /* NSString+SNPValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SNPValidation.m"; path = "NEW/utils/NSString+SNPValidation.m"; sourceTree = "<group>"; };
 		E50D851F1E5BF28700154327 /* SNPErrorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPErrorConstants.h; path = NEW/constants/SNPErrorConstants.h; sourceTree = "<group>"; };
 		E50D85211E5C037900154327 /* SNPCreditCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPCreditCard.h; path = NEW/models/SNPCreditCard.h; sourceTree = "<group>"; };
 		E50D85221E5C037900154327 /* SNPCreditCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPCreditCard.m; path = NEW/models/SNPCreditCard.m; sourceTree = "<group>"; };
-		E50D85251E5C11ED00154327 /* SNPCreditCard+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SNPCreditCard+Validation.h"; path = "NEW/utils/SNPCreditCard+Validation.h"; sourceTree = "<group>"; };
-		E50D85261E5C11ED00154327 /* SNPCreditCard+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SNPCreditCard+Validation.m"; path = "NEW/utils/SNPCreditCard+Validation.m"; sourceTree = "<group>"; };
-		E50D85291E5C132800154327 /* SNPCustomerDetails+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SNPCustomerDetails+Validation.h"; path = "NEW/utils/SNPCustomerDetails+Validation.h"; sourceTree = "<group>"; };
-		E50D852A1E5C132800154327 /* SNPCustomerDetails+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SNPCustomerDetails+Validation.m"; path = "NEW/utils/SNPCustomerDetails+Validation.m"; sourceTree = "<group>"; };
 		E50D852D1E5C87F100154327 /* SNPObtainedPromo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPObtainedPromo.h; path = NEW/models/SNPObtainedPromo.h; sourceTree = "<group>"; };
 		E50D852E1E5C87F100154327 /* SNPObtainedPromo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPObtainedPromo.m; path = NEW/models/SNPObtainedPromo.m; sourceTree = "<group>"; };
 		E50D85D21D0EC64E00F26D2E /* MidtransPaymentMandiriECash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransPaymentMandiriECash.h; sourceTree = "<group>"; };
@@ -361,8 +362,6 @@
 		E54421CF1E5D0F0F001FBFDA /* SNPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPRequest.h; path = NEW/protocols/SNPRequest.h; sourceTree = "<group>"; };
 		E54421D11E5D94A1001FBFDA /* NSError+SNPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+SNPUtils.h"; path = "NEW/utils/NSError+SNPUtils.h"; sourceTree = "<group>"; };
 		E54421D21E5D94A1001FBFDA /* NSError+SNPUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+SNPUtils.m"; path = "NEW/utils/NSError+SNPUtils.m"; sourceTree = "<group>"; };
-		E54421D51E5D95C1001FBFDA /* NSString+SNPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SNPUtils.h"; path = "NEW/utils/NSString+SNPUtils.h"; sourceTree = "<group>"; };
-		E54421D61E5D95C1001FBFDA /* NSString+SNPUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SNPUtils.m"; path = "NEW/utils/NSString+SNPUtils.m"; sourceTree = "<group>"; };
 		E54421D91E5D9A62001FBFDA /* SNPPaymentResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPPaymentResult.h; path = NEW/models/SNPPaymentResult.h; sourceTree = "<group>"; };
 		E54421DA1E5D9A62001FBFDA /* SNPPaymentResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPPaymentResult.m; path = NEW/models/SNPPaymentResult.m; sourceTree = "<group>"; };
 		E54421E01E5DC373001FBFDA /* SNPSavedCreditCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPSavedCreditCard.h; path = NEW/models/SNPSavedCreditCard.h; sourceTree = "<group>"; };
@@ -461,6 +460,15 @@
 		E5E436361CE31E6500F688ED /* MidtransMaskedCreditCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransMaskedCreditCard.m; sourceTree = "<group>"; };
 		E5E436391CE31E8D00F688ED /* Midtrans3DSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Midtrans3DSController.h; sourceTree = "<group>"; };
 		E5E4363A1CE31E8D00F688ED /* Midtrans3DSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Midtrans3DSController.m; sourceTree = "<group>"; };
+		E5E7BDDD1E63B9E60035B99C /* MidtransCoreKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MidtransCoreKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E7BDDF1E63B9E60035B99C /* MidtransCoreKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MidtransCoreKitTests.m; sourceTree = "<group>"; };
+		E5E7BDE11E63B9E60035B99C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5E7BDE81E63C2960035B99C /* SNPStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPStringUtils.h; path = NEW/utils/SNPStringUtils.h; sourceTree = "<group>"; };
+		E5E7BDE91E63C2960035B99C /* SNPStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPStringUtils.m; path = NEW/utils/SNPStringUtils.m; sourceTree = "<group>"; };
+		E5E7BDED1E63CD9F0035B99C /* SNPChargeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPChargeRequest.h; path = NEW/models/SNPChargeRequest.h; sourceTree = "<group>"; };
+		E5E7BDEE1E63CD9F0035B99C /* SNPChargeRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPChargeRequest.m; path = NEW/models/SNPChargeRequest.m; sourceTree = "<group>"; };
+		E5E7BDF21E63DD1E0035B99C /* SNPPaymentInfoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPPaymentInfoRequest.h; path = NEW/models/SNPPaymentInfoRequest.h; sourceTree = "<group>"; };
+		E5E7BDF31E63DD1E0035B99C /* SNPPaymentInfoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPPaymentInfoRequest.m; path = NEW/models/SNPPaymentInfoRequest.m; sourceTree = "<group>"; };
 		E5FBC7EF1E39E3FF006B574D /* MidtransNetworkLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransNetworkLogger.h; sourceTree = "<group>"; };
 		E5FBC7F01E39E3FF006B574D /* MidtransNetworkLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransNetworkLogger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -470,6 +478,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E7BDDA1E63B9E60035B99C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E7BDE21E63B9E60035B99C /* libMidtransCoreKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +740,7 @@
 			isa = PBXGroup;
 			children = (
 				3054943C1C759FF800938C17 /* MidtransCoreKit */,
+				E5E7BDDE1E63B9E60035B99C /* MidtransCoreKitTests */,
 				3054943B1C759FF800938C17 /* Products */,
 				C81F67B7B68722E328BF93D7 /* Pods */,
 				A0C9D60C2D536437D42CFD0A /* Frameworks */,
@@ -734,6 +751,7 @@
 			isa = PBXGroup;
 			children = (
 				3054943A1C759FF800938C17 /* libMidtransCoreKit.a */,
+				E5E7BDDD1E63B9E60035B99C /* MidtransCoreKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -782,20 +800,14 @@
 		E50D850F1E5BF02600154327 /* categories */ = {
 			isa = PBXGroup;
 			children = (
-				E50D85181E5BF0F400154327 /* NSString+SNPValidation.h */,
-				E50D85191E5BF0F400154327 /* NSString+SNPValidation.m */,
-				E50D85251E5C11ED00154327 /* SNPCreditCard+Validation.h */,
-				E50D85261E5C11ED00154327 /* SNPCreditCard+Validation.m */,
-				E50D85291E5C132800154327 /* SNPCustomerDetails+Validation.h */,
-				E50D852A1E5C132800154327 /* SNPCustomerDetails+Validation.m */,
 				E54421C71E5D07C9001FBFDA /* NSDictionary+SNPUtils.h */,
 				E54421C81E5D07C9001FBFDA /* NSDictionary+SNPUtils.m */,
 				E54421D11E5D94A1001FBFDA /* NSError+SNPUtils.h */,
 				E54421D21E5D94A1001FBFDA /* NSError+SNPUtils.m */,
-				E54421D51E5D95C1001FBFDA /* NSString+SNPUtils.h */,
-				E54421D61E5D95C1001FBFDA /* NSString+SNPUtils.m */,
 				E54421E81E5DE8A3001FBFDA /* NSObject+SNPUtils.h */,
 				E54421E91E5DE8A3001FBFDA /* NSObject+SNPUtils.m */,
+				E5E7BDE81E63C2960035B99C /* SNPStringUtils.h */,
+				E5E7BDE91E63C2960035B99C /* SNPStringUtils.m */,
 			);
 			name = categories;
 			sourceTree = "<group>";
@@ -837,10 +849,6 @@
 				E54421ED1E5E31DE001FBFDA /* SNPPromo.m */,
 				E54421E01E5DC373001FBFDA /* SNPSavedCreditCard.h */,
 				E54421E11E5DC373001FBFDA /* SNPSavedCreditCard.m */,
-				E54421D91E5D9A62001FBFDA /* SNPPaymentResult.h */,
-				E54421DA1E5D9A62001FBFDA /* SNPPaymentResult.m */,
-				E54421CB1E5D0C2B001FBFDA /* SNPCreditCardToken.h */,
-				E54421CC1E5D0C2B001FBFDA /* SNPCreditCardToken.m */,
 				E59977841E5B9C5F0012AD99 /* SNPCreditCardPayment.h */,
 				E59977851E5B9C5F0012AD99 /* SNPCreditCardPayment.m */,
 				E599778A1E5B9C750012AD99 /* SNPCallbacks.h */,
@@ -855,18 +863,10 @@
 				E59977951E5B9C750012AD99 /* SNPInstallment.m */,
 				E59977981E5B9C750012AD99 /* SNPMerchant.h */,
 				E59977991E5B9C750012AD99 /* SNPMerchant.m */,
-				E599779A1E5B9C750012AD99 /* SNPPaymentInfo.h */,
-				E599779B1E5B9C750012AD99 /* SNPPaymentInfo.m */,
 				E599779C1E5B9C750012AD99 /* SNPPreference.h */,
 				E599779D1E5B9C750012AD99 /* SNPPreference.m */,
 				E59977A01E5B9C750012AD99 /* SNPTerm.h */,
 				E59977A11E5B9C750012AD99 /* SNPTerm.m */,
-				E59977A21E5B9C750012AD99 /* SNPToken.h */,
-				E59977A31E5B9C750012AD99 /* SNPToken.m */,
-				E59977C91E5BA71F0012AD99 /* SNPCreditCardTokenizeRequest.h */,
-				E59977CA1E5BA71F0012AD99 /* SNPCreditCardTokenizeRequest.m */,
-				E50D85031E5BE4B900154327 /* SNPPaymentTokenizeRequest.h */,
-				E50D85041E5BE4B900154327 /* SNPPaymentTokenizeRequest.m */,
 				E50D85211E5C037900154327 /* SNPCreditCard.h */,
 				E50D85221E5C037900154327 /* SNPCreditCard.m */,
 				E50D852D1E5C87F100154327 /* SNPObtainedPromo.h */,
@@ -881,6 +881,15 @@
 				E59977A51E5B9C750012AD99 /* SNPTransactionDetails.m */,
 				E59977881E5B9C750012AD99 /* SNPAddress.h */,
 				E59977891E5B9C750012AD99 /* SNPAddress.m */,
+				E54421D91E5D9A62001FBFDA /* SNPPaymentResult.h */,
+				E54421DA1E5D9A62001FBFDA /* SNPPaymentResult.m */,
+				E54421CB1E5D0C2B001FBFDA /* SNPCreditCardToken.h */,
+				E54421CC1E5D0C2B001FBFDA /* SNPCreditCardToken.m */,
+				E599779A1E5B9C750012AD99 /* SNPPaymentInfo.h */,
+				E599779B1E5B9C750012AD99 /* SNPPaymentInfo.m */,
+				E59977A21E5B9C750012AD99 /* SNPToken.h */,
+				E59977A31E5B9C750012AD99 /* SNPToken.m */,
+				E5E7BDEC1E63CD8A0035B99C /* requests */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -907,6 +916,30 @@
 			name = configs;
 			sourceTree = "<group>";
 		};
+		E5E7BDDE1E63B9E60035B99C /* MidtransCoreKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5E7BDDF1E63B9E60035B99C /* MidtransCoreKitTests.m */,
+				E5E7BDE11E63B9E60035B99C /* Info.plist */,
+			);
+			path = MidtransCoreKitTests;
+			sourceTree = "<group>";
+		};
+		E5E7BDEC1E63CD8A0035B99C /* requests */ = {
+			isa = PBXGroup;
+			children = (
+				E59977C91E5BA71F0012AD99 /* SNPCreditCardTokenizeRequest.h */,
+				E59977CA1E5BA71F0012AD99 /* SNPCreditCardTokenizeRequest.m */,
+				E50D85031E5BE4B900154327 /* SNPPaymentTokenizeRequest.h */,
+				E50D85041E5BE4B900154327 /* SNPPaymentTokenizeRequest.m */,
+				E5E7BDED1E63CD9F0035B99C /* SNPChargeRequest.h */,
+				E5E7BDEE1E63CD9F0035B99C /* SNPChargeRequest.m */,
+				E5E7BDF21E63DD1E0035B99C /* SNPPaymentInfoRequest.h */,
+				E5E7BDF31E63DD1E0035B99C /* SNPPaymentInfoRequest.m */,
+			);
+			name = requests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -918,12 +951,10 @@
 				2EDAA3A31D0A7601009EC90D /* MidtransTrackingManager.h in Headers */,
 				0C1923621E430A8C00B3BBDB /* MIDTrackingManager.h in Headers */,
 				E5E4361F1CE31D1200F688ED /* MidtransTransactionResult.h in Headers */,
-				E50D852B1E5C132800154327 /* SNPCustomerDetails+Validation.h in Headers */,
 				E5E4360F1CE31B3600F688ED /* MidtransItemDetail.h in Headers */,
 				009A7E711DBF06E600049358 /* MidtransPaymentRequestV2EnabledPayments.h in Headers */,
 				00F61B0F1D145D0E00C93DA0 /* MidtransPaymentListModel.h in Headers */,
 				E511CF4C1E48612300926FC7 /* MidtransObtainedPromo.h in Headers */,
-				E50D85271E5C11ED00154327 /* SNPCreditCard+Validation.h in Headers */,
 				E5E436071CE31ACE00F688ED /* MidtransTransaction.h in Headers */,
 				009A7E701DBF06E600049358 /* MidtransPaymentRequestV2DataModels.h in Headers */,
 				E54421EA1E5DE8A3001FBFDA /* NSObject+SNPUtils.h in Headers */,
@@ -945,6 +976,7 @@
 				E5E4362A1CE31DB700F688ED /* MidtransEnvironment.h in Headers */,
 				305494571C75A08900938C17 /* MidtransAddress.h in Headers */,
 				E5E436171CE31C9C00F688ED /* MidtransClient.h in Headers */,
+				E5E7BDEA1E63C2960035B99C /* SNPStringUtils.h in Headers */,
 				E5C2329A1D5AAEBF00A0A486 /* MidtransCreditCardConfig.h in Headers */,
 				E59977C21E5B9C750012AD99 /* SNPTransactionDetails.h in Headers */,
 				E59977B61E5B9C750012AD99 /* SNPMerchant.h in Headers */,
@@ -991,10 +1023,10 @@
 				E54421E21E5DC373001FBFDA /* SNPSavedCreditCard.h in Headers */,
 				E59977BA1E5B9C750012AD99 /* SNPPreference.h in Headers */,
 				E59977AE1E5B9C750012AD99 /* SNPEnabledPayments.h in Headers */,
-				E54421D71E5D95C1001FBFDA /* NSString+SNPUtils.h in Headers */,
 				E54421C91E5D07C9001FBFDA /* NSDictionary+SNPUtils.h in Headers */,
 				E5E436151CE31C9C00F688ED /* MidtransMerchantClient.h in Headers */,
 				E59977A81E5B9C750012AD99 /* SNPCallbacks.h in Headers */,
+				E5E7BDF41E63DD1E0035B99C /* SNPPaymentInfoRequest.h in Headers */,
 				E54421DB1E5D9A62001FBFDA /* SNPPaymentResult.h in Headers */,
 				E5E4363B1CE31E8D00F688ED /* Midtrans3DSController.h in Headers */,
 				009A7E6E1DBF06E600049358 /* MidtransPaymentRequestV2CustomerDetails.h in Headers */,
@@ -1015,13 +1047,13 @@
 				0CD7EA9A1E03D0820036C187 /* MIdtransPaymentGCI.h in Headers */,
 				00F61B0E1D145D0E00C93DA0 /* MidtransPaymentListDataModel.h in Headers */,
 				E58017E11D584271007D2DEC /* MidtransPaymentIndosatDompetku.h in Headers */,
+				E5E7BDEF1E63CD9F0035B99C /* SNPChargeRequest.h in Headers */,
 				30D9ABFC1C76FD1D00F858AE /* MidtransNetworkOperation.h in Headers */,
 				E525E1211CFD402D009448A5 /* MidtransPrivateConfig.h in Headers */,
 				E5DACA921D034E7000F5BE0A /* MidtransLuhn.h in Headers */,
 				E59977861E5B9C5F0012AD99 /* SNPCreditCardPayment.h in Headers */,
 				E55DB9421C912ED300813B81 /* MidtransCustomerDetails.h in Headers */,
 				E59977D41E5BB36D0012AD99 /* SNPSystemConfig.h in Headers */,
-				E50D851A1E5BF0F400154327 /* NSString+SNPValidation.h in Headers */,
 				009A7E771DBF06E600049358 /* MidtransPaymentRequestV2Preference.h in Headers */,
 				E50D85051E5BE4B900154327 /* SNPPaymentTokenizeRequest.h in Headers */,
 				006DB7B91D3DE294001C9A71 /* MidtransTransactionTokenResponse.h in Headers */,
@@ -1051,6 +1083,24 @@
 			productReference = 3054943A1C759FF800938C17 /* libMidtransCoreKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		E5E7BDDC1E63B9E60035B99C /* MidtransCoreKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5E7BDE71E63B9E60035B99C /* Build configuration list for PBXNativeTarget "MidtransCoreKitTests" */;
+			buildPhases = (
+				E5E7BDD91E63B9E60035B99C /* Sources */,
+				E5E7BDDA1E63B9E60035B99C /* Frameworks */,
+				E5E7BDDB1E63B9E60035B99C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5E7BDE41E63B9E60035B99C /* PBXTargetDependency */,
+			);
+			name = MidtransCoreKitTests;
+			productName = MidtransCoreKitTests;
+			productReference = E5E7BDDD1E63B9E60035B99C /* MidtransCoreKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1066,6 +1116,11 @@
 					};
 					3054949C1C75ABD200938C17 = {
 						CreatedOnToolsVersion = 7.2;
+					};
+					E5E7BDDC1E63B9E60035B99C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = G92YEQF267;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1083,9 +1138,20 @@
 			targets = (
 				305494391C759FF800938C17 /* MidtransCoreKit */,
 				3054949C1C75ABD200938C17 /* Core Framework */,
+				E5E7BDDC1E63B9E60035B99C /* MidtransCoreKitTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5E7BDDB1E63B9E60035B99C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		305494A21C75ABE200938C17 /* MultiPlatform Build */ = {
@@ -1154,7 +1220,6 @@
 			files = (
 				0C6FC89B1E1B62850002E160 /* MidtransPaymentRequestV2Installment2.m in Sources */,
 				E59977BF1E5B9C750012AD99 /* SNPTerm.m in Sources */,
-				E50D851B1E5BF0F400154327 /* NSString+SNPValidation.m in Sources */,
 				E50D85301E5C87F100154327 /* SNPObtainedPromo.m in Sources */,
 				009A7E821DBF38A600049358 /* MidtransPaymentRequestV2SavedTokens.m in Sources */,
 				009A7E7E1DBF06E600049358 /* MidtransPaymentRequestV2TransactionDetails.m in Sources */,
@@ -1164,6 +1229,7 @@
 				E59977AD1E5B9C750012AD99 /* SNPCustomerDetails.m in Sources */,
 				E50D85061E5BE4B900154327 /* SNPPaymentTokenizeRequest.m in Sources */,
 				009A7E761DBF06E600049358 /* MidtransPaymentRequestV2Merchant.m in Sources */,
+				E5E7BDEB1E63C2960035B99C /* SNPStringUtils.m in Sources */,
 				2EDAA3A41D0A7601009EC90D /* MidtransTrackingManager.m in Sources */,
 				00C95DB91D196589001EC6B7 /* MidtransVirtualAccountModel.m in Sources */,
 				E58017DA1D584256007D2DEC /* MidtransPaymentTelkomselCash.m in Sources */,
@@ -1194,7 +1260,6 @@
 				E5E436161CE31C9C00F688ED /* MidtransMerchantClient.m in Sources */,
 				E5C00EEC1D61BC50008DD9C5 /* MidtransImageManager.m in Sources */,
 				E5504E0D1D0E58BE00137655 /* MidtransPaymentCIMBClicks.m in Sources */,
-				E50D852C1E5C132800154327 /* SNPCustomerDetails+Validation.m in Sources */,
 				E5E4360A1CE31ACE00F688ED /* MidtransTransactionDetails.m in Sources */,
 				0C43B4F81E0BC022000A583C /* MidtransBinResponse.m in Sources */,
 				E5C2329B1D5AAEBF00A0A486 /* MidtransCreditCardConfig.m in Sources */,
@@ -1205,7 +1270,6 @@
 				E59977B51E5B9C750012AD99 /* SNPItemDetails.m in Sources */,
 				E5E436281CE31DA100F688ED /* MidtransConfig.m in Sources */,
 				E59977AF1E5B9C750012AD99 /* SNPEnabledPayments.m in Sources */,
-				E54421D81E5D95C1001FBFDA /* NSString+SNPUtils.m in Sources */,
 				E5E436341CE31E4200F688ED /* MidtransCreditCard.m in Sources */,
 				E54421CE1E5D0C2B001FBFDA /* SNPCreditCardToken.m in Sources */,
 				E55DB9431C912ED300813B81 /* MidtransCustomerDetails.m in Sources */,
@@ -1213,6 +1277,7 @@
 				E50D85E81D0ECB7000F26D2E /* MidtransPaymentBCAKlikpay.m in Sources */,
 				E59977D11E5BB35B0012AD99 /* SNPSharedConfig.m in Sources */,
 				E5E4361C1CE31CD800F688ED /* MidtransTokenizeRequest.m in Sources */,
+				E5E7BDF01E63CD9F0035B99C /* SNPChargeRequest.m in Sources */,
 				E50D85241E5C037900154327 /* SNPCreditCard.m in Sources */,
 				E50D85EA1D0ECB7000F26D2E /* MidtransPaymentIndomaret.m in Sources */,
 				009A7E741DBF06E600049358 /* MidtransPaymentRequestV2ItemDetails.m in Sources */,
@@ -1240,11 +1305,11 @@
 				E53BD0271D128F4C001FADDE /* MidtransMandiriClickpayHelper.m in Sources */,
 				009A7E6F1DBF06E600049358 /* MidtransPaymentRequestV2CustomerDetails.m in Sources */,
 				00B827791DDAC76800E5AC17 /* MidtransDeviceHelper.m in Sources */,
-				E50D85281E5C11ED00154327 /* SNPCreditCard+Validation.m in Sources */,
 				009A7E7A1DBF06E600049358 /* MidtransPaymentRequestV2Response.m in Sources */,
 				009A7E721DBF06E600049358 /* MidtransPaymentRequestV2EnabledPayments.m in Sources */,
 				3054945E1C75A08900938C17 /* MidtransNetworking.m in Sources */,
 				009A7E781DBF06E600049358 /* MidtransPaymentRequestV2Preference.m in Sources */,
+				E5E7BDF51E63DD1E0035B99C /* SNPPaymentInfoRequest.m in Sources */,
 				E54421CA1E5D07C9001FBFDA /* NSDictionary+SNPUtils.m in Sources */,
 				E59977A71E5B9C750012AD99 /* SNPAddress.m in Sources */,
 				E59977871E5B9C5F0012AD99 /* SNPCreditCardPayment.m in Sources */,
@@ -1255,6 +1320,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5E7BDD91E63B9E60035B99C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E7BDE01E63B9E60035B99C /* MidtransCoreKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1262,6 +1335,11 @@
 			isa = PBXTargetDependency;
 			target = 305494391C759FF800938C17 /* MidtransCoreKit */;
 			targetProxy = 305494A01C75ABDA00938C17 /* PBXContainerItemProxy */;
+		};
+		E5E7BDE41E63B9E60035B99C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 305494391C759FF800938C17 /* MidtransCoreKit */;
+			targetProxy = E5E7BDE31E63B9E60035B99C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1391,6 +1469,34 @@
 			};
 			name = Release;
 		};
+		E5E7BDE51E63B9E60035B99C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = G92YEQF267;
+				INFOPLIST_FILE = MidtransCoreKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.midtrans.MidtransCoreKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E5E7BDE61E63B9E60035B99C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = G92YEQF267;
+				INFOPLIST_FILE = MidtransCoreKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.midtrans.MidtransCoreKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1420,6 +1526,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E5E7BDE71E63B9E60035B99C /* Build configuration list for PBXNativeTarget "MidtransCoreKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5E7BDE51E63B9E60035B99C /* Debug */,
+				E5E7BDE61E63B9E60035B99C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
