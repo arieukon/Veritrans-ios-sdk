@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E50939891E644DE800823B7E"
-               BuildableName = "SnapKit.framework"
-               BlueprintName = "SnapKit"
+               BlueprintIdentifier = "E50939A71E644E9A00823B7E"
+               BuildableName = "MidtransCoreKitDynamic.framework"
+               BlueprintName = "MidtransCoreKitDynamic"
                ReferencedContainer = "container:MidtransCoreKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E50939891E644DE800823B7E"
-            BuildableName = "SnapKit.framework"
-            BlueprintName = "SnapKit"
+            BlueprintIdentifier = "E50939A71E644E9A00823B7E"
+            BuildableName = "MidtransCoreKitDynamic.framework"
+            BlueprintName = "MidtransCoreKitDynamic"
             ReferencedContainer = "container:MidtransCoreKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E50939891E644DE800823B7E"
-            BuildableName = "SnapKit.framework"
-            BlueprintName = "SnapKit"
+            BlueprintIdentifier = "E50939A71E644E9A00823B7E"
+            BuildableName = "MidtransCoreKitDynamic.framework"
+            BlueprintName = "MidtransCoreKitDynamic"
             ReferencedContainer = "container:MidtransCoreKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
