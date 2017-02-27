@@ -56,7 +56,9 @@
             NSLog(@"%@", error);
             return;
         }
-        [[SNPClient shared] fetchPaymentInfoWithToken:paymentToken completion:^(NSError *error, SNPPaymentInfo *paymentInfo) {
+        
+        SNPPaymentInfoRequest *request = [[SNPPaymentInfoRequest alloc] initWithToken:paymentToken];
+        [[SNPClient shared] fetchPaymentInfoWithRequest:request completion:^(NSError *error, SNPPaymentInfo *paymentInfo) {
             if (error) {
                 NSLog(@"%@", error);
                 return;
@@ -77,7 +79,8 @@
                 
                 SNPInstallmentTerm *installmentTerm = [[SNPInstallmentTerm alloc] initWithInstallment:@"offline" term:@6];
                 SNPCreditCardPayment *payment = [[SNPCreditCardPayment alloc] initWithCreditCardToken:cctoken customerDetails:_customerDetails installmentTerm:installmentTerm];
-                [[SNPClient shared] chargePayment:payment token:paymentToken completion:^(NSError *error, SNPPaymentResult *paymentResult) {
+                SNPChargeRequest *request = [[SNPChargeRequest alloc] initWithPayment:payment token:paymentToken];
+                [[SNPClient shared] chargePaymentWithRequest:request completion:^(NSError *error, SNPPaymentResult *paymentResult) {
                     if (error) {
                         NSLog(@"payment error %@", error);
                     }
