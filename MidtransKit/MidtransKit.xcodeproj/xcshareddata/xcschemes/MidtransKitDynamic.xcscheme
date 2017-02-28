@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E50939A71E644E9A00823B7E"
-               BuildableName = "MidtransCoreKit.framework"
-               BlueprintName = "MidtransCoreKitDynamic"
-               ReferencedContainer = "container:MidtransCoreKit.xcodeproj">
+               BlueprintIdentifier = "E5093A3E1E644F5C00823B7E"
+               BuildableName = "MidtransKit.framework"
+               BlueprintName = "MidtransKitDynamic"
+               ReferencedContainer = "container:MidtransKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E50939A71E644E9A00823B7E"
-            BuildableName = "MidtransCoreKit.framework"
-            BlueprintName = "MidtransCoreKitDynamic"
-            ReferencedContainer = "container:MidtransCoreKit.xcodeproj">
+            BlueprintIdentifier = "E5093A3E1E644F5C00823B7E"
+            BuildableName = "MidtransKit.framework"
+            BlueprintName = "MidtransKitDynamic"
+            ReferencedContainer = "container:MidtransKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E50939A71E644E9A00823B7E"
-            BuildableName = "MidtransCoreKit.framework"
-            BlueprintName = "MidtransCoreKitDynamic"
-            ReferencedContainer = "container:MidtransCoreKit.xcodeproj">
+            BlueprintIdentifier = "E5093A3E1E644F5C00823B7E"
+            BuildableName = "MidtransKit.framework"
+            BlueprintName = "MidtransKitDynamic"
+            ReferencedContainer = "container:MidtransKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
