@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E5093A3E1E644F5C00823B7E"
-               BuildableName = "MidtransKitDynamic.framework"
+               BuildableName = "MidtransKit.framework"
                BlueprintName = "MidtransKitDynamic"
                ReferencedContainer = "container:MidtransKit.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E5093A3E1E644F5C00823B7E"
-            BuildableName = "MidtransKitDynamic.framework"
+            BuildableName = "MidtransKit.framework"
             BlueprintName = "MidtransKitDynamic"
             ReferencedContainer = "container:MidtransKit.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E5093A3E1E644F5C00823B7E"
-            BuildableName = "MidtransKitDynamic.framework"
+            BuildableName = "MidtransKit.framework"
             BlueprintName = "MidtransKitDynamic"
             ReferencedContainer = "container:MidtransKit.xcodeproj">
          </BuildableReference>
