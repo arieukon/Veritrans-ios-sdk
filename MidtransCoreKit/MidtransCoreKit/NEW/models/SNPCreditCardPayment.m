@@ -39,21 +39,6 @@
     return self;
 }
 
-- (NSDictionary *)chargeParameters {
-    NSMutableDictionary *value = [NSMutableDictionary new];
-    value[@"payment_type"] = SNPPaymentTypeCreditCard;
-    value[@"payment_params"] = [self paymentParameter];
-    value[@"customer_details"] = @{
-                                   @"email":[NSObject valueOrNull:self.customerDetails.email],
-                                   @"phone":[NSObject valueOrNull:self.customerDetails.phone],
-                                   @"full_name":[NSObject valueOrNull:self.customerDetails.firstName]
-                                   };
-    if (self.discountToken) {
-        value[@"discount_token"] = self.discountToken;
-    }
-    return value;
-}
-
 - (NSDictionary *)paymentParameter {
     NSMutableDictionary *parameters = [NSMutableDictionary new];
     [parameters setObject:@(SHAREDCONFIG.creditCardConfig.saveCardEnabled) forKey:@"save_card"];
@@ -67,6 +52,21 @@
         [parameters setObject:[self.installmentTerm chargeParameter] forKey:@"installment"];
     }
     return parameters;
+}
+
+- (NSDictionary *)chargeParameters {
+    NSMutableDictionary *value = [NSMutableDictionary new];
+    value[@"payment_type"] = SNPPaymentTypeCreditCard;
+    value[@"payment_params"] = [self paymentParameter];
+    value[@"customer_details"] = @{
+                                   @"email":[NSObject valueOrNull:self.customerDetails.email],
+                                   @"phone":[NSObject valueOrNull:self.customerDetails.phone],
+                                   @"full_name":[NSObject valueOrNull:self.customerDetails.firstName]
+                                   };
+    if (self.discountToken) {
+        value[@"discount_token"] = self.discountToken;
+    }
+    return value;
 }
 
 @end
