@@ -251,7 +251,7 @@
 		E5E4363C1CE31E8D00F688ED /* Midtrans3DSController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E4363A1CE31E8D00F688ED /* Midtrans3DSController.m */; };
 		E5E6FAD41E6F98E000B706C5 /* SNPKiosOnPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FAD21E6F98E000B706C5 /* SNPKiosOnPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6FAD51E6F98E000B706C5 /* SNPKiosOnPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FAD31E6F98E000B706C5 /* SNPKiosOnPayment.m */; };
-		E5E6FADC1E6F9B6700B706C5 /* SNPKiosOnResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FADA1E6F9B6700B706C5 /* SNPKiosOnResult.h */; };
+		E5E6FADC1E6F9B6700B706C5 /* SNPKiosOnResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FADA1E6F9B6700B706C5 /* SNPKiosOnResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6FADD1E6F9B6700B706C5 /* SNPKiosOnResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FADB1E6F9B6700B706C5 /* SNPKiosOnResult.m */; };
 		E5E7BDEA1E63C2960035B99C /* SNPStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E7BDE81E63C2960035B99C /* SNPStringUtils.h */; };
 		E5E7BDEB1E63C2960035B99C /* SNPStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7BDE91E63C2960035B99C /* SNPStringUtils.m */; };

@@ -2,7 +2,7 @@
 //  SNPKiosOnResult.m
 //
 //  Created by Nanang  on 3/8/17
-//  Copyright (c) 2017 Zahir. All rights reserved.
+//  Copyright (c) 2017 Midtrans. All rights reserved.
 //
 
 #import "SNPKiosOnResult.h"
@@ -22,13 +22,6 @@ NSString *const kSNPKiosOnResultFraudStatus = @"fraud_status";
 NSString *const kSNPKiosOnResultStatusCode = @"status_code";
 NSString *const kSNPKiosOnResultTransactionTime = @"transaction_time";
 
-
-@interface SNPKiosOnResult ()
-
-- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
-
-@end
-
 @implementation SNPKiosOnResult
 
 @synthesize store = _store;
@@ -46,40 +39,37 @@ NSString *const kSNPKiosOnResultTransactionTime = @"transaction_time";
 @synthesize transactionTime = _transactionTime;
 
 
-+ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
-{
++ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict {
     return [[self alloc] initWithDictionary:dict];
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)dict
-{
+- (instancetype)initWithDictionary:(NSDictionary *)dict {
     self = [super init];
     
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.store = [self objectOrNilForKey:kSNPKiosOnResultStore fromDictionary:dict];
-            self.finishRedirectUrl = [self objectOrNilForKey:kSNPKiosOnResultFinishRedirectUrl fromDictionary:dict];
-            self.transactionStatus = [self objectOrNilForKey:kSNPKiosOnResultTransactionStatus fromDictionary:dict];
-            self.paymentCode = [self objectOrNilForKey:kSNPKiosOnResultPaymentCode fromDictionary:dict];
-            self.paymentType = [self objectOrNilForKey:kSNPKiosOnResultPaymentType fromDictionary:dict];
-            self.transactionId = [self objectOrNilForKey:kSNPKiosOnResultTransactionId fromDictionary:dict];
-            self.grossAmount = [self objectOrNilForKey:kSNPKiosOnResultGrossAmount fromDictionary:dict];
-            self.orderId = [self objectOrNilForKey:kSNPKiosOnResultOrderId fromDictionary:dict];
-            self.kiosonExpireTime = [self objectOrNilForKey:kSNPKiosOnResultKiosonExpireTime fromDictionary:dict];
-            self.statusMessage = [self objectOrNilForKey:kSNPKiosOnResultStatusMessage fromDictionary:dict];
-            self.fraudStatus = [self objectOrNilForKey:kSNPKiosOnResultFraudStatus fromDictionary:dict];
-            self.statusCode = [self objectOrNilForKey:kSNPKiosOnResultStatusCode fromDictionary:dict];
-            self.transactionTime = [self objectOrNilForKey:kSNPKiosOnResultTransactionTime fromDictionary:dict];
-
+        self.store = [self objectOrNilForKey:kSNPKiosOnResultStore fromDictionary:dict];
+        self.finishRedirectUrl = [self objectOrNilForKey:kSNPKiosOnResultFinishRedirectUrl fromDictionary:dict];
+        self.transactionStatus = [self objectOrNilForKey:kSNPKiosOnResultTransactionStatus fromDictionary:dict];
+        self.paymentCode = [self objectOrNilForKey:kSNPKiosOnResultPaymentCode fromDictionary:dict];
+        self.paymentType = [self objectOrNilForKey:kSNPKiosOnResultPaymentType fromDictionary:dict];
+        self.transactionId = [self objectOrNilForKey:kSNPKiosOnResultTransactionId fromDictionary:dict];
+        self.grossAmount = [self objectOrNilForKey:kSNPKiosOnResultGrossAmount fromDictionary:dict];
+        self.orderId = [self objectOrNilForKey:kSNPKiosOnResultOrderId fromDictionary:dict];
+        self.kiosonExpireTime = [self objectOrNilForKey:kSNPKiosOnResultKiosonExpireTime fromDictionary:dict];
+        self.statusMessage = [self objectOrNilForKey:kSNPKiosOnResultStatusMessage fromDictionary:dict];
+        self.fraudStatus = [self objectOrNilForKey:kSNPKiosOnResultFraudStatus fromDictionary:dict];
+        self.statusCode = [self objectOrNilForKey:kSNPKiosOnResultStatusCode fromDictionary:dict];
+        self.transactionTime = [self objectOrNilForKey:kSNPKiosOnResultTransactionTime fromDictionary:dict];
+        
     }
     
     return self;
     
 }
 
-- (NSDictionary *)dictionaryRepresentation
-{
+- (NSDictionary *)dictionaryRepresentation {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
     [mutableDict setValue:self.store forKey:kSNPKiosOnResultStore];
     [mutableDict setValue:self.finishRedirectUrl forKey:kSNPKiosOnResultFinishRedirectUrl];
@@ -94,29 +84,19 @@ NSString *const kSNPKiosOnResultTransactionTime = @"transaction_time";
     [mutableDict setValue:self.fraudStatus forKey:kSNPKiosOnResultFraudStatus];
     [mutableDict setValue:self.statusCode forKey:kSNPKiosOnResultStatusCode];
     [mutableDict setValue:self.transactionTime forKey:kSNPKiosOnResultTransactionTime];
-
+    
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
 
-- (NSString *)description 
-{
+- (NSString *)description {
     return [NSString stringWithFormat:@"%@", [self dictionaryRepresentation]];
 }
 
-#pragma mark - Helper Method
-- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict
-{
-    id object = [dict objectForKey:aKey];
-    return [object isEqual:[NSNull null]] ? nil : object;
-}
-
-
 #pragma mark - NSCoding Methods
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
+- (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
-
+    
     self.store = [aDecoder decodeObjectForKey:kSNPKiosOnResultStore];
     self.finishRedirectUrl = [aDecoder decodeObjectForKey:kSNPKiosOnResultFinishRedirectUrl];
     self.transactionStatus = [aDecoder decodeObjectForKey:kSNPKiosOnResultTransactionStatus];
@@ -133,9 +113,8 @@ NSString *const kSNPKiosOnResultTransactionTime = @"transaction_time";
     return self;
 }
 
-- (void)encodeWithCoder:(NSCoder *)aCoder
-{
-
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    
     [aCoder encodeObject:_store forKey:kSNPKiosOnResultStore];
     [aCoder encodeObject:_finishRedirectUrl forKey:kSNPKiosOnResultFinishRedirectUrl];
     [aCoder encodeObject:_transactionStatus forKey:kSNPKiosOnResultTransactionStatus];
@@ -151,12 +130,11 @@ NSString *const kSNPKiosOnResultTransactionTime = @"transaction_time";
     [aCoder encodeObject:_transactionTime forKey:kSNPKiosOnResultTransactionTime];
 }
 
-- (id)copyWithZone:(NSZone *)zone
-{
+- (id)copyWithZone:(NSZone *)zone {
     SNPKiosOnResult *copy = [[SNPKiosOnResult alloc] init];
     
     if (copy) {
-
+        
         copy.store = [self.store copyWithZone:zone];
         copy.finishRedirectUrl = [self.finishRedirectUrl copyWithZone:zone];
         copy.transactionStatus = [self.transactionStatus copyWithZone:zone];
