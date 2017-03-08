@@ -39,3 +39,6 @@ FOUNDATION_EXPORT const unsigned char SnapKitVersionString[];
 #import "SNPSystemConfig.h"
 #import "SNPTerm.h"
 #import "NSObject+SNPUtils.h"
+#import "SNPKlikBCAPayment.h"
+#import "SNPCIMBClicksPayment.h"
+#import "SNPBCAKlikpayPayment.h"

@@ -134,6 +134,45 @@
     [self waitForExpectationsWithTimeout:61 handler:nil];
 }
 
+- (void)testKlikBCAPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge kios-on payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPKlikBCAPayment *payment = [[SNPKlikBCAPayment alloc] initWithKlikBCAUserID:@"NANANGX0707"];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPKlikBCAResult *result) {
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
+- (void)testCIMBClicksPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge kios-on payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPCIMBClicksPayment *payment = [SNPCIMBClicksPayment new];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPCIMBClicksResult *result) {
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
+- (void)testBCAKlikpayPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge kios-on payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPBCAKlikpayPayment *payment = [SNPBCAKlikpayPayment new];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPBCAKlikpayResult *result) {
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
 - (void)tokenizePaymentWithCompletion:(void(^)(NSError *error, SNPToken *token))completion {
     SNPPaymentTokenizeRequest *request = [[SNPPaymentTokenizeRequest alloc] initWithTransactionDetails:self.transactionDetails
                                                                                        customerDetails:self.customerDetails
