@@ -9,9 +9,11 @@
 #import "SNPCreditCardPayment.h"
 #import "SNPSharedConfig.h"
 #import "NSObject+SNPUtils.h"
+#import "SNPSystemConfig.h"
+#import "SNPToken.h"
+#import "NSDictionary+SNPUtils.h"
 
 @interface SNPCreditCardPayment()
-@property (nonatomic) SNPCustomerDetails *customerDetails;
 @property (nonatomic) SNPInstallmentTerm *installmentTerm;
 @end
 
@@ -54,7 +56,7 @@
     return parameters;
 }
 
-- (NSDictionary *)chargeParameters {
+- (NSDictionary *)dictionaryValue {
     NSMutableDictionary *value = [NSMutableDictionary new];
     value[@"payment_type"] = SNPPaymentTypeCreditCard;
     value[@"payment_params"] = [self paymentParameter];
@@ -68,5 +70,19 @@
     }
     return value;
 }
+
+- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPCreditCardResult *result))completion {
+    NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
+    [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
+        SNPCreditCardResult *result;
+        if (dictionaryResponse) {
+            result = [SNPCreditCardResult modelObjectWithDictionary:dictionaryResponse];
+        }
+        if (completion)
+            completion(error, result);
+    }];
+}
+
+
 
 @end

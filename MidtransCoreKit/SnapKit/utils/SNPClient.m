@@ -12,84 +12,46 @@
 #import "SNPSharedConfig.h"
 #import "SNPSystemConfig.h"
 #import "NSError+SNPUtils.h"
-#import "SNPChargeRequest.h"
-
-@interface SNPClient()
-@property (nonatomic) NSURLSession *session;
-@end
+#import "SNPNetworking.h"
 
 @implementation SNPClient
 
-+ (SNPClient *)shared {
-    static SNPClient *shared = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        shared = [[self alloc] init];
-    });
-    return shared;
-}
-
-- (instancetype)init {
-    if (self = [super init]) {
-        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-        config.HTTPAdditionalHeaders = @{@"Content-Type":@"application/json"};
-        self.session = [NSURLSession sessionWithConfiguration:config];
-    }
-    return self;
-}
-
-- (void)fetchPaymentInfoWithRequest:(id<SNPRequest>)request
++ (void)fetchPaymentInfoWithRequest:(id<SNPRequest>)request
                          completion:(void(^)(NSError *error, SNPPaymentInfo *paymentInfo))completion {
-    [[self.session dataTaskWithRequest:[request request] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    [[SNPNetworking shared] performRequest:[request requestObject] completion:^(NSError *error, id dictionaryResponse) {
         SNPPaymentInfo *info;
-        if (data) {
-            NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-            info = [SNPPaymentInfo modelObjectWithDictionary:jsonDict];
+        if (dictionaryResponse) {
+            info = [SNPPaymentInfo modelObjectWithDictionary:dictionaryResponse];
         }
         if (completion) completion(error, info);
-    }] resume];
+    }];
 }
 
-- (void)chargePaymentWithRequest:(id<SNPRequest>)request
-                      completion:(void(^)(NSError *error, SNPPaymentResult *paymentResult))completion {
-    [[self.session dataTaskWithRequest:[request request] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        SNPPaymentResult *paymentResult;
-        if (data) {
-            NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-            error = [NSError errorFromSnapResponse:jsonDict];
-            if (!error) {
-                paymentResult = [SNPPaymentResult modelObjectWithDictionary:jsonDict];
-            }
-        }
-        if (completion) completion(error, paymentResult);
-    }] resume];
-}
 
-- (void)tokenizeCreditCardWithRequest:(id<SNPRequest>)request
+
++ (void)tokenizeCreditCardWithRequest:(id<SNPRequest>)request
                            completion:(void(^)(NSError *error, SNPCreditCardToken *token))completion {
-    [[self.session dataTaskWithRequest:[request request] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    [[SNPNetworking shared] performRequest:[request requestObject] completion:^(NSError *error, id dictionaryResponse) {
         SNPCreditCardToken *token;
-        if (data) {
-            NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-            token = [SNPCreditCardToken modelObjectWithDictionary:jsonDict];
+        if (dictionaryResponse) {
+            token = [SNPCreditCardToken modelObjectWithDictionary:dictionaryResponse];
         }
         if (completion) completion(error, token);
-    }] resume];
+    }];
 }
 
-- (void)tokenizePaymentWithRequest:(id<SNPRequest>)request
++ (void)tokenizePaymentWithRequest:(id<SNPRequest>)request
                         completion:(void(^)(NSError *error, SNPToken *token))completion {
-    [[self.session dataTaskWithRequest:[request request] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    [[SNPNetworking shared] performRequest:[request requestObject] completion:^(NSError *error, id dictionaryResponse) {
         SNPToken *token;
-        if (data) {
-            NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-            error = [NSError errorFromMerchantServerResponse:jsonDict];
+        if (dictionaryResponse) {
+            error = [NSError errorFromMerchantServerResponse:dictionaryResponse];
             if (!error) {
-                token = [SNPToken modelObjectWithDictionary:jsonDict];
+                token = [SNPToken modelObjectWithDictionary:dictionaryResponse];
             }
         }
         if (completion) completion(error, token);
-    }] resume];
+    }];
 }
 
 @end

@@ -2,7 +2,7 @@
 //  VTInstruction.m
 //
 //  Created by Nanang  on 8/16/16
-//  Copyright (c) 2016 Zahir. All rights reserved.
+//  Copyright (c) 2016 Midtrans. All rights reserved.
 //
 
 #import "VTInstruction.h"

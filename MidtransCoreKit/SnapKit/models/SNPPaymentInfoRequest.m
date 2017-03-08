@@ -21,7 +21,7 @@
     return self;
 }
 
-- (NSURLRequest *)request {
+- (NSURLRequest *)requestObject {
     NSString *endpoint = [NSString stringWithFormat:@"transactions/%@", self.token.token];
     NSURL *url = [SYSTEMCONFIG.snapURL URLByAppendingPathComponent:endpoint];
     return [NSURLRequest requestWithURL:url];

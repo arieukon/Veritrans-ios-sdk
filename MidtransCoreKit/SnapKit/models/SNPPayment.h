@@ -2,11 +2,14 @@
 //  SNPPayment.h
 //  MidtransCoreKit
 //
-//  Created by Nanang Rafsanjani on 2/21/17.
+//  Created by Nanang Rafsanjani on 3/7/17.
 //  Copyright © 2017 Midtrans. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "SNPToken.h"
+#import "SNPNetworking.h"
+#import "SNPCustomerDetails.h"
 
 static NSString * const SNPPaymentTypeKlikpay = @"bca_klikpay";
 static NSString * const SNPPaymentTypeKlikbca = @"bca_klikbca";
@@ -29,8 +32,11 @@ static NSString * const SNPPaymentTypeClickpay = @"mandiri_clickpay";
 static NSString * const SNPPaymentTypeGCI = @"gci";
 static NSString * const SNPPaymentTypeKiosOn = @"kioson";
 
-@protocol SNPPayment <NSObject>
+@interface SNPPayment : NSObject
 
-- (NSDictionary *)chargeParameters;
+@property (nonatomic) SNPCustomerDetails *customerDetails;
+- (instancetype)initWithCustomerDetails:(SNPCustomerDetails *)customerDetails;
+- (NSURLRequest *)requestWithParameter:(NSDictionary *)parameter token:(SNPToken *)token;
+- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, id result))completion;
 
 @end

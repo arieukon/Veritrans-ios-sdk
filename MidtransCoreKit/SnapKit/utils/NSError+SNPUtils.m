@@ -23,8 +23,10 @@
 + (NSError *)errorFromSnapResponse:(NSDictionary *)response {
     NSError *error;
     NSInteger errorCode = [response[@"status_code"] integerValue];
-    if (errorCode >= 400 && errorCode <= 411) {
-        error = [NSError errorWithDomain:SNPErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey:response[@"status_message"]}];
+    if ((errorCode>=400) && (errorCode<=504)) {
+        error = [NSError errorWithDomain:SNPErrorDomain
+                                    code:errorCode
+                                userInfo:@{NSLocalizedDescriptionKey:response[@"status_message"]}];
     }
     return error;
 }

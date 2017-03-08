@@ -13,4 +13,9 @@
 @property (nonatomic) NSString *expiryMonth;
 @property (nonatomic) NSString *expiryYear;
 @property (nonatomic) NSString *cvv;
+
+- (instancetype)initWithNumber:(NSString *)number
+                   expiryMonth:(NSString *)expiryMonth
+                    expiryYear:(NSString *)expiryYear
+                           cvv:(NSString *)cvv;
 @end

@@ -7,5 +7,5 @@
 //
 
 @protocol SNPRequest <NSObject>
-- (NSURLRequest *)request;
+- (NSURLRequest *)requestObject;
 @end

@@ -22,7 +22,10 @@
 - (void)setUp {
     [super setUp];
     
+    [[SNPNetworkingLogger shared] start];
+    
     SNPCreditCardConfig *ccconfig = [SNPCreditCardConfig defaultConfig];
+    ccconfig.secure3DEnabled = YES;
     ccconfig.paymentType = SNPCreditCardPaymentTypeTwoclick;
     
     [SNPSharedConfig setClientKey:@"VT-client-E4f1bsi1LpL1p5cF"
@@ -45,25 +48,74 @@
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    [[SNPNetworkingLogger shared] stop];
+    
     [super tearDown];
+}
+
+- (void)testCreditCardPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge CC payment"];
+    SNPCreditCard *card = [[SNPCreditCard alloc] initWithNumber:@"4811111111111114" expiryMonth:@"02" expiryYear:@"20" cvv:@"123"];
+    SNPCreditCardTokenizeRequest *request = [[SNPCreditCardTokenizeRequest alloc] initWithCreditCard:card transactionAmount:self.transactionDetails.grossAmount installmentTerm:nil obtainedPromo:nil];
+    [SNPClient tokenizeCreditCardWithRequest:request completion:^(NSError *error, SNPCreditCardToken *cctoken) {
+        [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *paymenttoken) {
+            SNPCreditCardPayment *payment = [[SNPCreditCardPayment alloc] initWithCreditCardToken:cctoken customerDetails:self.customerDetails installmentTerm:nil];
+            [payment chargeWithToken:paymenttoken completion:^(NSError * _Nullable error, SNPCreditCardResult * _Nullable result) {
+                [exp fulfill];
+            }];
+        }];
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
+- (void)testPermataVAPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge BCA VA payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPPermataVAPayment *payment = [[SNPPermataVAPayment alloc] initWithCustomerDetails:self.customerDetails];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPPermataVAResult *result) {
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
+- (void)testEChannelPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge BCA VA payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPEChannelPayment *payment = [[SNPEChannelPayment alloc] initWithCustomerDetails:self.customerDetails];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPEChannelResult *result) {
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
+- (void)testBCAVAPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge BCA VA payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPBCAVAPayment *payment = [[SNPBCAVAPayment alloc] initWithCustomerDetails:self.customerDetails];
+            [payment chargeWithToken:token completion:^(NSError *error, id result) {
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
 }
 
 - (void)testIndomaretPayment {
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge indomaret payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPConvenienceStorePayment *payment = [[SNPConvenienceStorePayment alloc] initWithType:SNPConvenienceStoreTypeIndomaret];
-            SNPChargeRequest *request = [[SNPChargeRequest alloc] initWithPayment:payment token:token];
-            [[SNPClient shared] chargePaymentWithRequest:request completion:^(NSError *error, SNPPaymentResult *paymentResult) {
-                if ([paymentResult.statusCode isEqualToString: @"201"] == NO) {
-                    XCTFail("Failed charging indomaret payment");
-                }
+            SNPIndomaretPayment *payment = [SNPIndomaretPayment new];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPIndomaretResult *result) {
                 [exp fulfill];
             }];
-        }
-        else {
-            XCTFail(@"Failed tokenizing payment");
         }
     }];
     [self waitForExpectationsWithTimeout:61 handler:nil];
@@ -73,7 +125,7 @@
     SNPPaymentTokenizeRequest *request = [[SNPPaymentTokenizeRequest alloc] initWithTransactionDetails:self.transactionDetails
                                                                                        customerDetails:self.customerDetails
                                                                                            itemDetails:self.itemDetails];
-    [[SNPClient shared] tokenizePaymentWithRequest:request completion:completion];
+    [SNPClient tokenizePaymentWithRequest:request completion:completion];
 }
 
 @end

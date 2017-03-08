@@ -105,7 +105,7 @@
 
 #pragma mark - Request
 
-- (NSURLRequest *)request {
+- (NSURLRequest *)requestObject {
     NSURL *url = [SYSTEMCONFIG.papiURL URLByAppendingPathComponent:@"token"];
     NSURLComponents *urlComp = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];
     [urlComp setQueryItems:[[self parameter] urlQueryItems]];

@@ -11,8 +11,9 @@
 #import "SNPPayment.h"
 #import "SNPCreditCardToken.h"
 #import "SNPInstallmentTerm.h"
+#import "SNPCreditCardResult.h"
 
-@interface SNPCreditCardPayment : NSObject <SNPPayment>
+@interface SNPCreditCardPayment : SNPPayment
 
 - (instancetype _Nonnull)initWithCreditCardToken:(SNPCreditCardToken *_Nonnull)token
                                  customerDetails:(SNPCustomerDetails *_Nonnull)customerDetails
@@ -35,5 +36,8 @@
  This token is from Token Storage, used for 1-click or 2-clicks transaction
  */
 @property (nonatomic, nullable) SNPCreditCardToken *creditCardToken;
+
+- (void)chargeWithToken:(SNPToken *_Nonnull)token
+             completion:(void (^_Nullable)(NSError *_Nullable error, SNPCreditCardResult *_Nullable result))completion;
 
 @end

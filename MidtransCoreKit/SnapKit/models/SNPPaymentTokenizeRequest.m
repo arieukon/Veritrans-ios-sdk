@@ -81,7 +81,7 @@
 
 #pragma mark - Request
 
-- (NSURLRequest *)request {
+- (NSURLRequest *)requestObject {
     NSURL *url = [SHAREDCONFIG.merchantURL URLByAppendingPathComponent:@"charge"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";

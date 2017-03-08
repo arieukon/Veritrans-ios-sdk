@@ -15,13 +15,12 @@
 #import "SNPPaymentResult.h"
 
 @interface SNPClient : NSObject
-+ (SNPClient *)shared;
-- (void)fetchPaymentInfoWithRequest:(id<SNPRequest>)request
+
++ (void)fetchPaymentInfoWithRequest:(id<SNPRequest>)request
                          completion:(void(^)(NSError *error, SNPPaymentInfo *paymentInfo))completion;
-- (void)tokenizeCreditCardWithRequest:(id<SNPRequest>)request
++ (void)tokenizeCreditCardWithRequest:(id<SNPRequest>)request
                            completion:(void(^)(NSError *error, SNPCreditCardToken *token))completion;
-- (void)tokenizePaymentWithRequest:(id<SNPRequest>)request
++ (void)tokenizePaymentWithRequest:(id<SNPRequest>)request
                         completion:(void(^)(NSError *error, SNPToken *token))completion;
-- (void)chargePaymentWithRequest:(id<SNPRequest>)request
-                      completion:(void(^)(NSError *error, SNPPaymentResult *paymentResult))completion;
+
 @end
