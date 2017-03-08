@@ -28,3 +28,4 @@ FOUNDATION_EXPORT const unsigned char SnapKitVersionString[];
 #import "SNPBCAVAPayment.h"
 #import "SNPEChannelPayment.h"
 #import "SNPPermataVAPayment.h"
+#import "SNPKiosOnPayment.h"

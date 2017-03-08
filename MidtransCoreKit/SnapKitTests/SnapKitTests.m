@@ -121,6 +121,19 @@
     [self waitForExpectationsWithTimeout:61 handler:nil];
 }
 
+- (void)testKiosOnPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge kios-on payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPKiosOnPayment *payment = [SNPKiosOnPayment new];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPKiosOnResult *result) {
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
 - (void)tokenizePaymentWithCompletion:(void(^)(NSError *error, SNPToken *token))completion {
     SNPPaymentTokenizeRequest *request = [[SNPPaymentTokenizeRequest alloc] initWithTransactionDetails:self.transactionDetails
                                                                                        customerDetails:self.customerDetails
