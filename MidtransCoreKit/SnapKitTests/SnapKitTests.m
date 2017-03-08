@@ -173,6 +173,32 @@
     [self waitForExpectationsWithTimeout:61 handler:nil];
 }
 
+- (void)testBRIEpayPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge kios-on payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPBRIEpayPayment *payment = [SNPBRIEpayPayment new];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPBRIEpayResult *result) {
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
+- (void)testMandiriEcashPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge kios-on payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPMandiriECashPayment *payment = [SNPMandiriECashPayment new];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPMandiriECashResult *result) {
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
 - (void)tokenizePaymentWithCompletion:(void(^)(NSError *error, SNPToken *token))completion {
     SNPPaymentTokenizeRequest *request = [[SNPPaymentTokenizeRequest alloc] initWithTransactionDetails:self.transactionDetails
                                                                                        customerDetails:self.customerDetails
