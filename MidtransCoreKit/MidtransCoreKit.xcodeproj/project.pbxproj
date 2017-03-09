@@ -113,6 +113,10 @@
 		E51945051E71081F00B4122B /* SNPMandiriClickpayResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E51945031E71081F00B4122B /* SNPMandiriClickpayResult.m */; };
 		E525E1211CFD402D009448A5 /* MidtransPrivateConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E525E11F1CFD402D009448A5 /* MidtransPrivateConfig.h */; };
 		E525E1221CFD402D009448A5 /* MidtransPrivateConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E525E1201CFD402D009448A5 /* MidtransPrivateConfig.m */; };
+		E52CFB021E713A0A00181A41 /* SNPIndosatDompetkuPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E52CFB001E713A0A00181A41 /* SNPIndosatDompetkuPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E52CFB031E713A0A00181A41 /* SNPIndosatDompetkuPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E52CFB011E713A0A00181A41 /* SNPIndosatDompetkuPayment.m */; };
+		E52CFB061E713C2B00181A41 /* SNPIndosatDompetkuResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E52CFB041E713C2B00181A41 /* SNPIndosatDompetkuResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E52CFB071E713C2B00181A41 /* SNPIndosatDompetkuResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E52CFB051E713C2B00181A41 /* SNPIndosatDompetkuResult.m */; };
 		E53BD0181D124AB7001FADDE /* MidtransPaymentWebController.h in Headers */ = {isa = PBXBuildFile; fileRef = E53BD0161D124AB7001FADDE /* MidtransPaymentWebController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E53BD0191D124AB7001FADDE /* MidtransPaymentWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53BD0171D124AB7001FADDE /* MidtransPaymentWebController.m */; };
 		E53BD0261D128F4C001FADDE /* MidtransMandiriClickpayHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E53BD0221D128F4C001FADDE /* MidtransMandiriClickpayHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -424,6 +428,10 @@
 		E51945031E71081F00B4122B /* SNPMandiriClickpayResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPMandiriClickpayResult.m; path = SnapKit/models/SNPMandiriClickpayResult.m; sourceTree = SOURCE_ROOT; };
 		E525E11F1CFD402D009448A5 /* MidtransPrivateConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransPrivateConfig.h; sourceTree = "<group>"; };
 		E525E1201CFD402D009448A5 /* MidtransPrivateConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransPrivateConfig.m; sourceTree = "<group>"; };
+		E52CFB001E713A0A00181A41 /* SNPIndosatDompetkuPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPIndosatDompetkuPayment.h; path = SnapKit/payments/SNPIndosatDompetkuPayment.h; sourceTree = SOURCE_ROOT; };
+		E52CFB011E713A0A00181A41 /* SNPIndosatDompetkuPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPIndosatDompetkuPayment.m; path = SnapKit/payments/SNPIndosatDompetkuPayment.m; sourceTree = SOURCE_ROOT; };
+		E52CFB041E713C2B00181A41 /* SNPIndosatDompetkuResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPIndosatDompetkuResult.h; path = SnapKit/models/SNPIndosatDompetkuResult.h; sourceTree = SOURCE_ROOT; };
+		E52CFB051E713C2B00181A41 /* SNPIndosatDompetkuResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPIndosatDompetkuResult.m; path = SnapKit/models/SNPIndosatDompetkuResult.m; sourceTree = SOURCE_ROOT; };
 		E53BD0161D124AB7001FADDE /* MidtransPaymentWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransPaymentWebController.h; sourceTree = "<group>"; };
 		E53BD0171D124AB7001FADDE /* MidtransPaymentWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransPaymentWebController.m; sourceTree = "<group>"; };
 		E53BD0221D128F4C001FADDE /* MidtransMandiriClickpayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransMandiriClickpayHelper.h; sourceTree = "<group>"; };
@@ -1054,6 +1062,8 @@
 				E518A65A1E7118F900746DE3 /* SNPXLTunaiResult.m */,
 				E518A6611E7127A800746DE3 /* SNPTelkomselCashResult.h */,
 				E518A6621E7127A800746DE3 /* SNPTelkomselCashResult.m */,
+				E52CFB041E713C2B00181A41 /* SNPIndosatDompetkuResult.h */,
+				E52CFB051E713C2B00181A41 /* SNPIndosatDompetkuResult.m */,
 			);
 			name = "payment results";
 			sourceTree = "<group>";
@@ -1093,6 +1103,8 @@
 				E518A6561E71161600746DE3 /* SNPXLTunaiPayment.m */,
 				E518A65D1E711F9C00746DE3 /* SNPTelkomselCashPayment.h */,
 				E518A65E1E711F9C00746DE3 /* SNPTelkomselCashPayment.m */,
+				E52CFB001E713A0A00181A41 /* SNPIndosatDompetkuPayment.h */,
+				E52CFB011E713A0A00181A41 /* SNPIndosatDompetkuPayment.m */,
 			);
 			name = payments;
 			path = ../MidtransCoreKit;
@@ -1272,6 +1284,8 @@
 				E5E6FAFE1E6FAD0400B706C5 /* SNPCIMBClicksResult.h in Headers */,
 				E518A6631E7127A800746DE3 /* SNPTelkomselCashResult.h in Headers */,
 				E5EDA9A41E6E66B100F3A76E /* SNPSavedCreditCard.h in Headers */,
+				E52CFB061E713C2B00181A41 /* SNPIndosatDompetkuResult.h in Headers */,
+				E52CFB021E713A0A00181A41 /* SNPIndosatDompetkuPayment.h in Headers */,
 				E5BA561E1E6EC74900D06C7E /* SNPIndomaretResult.h in Headers */,
 				E5EDA9A61E6E66B100F3A76E /* SNPCallbacks.h in Headers */,
 				E5EDA9A81E6E66B100F3A76E /* SNPCreditCardDetails.h in Headers */,
@@ -1617,6 +1631,7 @@
 				E5EDA9F21E6E684000F3A76E /* SNPPreference.m in Sources */,
 				E5BA56231E6EC9E500D06C7E /* SNPBCAVAPayment.m in Sources */,
 				E518A6641E7127A800746DE3 /* SNPTelkomselCashResult.m in Sources */,
+				E52CFB031E713A0A00181A41 /* SNPIndosatDompetkuPayment.m in Sources */,
 				E5E6FB201E70024500B706C5 /* SNPMandiriClickpayPayment.m in Sources */,
 				E5EDA9F31E6E684000F3A76E /* SNPTerm.m in Sources */,
 				E5BA561F1E6EC74900D06C7E /* SNPIndomaretResult.m in Sources */,
@@ -1629,6 +1644,7 @@
 				E5EDA9F51E6E684000F3A76E /* SNPObtainedPromo.m in Sources */,
 				E5E6FAD51E6F98E000B706C5 /* SNPKiosOnPayment.m in Sources */,
 				E5E6FAF71E6FACEA00B706C5 /* SNPBCAKlikpayResult.m in Sources */,
+				E52CFB071E713C2B00181A41 /* SNPIndosatDompetkuResult.m in Sources */,
 				E5EDA9F61E6E684000F3A76E /* SNPInstallmentTerm.m in Sources */,
 				E5BA56411E6EF08400D06C7E /* SNPCreditCardResult.m in Sources */,
 				E5EDA9F71E6E684000F3A76E /* SNPItemDetails.m in Sources */,

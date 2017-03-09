@@ -10,7 +10,7 @@
 #import "SNPTelkomselCashResult.h"
 
 @interface SNPTelkomselCashPayment : SNPPayment
-@property (nonatomic) NSString *msisdn;
-- (instancetype)initWithMSISDN:(NSString *)msisdn;
+@property (nonatomic) NSString *tcashToken;
+- (instancetype)initWithTelkomselCashToken:(NSString *)tcashToken;
 - (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPTelkomselCashResult *result))completion;
 @end

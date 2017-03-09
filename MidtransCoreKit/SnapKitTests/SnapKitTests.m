@@ -245,13 +245,13 @@
 }
 
 - (void)testXLTunaiPayment {
-    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge clickpay payment"];
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge xl tunai payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
             SNPXLTunaiPayment *payment = [SNPXLTunaiPayment new];
             [payment chargeWithToken:token completion:^(NSError *error, SNPXLTunaiResult *result) {
                 if (error) {
-                    XCTFail(@"Mandiri Clickpay payment failed");
+                    XCTFail(@"XL Tunai payment failed");
                 }
                 [exp fulfill];
             }];
@@ -261,13 +261,29 @@
 }
 
 - (void)testTelkomselCashPayment {
-    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge clickpay payment"];
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge telkomsel cash payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPTelkomselCashPayment *payment = [[SNPTelkomselCashPayment alloc] initWithMSISDN:@"0811111111"];
+            SNPTelkomselCashPayment *payment = [[SNPTelkomselCashPayment alloc] initWithTelkomselCashToken:@"0811111111"];
             [payment chargeWithToken:token completion:^(NSError *error, SNPTelkomselCashResult *result) {
                 if (error) {
-                    XCTFail(@"Mandiri Clickpay payment failed");
+                    XCTFail(@"Telkomsel cash payment failed");
+                }
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
+- (void)testIndosatDompetkuPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge indosat dompetku payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPIndosatDompetkuPayment *payment = [[SNPIndosatDompetkuPayment alloc] initWithMSISDN:@"08123456789"];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPIndosatDompetkuResult *result) {
+                if (error) {
+                    XCTFail(@"Indosat dompetku payment failed");
                 }
                 [exp fulfill];
             }];
