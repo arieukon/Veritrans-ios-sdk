@@ -27,8 +27,6 @@
     }];
 }
 
-
-
 + (void)tokenizeCreditCardWithRequest:(id<SNPRequest>)request
                            completion:(void(^)(NSError *error, SNPCreditCardToken *token))completion {
     [[SNPNetworking shared] performRequest:[request requestObject] completion:^(NSError *error, id dictionaryResponse) {
