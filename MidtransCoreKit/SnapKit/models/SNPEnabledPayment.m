@@ -1,22 +1,22 @@
 //
-//  SNPEnabledPayments.m
+//  SNPEnabledPayment.m
 //
 //  Created by Nanang  on 2/21/17
 //  Copyright (c) 2017 Midtrans. All rights reserved.
 //
 
-#import "SNPEnabledPayments.h"
+#import "SNPEnabledPayment.h"
 
-NSString *const kSNPEnabledPaymentsType = @"type";
-NSString *const kSNPEnabledPaymentsCategory = @"category";
+NSString *const kSNPEnabledPaymentType = @"type";
+NSString *const kSNPEnabledPaymentCategory = @"category";
 
-@interface SNPEnabledPayments ()
+@interface SNPEnabledPayment ()
 
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation SNPEnabledPayments
+@implementation SNPEnabledPayment
 
 @synthesize type = _type;
 @synthesize category = _category;
@@ -28,16 +28,16 @@ NSString *const kSNPEnabledPaymentsCategory = @"category";
 - (instancetype)initWithDictionary:(NSDictionary *)dict {
     self = [super init];
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-        self.type = [self objectOrNilForKey:kSNPEnabledPaymentsType fromDictionary:dict];
-        self.category = [self objectOrNilForKey:kSNPEnabledPaymentsCategory fromDictionary:dict];
+        self.type = [self objectOrNilForKey:kSNPEnabledPaymentType fromDictionary:dict];
+        self.category = [self objectOrNilForKey:kSNPEnabledPaymentCategory fromDictionary:dict];
     }
     return self;
 }
 
 - (NSDictionary *)dictionaryRepresentation {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:self.type forKey:kSNPEnabledPaymentsType];
-    [mutableDict setValue:self.category forKey:kSNPEnabledPaymentsCategory];
+    [mutableDict setValue:self.type forKey:kSNPEnabledPaymentType];
+    [mutableDict setValue:self.category forKey:kSNPEnabledPaymentCategory];
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
 
@@ -55,18 +55,18 @@ NSString *const kSNPEnabledPaymentsCategory = @"category";
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
-    self.type = [aDecoder decodeObjectForKey:kSNPEnabledPaymentsType];
-    self.category = [aDecoder decodeObjectForKey:kSNPEnabledPaymentsCategory];
+    self.type = [aDecoder decodeObjectForKey:kSNPEnabledPaymentType];
+    self.category = [aDecoder decodeObjectForKey:kSNPEnabledPaymentCategory];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:_type forKey:kSNPEnabledPaymentsType];
-    [aCoder encodeObject:_category forKey:kSNPEnabledPaymentsCategory];
+    [aCoder encodeObject:_type forKey:kSNPEnabledPaymentType];
+    [aCoder encodeObject:_category forKey:kSNPEnabledPaymentCategory];
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-    SNPEnabledPayments *copy = [[SNPEnabledPayments alloc] init];
+    SNPEnabledPayment *copy = [[SNPEnabledPayment alloc] init];
     if (copy) {
         copy.type = [self.type copyWithZone:zone];
         copy.category = [self.category copyWithZone:zone];

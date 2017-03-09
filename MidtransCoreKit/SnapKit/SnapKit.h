@@ -31,7 +31,7 @@ FOUNDATION_EXPORT const unsigned char SnapKitVersionString[];
 #import "SNPKiosOnPayment.h"
 #import "NSDictionary+SNPUtils.h"
 #import "NSError+SNPUtils.h"
-#import "SNPEnabledPayments.h"
+#import "SNPEnabledPayment.h"
 #import "SNPErrorConstants.h"
 #import "SNPInstallment.h"
 #import "SNPPreference.h"
@@ -44,3 +44,4 @@ FOUNDATION_EXPORT const unsigned char SnapKitVersionString[];
 #import "SNPBCAKlikpayPayment.h"
 #import "SNPMandiriECashPayment.h"
 #import "SNPBRIEpayPayment.h"
+#import "SNPMandiriClickpayPayment.h"

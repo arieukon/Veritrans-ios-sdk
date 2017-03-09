@@ -1,5 +1,5 @@
 //
-//  SNPEnabledPayments.h
+//  SNPEnabledPayment.h
 //
 //  Created by Nanang  on 2/21/17
 //  Copyright (c) 2017 Midtrans. All rights reserved.
@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNPEnabledPayments : NSObject <NSCoding, NSCopying>
+@interface SNPEnabledPayment : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *category;

@@ -6,8 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class SNPPreference;
+#import "SNPPreference.h"
 
 @interface SNPMerchant : NSObject <NSCoding, NSCopying>
 

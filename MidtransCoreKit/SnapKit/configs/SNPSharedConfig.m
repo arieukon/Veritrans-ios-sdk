@@ -9,19 +9,19 @@
 #import "SNPSharedConfig.h"
 #import "SNPSystemConfig.h"
 
-static NSString *const PAPISandboxURL = @"https://api.sandbox.veritrans.co.id/v2";
+static NSString *const PAPISandboxURL = @"https://api.sandbox.midtrans.com/v2";
 static NSString *const MixpanelSandboxToken = @"cc005b296ca4ce612fe3939177c668bb";
-static NSString *const SnapSandboxURL = @"https://app.sandbox.veritrans.co.id/snap/v1";
+static NSString *const SnapSandboxURL = @"https://app.sandbox.midtrans.com/snap/v1";
 static NSString *const BINSandboxURL = @"https://app.sandbox.midtrans.com/snap/v1/bank_bins";
 static NSString *const PromoSandboxURL = @"https://promo.vt-stage.info/v2";
-static NSString *const PAPIProductionURL = @"https://api.veritrans.co.id/v2";
+static NSString *const PAPIProductionURL = @"https://api.midtrans.com/v2";
 static NSString *const SnapProductionURL = @"https://app.midtrans.com/snap/v1";
 static NSString *const MixpanelProductionToken = @"0269722c477a0e085fde32e0248c6003";
 static NSString *const BINProductionURL = @"https://app.midtrans.com/snap/v1/bank_bins";
 static NSString *const PromoProductionURL = @"https://promo.vt-stage.info/v2";
-static NSString *const PAPIStagingURL = @"https://api.stg.veritrans.co.id/v2";
+static NSString *const PAPIStagingURL = @"https://api.stg.midtrans.com/v2";
 static NSString *const MixpanelStagingToken = @"cc005b296ca4ce612fe3939177c668bb";
-static NSString *const SnapStagingURL = @"https://app.stg.veritrans.co.id/snap/v1";
+static NSString *const SnapStagingURL = @"https://app.stg.midtrans.com/snap/v1";
 static NSString *const BINStagingURL = @"https://app.stg.midtrans.com/snap/v1/bank_bins";
 static NSString *const PromoStagingURL = @"https://promo.vt-stage.info/v2";
 

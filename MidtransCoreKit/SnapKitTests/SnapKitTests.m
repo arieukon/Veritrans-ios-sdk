@@ -62,6 +62,9 @@
         [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *paymenttoken) {
             SNPCreditCardPayment *payment = [[SNPCreditCardPayment alloc] initWithCreditCardToken:cctoken customerDetails:self.customerDetails installmentTerm:nil];
             [payment chargeWithToken:paymenttoken completion:^(NSError * _Nullable error, SNPCreditCardResult * _Nullable result) {
+                if (error) {
+                    XCTFail(@"Credit card payment failed");
+                }
                 [exp fulfill];
             }];
         }];
@@ -75,6 +78,9 @@
         if (token) {
             SNPPermataVAPayment *payment = [[SNPPermataVAPayment alloc] initWithCustomerDetails:self.customerDetails];
             [payment chargeWithToken:token completion:^(NSError *error, SNPPermataVAResult *result) {
+                if (error) {
+                    XCTFail(@"Mandiri Clickpay payment failed");
+                }
                 [exp fulfill];
             }];
         }
@@ -88,6 +94,9 @@
         if (token) {
             SNPEChannelPayment *payment = [[SNPEChannelPayment alloc] initWithCustomerDetails:self.customerDetails];
             [payment chargeWithToken:token completion:^(NSError *error, SNPEChannelResult *result) {
+                if (error) {
+                    XCTFail(@"Mandiri Clickpay payment failed");
+                }
                 [exp fulfill];
             }];
         }
@@ -101,6 +110,9 @@
         if (token) {
             SNPBCAVAPayment *payment = [[SNPBCAVAPayment alloc] initWithCustomerDetails:self.customerDetails];
             [payment chargeWithToken:token completion:^(NSError *error, id result) {
+                if (error) {
+                    XCTFail(@"Mandiri Clickpay payment failed");
+                }
                 [exp fulfill];
             }];
         }
@@ -114,6 +126,9 @@
         if (token) {
             SNPIndomaretPayment *payment = [SNPIndomaretPayment new];
             [payment chargeWithToken:token completion:^(NSError *error, SNPIndomaretResult *result) {
+                if (error) {
+                    XCTFail(@"Mandiri Clickpay payment failed");
+                }
                 [exp fulfill];
             }];
         }
@@ -127,6 +142,9 @@
         if (token) {
             SNPKiosOnPayment *payment = [SNPKiosOnPayment new];
             [payment chargeWithToken:token completion:^(NSError *error, SNPKiosOnResult *result) {
+                if (error) {
+                    XCTFail(@"Mandiri Clickpay payment failed");
+                }
                 [exp fulfill];
             }];
         }
@@ -140,6 +158,9 @@
         if (token) {
             SNPKlikBCAPayment *payment = [[SNPKlikBCAPayment alloc] initWithKlikBCAUserID:@"NANANGX0707"];
             [payment chargeWithToken:token completion:^(NSError *error, SNPKlikBCAResult *result) {
+                if (error) {
+                    XCTFail(@"Mandiri Clickpay payment failed");
+                }
                 [exp fulfill];
             }];
         }
@@ -153,6 +174,9 @@
         if (token) {
             SNPCIMBClicksPayment *payment = [SNPCIMBClicksPayment new];
             [payment chargeWithToken:token completion:^(NSError *error, SNPCIMBClicksResult *result) {
+                if (error) {
+                    XCTFail(@"Mandiri Clickpay payment failed");
+                }
                 [exp fulfill];
             }];
         }
@@ -166,6 +190,9 @@
         if (token) {
             SNPBCAKlikpayPayment *payment = [SNPBCAKlikpayPayment new];
             [payment chargeWithToken:token completion:^(NSError *error, SNPBCAKlikpayResult *result) {
+                if (error) {
+                    XCTFail(@"Mandiri Clickpay payment failed");
+                }
                 [exp fulfill];
             }];
         }
@@ -179,6 +206,9 @@
         if (token) {
             SNPBRIEpayPayment *payment = [SNPBRIEpayPayment new];
             [payment chargeWithToken:token completion:^(NSError *error, SNPBRIEpayResult *result) {
+                if (error) {
+                    XCTFail(@"Mandiri Clickpay payment failed");
+                }
                 [exp fulfill];
             }];
         }
@@ -192,6 +222,25 @@
         if (token) {
             SNPMandiriECashPayment *payment = [SNPMandiriECashPayment new];
             [payment chargeWithToken:token completion:^(NSError *error, SNPMandiriECashResult *result) {
+                if (error) {
+                    XCTFail(@"E-Cash payment failed");
+                }
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
+- (void)testMandiriClickpayPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge clickpay payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPMandiriClickpayPayment *payment = [[SNPMandiriClickpayPayment alloc] initWithCardNumber:@"4111111111111111" challengeToken:@"000000"];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPMandiriClickpayResult *result) {
+                if (error) {
+                    XCTFail(@"Mandiri Clickpay payment failed");
+                }
                 [exp fulfill];
             }];
         }

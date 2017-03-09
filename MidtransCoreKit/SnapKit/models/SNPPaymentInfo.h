@@ -13,6 +13,8 @@
 #import "SNPMerchant.h"
 #import "SNPCallbacks.h"
 #import "SNPCustomerDetails.h"
+#import "SNPEnabledPayment.h"
+#import "SNPItemDetails.h"
 
 @interface SNPPaymentInfo : NSObject <NSCoding, NSCopying>
 
@@ -22,10 +24,10 @@
 @property (nonatomic, strong) SNPMerchant *merchant;
 @property (nonatomic, strong) SNPCallbacks *callbacks;
 @property (nonatomic, strong) SNPCustomerDetails *customerDetails;
-@property (nonatomic, strong) NSArray *itemDetails;
-@property (nonatomic, strong) NSString *token;
-@property (nonatomic, strong) NSArray *enabledPayments;
+@property (nonatomic, strong) NSArray <SNPItemDetails*>*itemDetails;
+@property (nonatomic, strong) NSArray <SNPEnabledPayment*>*enabledPayments;
 @property (nonatomic, strong) NSArray <SNPPromo*>*promos;
+@property (nonatomic, strong) NSString *token;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

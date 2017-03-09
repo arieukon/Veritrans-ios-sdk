@@ -12,8 +12,6 @@
 #import "SNPMerchant.h"
 #import "SNPCallbacks.h"
 #import "SNPCustomerDetails.h"
-#import "SNPItemDetails.h"
-#import "SNPEnabledPayments.h"
 
 NSString *const kSNPPaymentInfoTransactionDetails = @"transaction_details";
 NSString *const kSNPPaymentInfoExpiry = @"expiry";
@@ -73,19 +71,19 @@ NSString *const kSNPPaymentInfoPromos = @"promos";
         
         self.itemDetails = [NSArray arrayWithArray:parsedSNPItemDetails];
         self.token = [self objectOrNilForKey:kSNPPaymentInfoToken fromDictionary:dict];
-        NSObject *receivedSNPEnabledPayments = [dict objectForKey:kSNPPaymentInfoEnabledPayments];
-        NSMutableArray *parsedSNPEnabledPayments = [NSMutableArray array];
-        if ([receivedSNPEnabledPayments isKindOfClass:[NSArray class]]) {
-            for (NSDictionary *item in (NSArray *)receivedSNPEnabledPayments) {
+        NSObject *receivedSNPEnabledPayment = [dict objectForKey:kSNPPaymentInfoEnabledPayments];
+        NSMutableArray *parsedSNPEnabledPayment = [NSMutableArray array];
+        if ([receivedSNPEnabledPayment isKindOfClass:[NSArray class]]) {
+            for (NSDictionary *item in (NSArray *)receivedSNPEnabledPayment) {
                 if ([item isKindOfClass:[NSDictionary class]]) {
-                    [parsedSNPEnabledPayments addObject:[SNPEnabledPayments modelObjectWithDictionary:item]];
+                    [parsedSNPEnabledPayment addObject:[SNPEnabledPayment modelObjectWithDictionary:item]];
                 }
             }
         }
-        else if ([receivedSNPEnabledPayments isKindOfClass:[NSDictionary class]]) {
-            [parsedSNPEnabledPayments addObject:[SNPEnabledPayments modelObjectWithDictionary:(NSDictionary *)receivedSNPEnabledPayments]];
+        else if ([receivedSNPEnabledPayment isKindOfClass:[NSDictionary class]]) {
+            [parsedSNPEnabledPayment addObject:[SNPEnabledPayment modelObjectWithDictionary:(NSDictionary *)receivedSNPEnabledPayment]];
         }
-        self.enabledPayments = [NSArray arrayWithArray:parsedSNPEnabledPayments];
+        self.enabledPayments = [NSArray arrayWithArray:parsedSNPEnabledPayment];
         
         NSMutableArray *parsedPromos = [NSMutableArray new];
         id promoDicts = dict[kSNPPaymentInfoPromos];

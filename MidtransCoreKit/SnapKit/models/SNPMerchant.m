@@ -6,8 +6,6 @@
 //
 
 #import "SNPMerchant.h"
-#import "SNPPreference.h"
-
 
 NSString *const kSNPMerchantEnabledPrinciples = @"enabled_principles";
 NSString *const kSNPMerchantPreference = @"preference";

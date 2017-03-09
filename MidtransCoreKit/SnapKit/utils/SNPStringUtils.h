@@ -34,6 +34,9 @@ typedef NS_ENUM(NSInteger, SNPCreditCardType) {
 #pragma mark - Clickpay
 - (BOOL)isValidClickpayNumber;
 - (BOOL)isValidClickpayToken;
++ (NSString *)generateInput1FromCardNumber:(NSString *)cardNumber;
++ (NSString *)generateInput2FromGrossAmount:(NSNumber *)grossAmount;
++ (NSString *)generateInput3;
 #pragma mark - CC
 - (BOOL)isValidCVVWithCreditCardNumber:(NSString *)cardNumber;
 - (BOOL)isValidCreditCardExpiryDate;

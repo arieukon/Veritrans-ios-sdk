@@ -143,6 +143,35 @@ static NSString * const SNPAmexRegex         = @"^3[47][0-9]{0,}$";
     return [predicate evaluateWithObject:self];
 }
 
++ (NSString *)generateInput1FromCardNumber:(NSString *)cardNumber {
+    if ([cardNumber length] == 0) {
+        return @"-";
+    }
+    
+    cardNumber = [cardNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSInteger startIndex = [cardNumber length] - 10;
+    if (startIndex > 0) {
+        return [cardNumber substringFromIndex:startIndex];
+    }
+    else {
+        return cardNumber;
+    }
+}
+
++ (NSString *)generateInput2FromGrossAmount:(NSNumber *)grossAmount {
+    return [grossAmount stringValue];
+}
+
++ (NSString *)generateInput3 {
+    NSString *letters = @"0123456789";
+    NSInteger len = 5;
+    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
+    for (int i=0; i<len; i++) {
+        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform((int)[letters length])]];
+    }
+    return randomString;
+}
+
 #pragma mark - CC
 
 - (BOOL)isValidCVVWithCreditCardNumber:(NSString *)cardNumber {
