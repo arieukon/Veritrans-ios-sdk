@@ -260,6 +260,22 @@
     [self waitForExpectationsWithTimeout:61 handler:nil];
 }
 
+- (void)testTelkomselCashPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge clickpay payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPTelkomselCashPayment *payment = [[SNPTelkomselCashPayment alloc] initWithMSISDN:@"0811111111"];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPTelkomselCashResult *result) {
+                if (error) {
+                    XCTFail(@"Mandiri Clickpay payment failed");
+                }
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
 - (void)tokenizePaymentWithCompletion:(void(^)(NSError *error, SNPToken *token))completion {
     SNPPaymentTokenizeRequest *request = [[SNPPaymentTokenizeRequest alloc] initWithTransactionDetails:self.transactionDetails
                                                                                        customerDetails:self.customerDetails

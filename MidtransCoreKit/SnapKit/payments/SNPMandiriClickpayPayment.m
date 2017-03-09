@@ -29,6 +29,9 @@
 }
 
 - (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPMandiriClickpayResult *result))completion {
+    NSAssert(self.cardNumber.length>0, @"Debit number cannot be nil");
+    NSAssert(self.challengeToken.length>0, @"Challenge token cannot be nil");
+    
     NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
     [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
         SNPMandiriClickpayResult *result;

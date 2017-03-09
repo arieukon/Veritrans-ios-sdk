@@ -46,3 +46,4 @@ FOUNDATION_EXPORT const unsigned char SnapKitVersionString[];
 #import "SNPBRIEpayPayment.h"
 #import "SNPMandiriClickpayPayment.h"
 #import "SNPXLTunaiPayment.h"
+#import "SNPTelkomselCashPayment.h"

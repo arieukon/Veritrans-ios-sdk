@@ -18,6 +18,8 @@
 }
 
 - (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *, SNPEChannelResult *result))completion {
+    NSAssert(self.customerDetails != nil, @"Customer detail cannot be nil");
+    
     NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
     [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
         SNPEChannelResult *result;

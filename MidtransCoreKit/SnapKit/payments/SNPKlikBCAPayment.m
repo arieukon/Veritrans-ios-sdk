@@ -25,6 +25,8 @@
 }
 
 - (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPKlikBCAResult *result))completion {
+    NSAssert(self.userID.length>0, @"Klik BCA User ID cannot be nil");
+    
     NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
     [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
         SNPKlikBCAResult *result;
