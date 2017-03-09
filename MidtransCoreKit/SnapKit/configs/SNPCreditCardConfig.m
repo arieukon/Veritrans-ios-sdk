@@ -13,7 +13,7 @@
 + (SNPCreditCardConfig *)defaultConfig {
     SNPCreditCardConfig *config = [SNPCreditCardConfig new];
     config.paymentType = SNPCreditCardPaymentTypeNormal;
-    config.secure3DEnabled = YES;
+    config.secure3DEnabled = NO;
     return config;
 }
 

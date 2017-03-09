@@ -24,14 +24,10 @@
     
     [[SNPNetworkingLogger shared] start];
     
-    SNPCreditCardConfig *ccconfig = [SNPCreditCardConfig defaultConfig];
-    ccconfig.secure3DEnabled = YES;
-    ccconfig.paymentType = SNPCreditCardPaymentTypeTwoclick;
-    
     [SNPSharedConfig setClientKey:@"VT-client-E4f1bsi1LpL1p5cF"
                       merchantURL:@"https://rakawm-snap.herokuapp.com/installment"
                       environment:SNPEnvironmentSandbox
-                 creditCardConfig:ccconfig];
+                 creditCardConfig:nil];
     
     self.transactionDetails = [[SNPTransactionDetails alloc] initWithOrderID:[NSString randomWithLength:20]
                                                                  grossAmount:@1000];
@@ -238,6 +234,22 @@
         if (token) {
             SNPMandiriClickpayPayment *payment = [[SNPMandiriClickpayPayment alloc] initWithCardNumber:@"4111111111111111" challengeToken:@"000000"];
             [payment chargeWithToken:token completion:^(NSError *error, SNPMandiriClickpayResult *result) {
+                if (error) {
+                    XCTFail(@"Mandiri Clickpay payment failed");
+                }
+                [exp fulfill];
+            }];
+        }
+    }];
+    [self waitForExpectationsWithTimeout:61 handler:nil];
+}
+
+- (void)testXLTunaiPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge clickpay payment"];
+    [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
+        if (token) {
+            SNPXLTunaiPayment *payment = [SNPXLTunaiPayment new];
+            [payment chargeWithToken:token completion:^(NSError *error, SNPXLTunaiResult *result) {
                 if (error) {
                     XCTFail(@"Mandiri Clickpay payment failed");
                 }
