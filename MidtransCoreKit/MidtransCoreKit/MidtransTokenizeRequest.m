@@ -15,15 +15,8 @@
 #import "MidtransCreditCardConfig.h"
 
 @interface MidtransTokenizeRequest()
-@property (nonatomic, readwrite) MidtransCreditCard *creditCard;
-@property (nonatomic, readwrite) NSNumber *grossAmount;
-@property (nonatomic, readwrite) BOOL installment;
-@property (nonatomic, readwrite) NSNumber *installmentTerm;
-@property (nonatomic, readwrite) NSString *token;
-@property (nonatomic, readwrite) BOOL twoClick;
 @property (nonatomic, readwrite) NSString *type;
 @property (nonatomic, readwrite) NSString *cvv;
-@property (nonatomic, readwrite) BOOL secure;
 @property (nonatomic, readwrite) MidtransCreditCardPaymentFeature creditCardPaymentFeature;
 @end
 
@@ -137,7 +130,9 @@
         [result setObject:@"true" forKey:@"installment"];
         [result setObject:self.installmentTerm forKey:@"installment_term"];
     }
-    
+    if (self.point) {
+         [result setObject:@"true" forKey:@"point"];
+    }
     if (CC_CONFIG.preauthEnabled) {
         result[@"type"] = @"authorize";
     }

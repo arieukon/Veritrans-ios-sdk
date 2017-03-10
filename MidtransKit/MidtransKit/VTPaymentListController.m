@@ -10,12 +10,12 @@
 #import "VTClassHelper.h"
 #import "MidtransUIListCell.h"
 #import "VTPaymentHeader.h"
-#import "VTCardListController.h"
+#import "VTVAListController.h"
 #import "VTMandiriClickpayController.h"
 #import "MidtransUIPaymentGeneralViewController.h"
 #import "MidtransUIPaymentDirectViewController.h"
 #import "VTMandiriClickpayController.h"
-#import "VTVAListController.h"
+#import "MidtransSavedCardController.h"
 #import "VTPaymentListView.h"
 #import "MidtransNewCreditCardViewController.h"
 #import "MidtransPaymentGCIViewController.h"
@@ -199,16 +199,18 @@
             MidtransNewCreditCardViewController *creditCardVC  = [[MidtransNewCreditCardViewController alloc]
                                                                   initWithToken:self.token
                                                                   paymentMethodName:paymentMethod
-                                                                  andCreditCardData:self.responsePayment.creditCard];
+                                                                  andCreditCardData:self.responsePayment.creditCard andCompleteResponseOfPayment:self.responsePayment];
             creditCardVC.promos = self.responsePayment.promos;
             [creditCardVC showDismissButton:self.singlePayment];
             [self.navigationController pushViewController:creditCardVC animated:!self.singlePayment];
         }
         else {
             if (self.responsePayment.creditCard.savedTokens.count) {
-                VTCardListController *vc = [[VTCardListController alloc] initWithToken:self.token
+                MidtransSavedCardController *vc = [[MidtransSavedCardController alloc] initWithToken:self.token
                                                                      paymentMethodName:paymentMethod
-                                                                     andCreditCardData:self.responsePayment.creditCard];
+                                                                     andCreditCardData:self.responsePayment.creditCard
+                                                                     andCompleteResponseOfPayment:self.responsePayment];
+                vc.promos = self.responsePayment.promos;
                 [vc showDismissButton:self.singlePayment];
                 [self.navigationController pushViewController:vc animated:!self.singlePayment];
                 
@@ -217,7 +219,7 @@
                 MidtransNewCreditCardViewController *creditCardVC  = [[MidtransNewCreditCardViewController alloc]
                                                                       initWithToken:self.token
                                                                       paymentMethodName:paymentMethod
-                                                                      andCreditCardData:self.responsePayment.creditCard];
+                                                                      andCreditCardData:self.responsePayment.creditCard andCompleteResponseOfPayment:self.responsePayment];
                 creditCardVC.promos = self.responsePayment.promos;
                 [creditCardVC showDismissButton:self.singlePayment];
                 [self.navigationController pushViewController:creditCardVC animated:!self.singlePayment];

@@ -36,6 +36,7 @@
 "creditcard.promo-title" = "Congratulations";
 
 "va.list.title" = "Select Bank";
+"va.pay-button" = "See Account Number";
 
 "payment.telkomsel-cash.token-placeholder" = "T-Cash Token";
 "payment.telkomsel-cash.token-note" = "T-Cash payment must be completed through a registered telkomsel phone number";
@@ -52,3 +53,10 @@
 "kioson.pending.code-title" = "Payment Code";
 "kioson.pending.howto-title" = "How Can I Pay via Kioson";
 "kioson.pending.copy-title" = "Copy Payment Code";
+
+"alert.title" = "Warning";
+"alert.message-delete-card" = "Are you sure to delete this card?";
+"alert.no" = "No";
+"alert.yes" = "Yes";
+
+"Delete Saved Card" = "delete this card";

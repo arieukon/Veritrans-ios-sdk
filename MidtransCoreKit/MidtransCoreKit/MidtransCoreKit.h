@@ -6,6 +6,9 @@
 //  Copyright © 2016 Veritrans. All rights reserved.
 //
 
+#ifndef MidtransCoreKit_h
+#define MidtransCoreKit_h
+
 #import "MidtransTransactionResult.h"
 #import "MidtransItemDetail.h"
 #import "MidtransTransaction.h"
@@ -51,4 +54,6 @@
 #import "MIdtransPaymentGCI.h"
 #import "MidtransNetworkLogger.h"
 #import "MidtransPromo.h"
+#import "SNPPointDataModels.h"
 #import "MidtransPromoEngine.h"
+#endif /* MidtransCoreKit_h */

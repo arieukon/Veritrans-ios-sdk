@@ -8,6 +8,7 @@
 
 #import "MidtransMerchantClient.h"
 #import "MidtransConfig.h"
+#import "SNPPointDataModels.h"
 #import "MidtransNetworking.h"
 #import "MidtransConstant.h"
 #import "MidtransPrivateConfig.h"
@@ -15,8 +16,7 @@
 #import "MidtransTrackingManager.h"
 #import "MidtransPaymentWebController.h"
 #import "MidtransTransactionTokenResponse.h"
-
-#import <MidtransCoreKit/MidtransCoreKit.h>
+#import "MidtransCoreKit.h"
 
 NSString *const SAVE_MASKEDCARD_URL = @"%@/users/%@/tokens";
 NSString *const FETCH_MASKEDCARD_URL = @"%@/users/%@/tokens";
@@ -43,7 +43,6 @@ NSString *const FETCH_MASKEDCARD_URL = @"%@/users/%@/tokens";
 @implementation MidtransMerchantClient
 
 + (MidtransMerchantClient *)shared {
-    // Idea stolen from http://www.galloway.me.uk/tutorials/singleton-classes/
     static MidtransMerchantClient *instance = nil;
     @synchronized(self) {
         if (instance == nil) {
@@ -84,6 +83,24 @@ NSString *const FETCH_MASKEDCARD_URL = @"%@/users/%@/tokens";
                 completion(nil, error);
             }
         }
+    }];
+}
+
+- (void)deleteMaskedCreditCard:(MidtransMaskedCreditCard *)maskedCard
+                         token:(MidtransTransactionTokenResponse *)token
+                    completion:(void(^)(BOOL success))completion {
+    NSString *stringURL = [NSString stringWithFormat:@"%@/transactions/%@/saved_tokens/%@",PRIVATECONFIG.snapURL, token.tokenId, maskedCard.maskedNumber];
+    NSDictionary *parameter = @{@"token":token.tokenId,
+                                @"masked_card":maskedCard.maskedNumber};
+    [[MidtransNetworking shared] deleteFromURL:stringURL header:nil parameters:parameter callback:^(id response, NSError *error) {
+        BOOL success = YES;
+        if (error) {
+            success = NO;
+        }
+        if (response[@"error_message"]) {
+            success = NO;
+        }
+        if (completion) completion(success);
     }];
 }
 
@@ -131,11 +148,30 @@ NSString *const FETCH_MASKEDCARD_URL = @"%@/users/%@/tokens";
     [paymentType isEqualToString:MIDTRANS_PAYMENT_MANDIRI_ECASH] ||
     [paymentType isEqualToString:MIDTRANS_PAYMENT_BRI_EPAY];
 }
+- (void)requestCustomerPointWithToken:(NSString * _Nonnull )token
+                   andCreditCardToken:(NSString *_Nonnull)creditCardToken
+                           completion:(void (^_Nullable)(SNPPointResponse *_Nullable response, NSError *_Nullable error))completion {
+    NSString *stringURL = [NSString stringWithFormat:@"%@/transactions/%@/point_inquiry/%@",PRIVATECONFIG.snapURL, token, creditCardToken];
+    [[MidtransNetworking shared] getFromURL:stringURL parameters:nil callback:^(id response, NSError *error) {
+        if (!error) {
+            SNPPointResponse *pointResponse = [[SNPPointResponse alloc] initWithDictionary:(NSDictionary *)response];
+            if (completion) {
+                completion(pointResponse,NULL);
+            }
+        }
+        else{
+            if (completion) {
+                [[MidtransTrackingManager shared] trackGeneratedSnapToken:NO];
+                completion(NULL,error);
+            }
+        }
+    }];
 
+}
 - (void)requestTransactionTokenWithTransactionDetails:(nonnull MidtransTransactionDetails *)transactionDetails
                                           itemDetails:(nullable NSArray<MidtransItemDetail*> *)itemDetails
                                       customerDetails:(nullable MidtransCustomerDetails *)customerDetails
-                                          customField:(NSDictionary *)customField
+                                          customField:(nullable NSArray *)customField
                                 transactionExpireTime:(MidtransTransactionExpire *)expireTime
                                            completion:(void (^_Nullable)(MidtransTransactionTokenResponse *_Nullable token, NSError *_Nullable error))completion {
     NSMutableDictionary *dictionaryParameters = [NSMutableDictionary new];
@@ -144,7 +180,14 @@ NSString *const FETCH_MASKEDCARD_URL = @"%@/users/%@/tokens";
     [dictionaryParameters setObject:[itemDetails itemDetailsDictionaryValue] forKey:MIDTRANS_CORE_SNAP_PARAMETER_ITEM_DETAILS];
     [dictionaryParameters setObject:customerDetails.customerIdentifier forKey:@"user_id"];
     if ([customField count] || [customField isEqual:[NSNull null]]) {
-        [dictionaryParameters setObject:customField forKey:MIDTRANS_CORE_SNAP_PARAMETER_CUSTOM];
+        for (NSDictionary *dictionary in customField) {
+            NSArray *key_dictionary=[dictionary allKeys];
+            for (NSString *string_key in key_dictionary) {
+                [dictionaryParameters setObject:[dictionary objectForKey:string_key] forKey:string_key];
+
+            }
+            
+        }
     }
     if ([[expireTime dictionaryRepresentation] count] || [expireTime isEqual:[NSNull null]]) {
         [dictionaryParameters setObject:[expireTime dictionaryRepresentation] forKey:MIDTRANS_CORE_SNAP_PARAMETER_EXPIRE_TIME];

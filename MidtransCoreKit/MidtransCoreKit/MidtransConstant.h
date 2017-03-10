@@ -9,6 +9,11 @@
 /**
  *  error domain
  */
+
+static NSString * const MIDTRANS_CUSTOMFIELD_1 = @"custom_field1";
+static NSString * const MIDTRANS_CUSTOMFIELD_2 = @"custom_field2";
+static NSString * const MIDTRANS_CUSTOMFIELD_3 = @"custom_field3";
+
 static NSString * const MIDTRANS_ERROR_DOMAIN = @"error.veritrans.co.id";
 
 /**
@@ -143,6 +148,12 @@ static NSString *const MIDTRANS_CORE_TRANSACTION_ID = @"transaction_id";
 static NSString *const MIDTRANS_CORE_MERCHANT_LOGO_KEY = @"merchant_logo_key";
 static NSString *const MIDTRANS_CORE_MERCHANT_NAME = @"merchant_name";
 
+static NSString *const SNP_CORE_BNI_POINT = @"BNI_POINT";
+static NSString *const SNP_CORE_CREDIT_CARD_SAVE = @"CREDIT_CARD_SAVE";
+
+static NSString *const SNP_CORE_DEBIT_CARD = @"debit";
+static NSString *const SNP_CORE_BANK_MANDIRI = @"mandiri";
+static NSString *const SNP_CORE_BANK_BNI = @"bni";
 static NSString *const MIDTRANS_CORE_TRACKING_MIXPANEL_URL = @"https://api.mixpanel.com/track";
 
 static NSString *const  MIDTRANS_UIKIT_TRACKING_SELECT_PAYMENT = @"Payment Select";
