@@ -11,8 +11,8 @@
 
 @implementation SNPMandiriClickpayPayment
 
-- (instancetype)initWithCardNumber:(NSString *)number challengeToken:(NSString *)challengeToken {
-    if (self = [super init]) {
+- (instancetype)initWithToken:(SNPToken *)token cardNumber:(NSString *)number challengeToken:(NSString *)challengeToken {
+    if (self = [super initWithToken:token]) {
         self.cardNumber = [number stringByReplacingOccurrencesOfString:@" " withString:@""];
         self.challengeToken = challengeToken;
     }
@@ -28,19 +28,12 @@
              };
 }
 
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPMandiriClickpayResult *result))completion {
-    NSAssert(self.cardNumber.length>0, @"Debit number cannot be nil");
-    NSAssert(self.challengeToken.length>0, @"Challenge token cannot be nil");
-    
-    NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
-    [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
-        SNPMandiriClickpayResult *result;
-        if (dictionaryResponse) {
-            result = [SNPMandiriClickpayResult modelObjectWithDictionary:dictionaryResponse];
-        }
-        if (completion)
-            completion(error, result);
-    }];
+- (NSURLRequest *)requestObject {
+    return [self requestWithParameter:[self dictionaryValue]];
+}
+
++ (SNPMandiriClickpayResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
+    return [SNPMandiriClickpayResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

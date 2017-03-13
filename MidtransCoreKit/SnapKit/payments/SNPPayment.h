@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SNPToken.h"
-#import "SNPNetworking.h"
-#import "SNPCustomerDetails.h"
+#import "SNPRequest.h"
 
 static NSString * const SNPPaymentTypeKlikpay = @"bca_klikpay";
 static NSString * const SNPPaymentTypeKlikbca = @"bca_klikbca";
@@ -33,10 +32,7 @@ static NSString * const SNPPaymentTypeGCI = @"gci";
 static NSString * const SNPPaymentTypeKiosOn = @"kioson";
 
 @interface SNPPayment : NSObject
-
-@property (nonatomic) SNPCustomerDetails *customerDetails;
-- (instancetype)initWithCustomerDetails:(SNPCustomerDetails *)customerDetails;
-- (NSURLRequest *)requestWithParameter:(NSDictionary *)parameter token:(SNPToken *)token;
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, id result))completion;
-
+@property (nonatomic) SNPToken *token;
+- (instancetype)initWithToken:(SNPToken *)token;
+- (NSURLRequest *)requestWithParameter:(NSDictionary *)parameter;
 @end

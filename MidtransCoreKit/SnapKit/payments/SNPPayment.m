@@ -12,22 +12,20 @@
 
 @implementation SNPPayment
 
-- (instancetype)initWithCustomerDetails:(SNPCustomerDetails *)customerDetails {
+- (instancetype)initWithToken:(SNPToken *)token {
     if (self = [super init]) {
-        self.customerDetails = customerDetails;
+        self.token = token;
     }
     return self;
 }
 
-- (NSURLRequest *)requestWithParameter:(NSDictionary *)parameter token:(SNPToken *)token {
-    NSString *endPoint = [NSString stringWithFormat:@"transactions/%@/pay", token.token];
+- (NSURLRequest *)requestWithParameter:(NSDictionary *)parameter {
+    NSString *endPoint = [NSString stringWithFormat:@"transactions/%@/pay", self.token.token];
     NSURL *url = [SYSTEMCONFIG.snapURL URLByAppendingPathComponent:endPoint];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
     request.HTTPBody = [parameter httpBody];
     return request;
 }
-
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, id result))completion {}
 
 @end

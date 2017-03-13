@@ -14,16 +14,12 @@
     return @{@"payment_type" : SNPPaymentTypeXLTunai};
 }
 
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPXLTunaiResult *result))completion {
-    NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
-    [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
-        SNPXLTunaiResult *result;
-        if (dictionaryResponse) {
-            result = [SNPXLTunaiResult modelObjectWithDictionary:dictionaryResponse];
-        }
-        if (completion)
-            completion(error, result);
-    }];
+- (NSURLRequest *)requestObject {
+    return [self requestWithParameter:[self dictionaryValue]];
+}
+
++ (SNPXLTunaiResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
+    return [SNPXLTunaiResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

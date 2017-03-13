@@ -16,6 +16,10 @@
 
 @implementation SNPClient
 
++ (void)chargePayment:(id<SNPRequest>)payment completion:(void(^)(NSError *error, NSDictionary *response))completion {
+    [[SNPNetworking shared] performRequest:[payment requestObject] completion:completion];
+}
+
 + (void)fetchPaymentInfoWithRequest:(id<SNPRequest>)request
                          completion:(void(^)(NSError *error, SNPPaymentInfo *paymentInfo))completion {
     [[SNPNetworking shared] performRequest:[request requestObject] completion:^(NSError *error, id dictionaryResponse) {
@@ -45,7 +49,7 @@
         if (dictionaryResponse) {
             error = [NSError errorFromMerchantServerResponse:dictionaryResponse];
             if (!error) {
-                token = [SNPToken modelObjectWithDictionary:dictionaryResponse];
+                token = [SNPToken modelObjectWithDictionary:dictionaryResponse request:request];
             }
         }
         if (completion) completion(error, token);

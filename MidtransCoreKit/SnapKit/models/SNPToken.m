@@ -9,7 +9,9 @@
 
 
 NSString *const kSNPTokenToken = @"token";
-
+NSString *const kSNPTokenCustomerDetails = @"customer_details";
+NSString *const kSNPTokenItemDetails = @"item_details";
+NSString *const kSNPTokenTransactionDetails = @"transaction_details";
 
 @interface SNPToken ()
 
@@ -21,6 +23,13 @@ NSString *const kSNPTokenToken = @"token";
 
 @synthesize token = _token;
 
++ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict request:(SNPPaymentTokenizeRequest *)request {
+    SNPToken *token = [[self alloc] initWithDictionary:dict];
+    token.customerDetails = request.customerDetails;
+    token.itemDetails = request.itemDetails;
+    token.transactionDetails = request.transactionDetails;
+    return token;
+}
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict {
     return [[self alloc] initWithDictionary:dict];
@@ -30,17 +39,16 @@ NSString *const kSNPTokenToken = @"token";
     self = [super init];
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
         self.token = [self objectOrNilForKey:kSNPTokenToken fromDictionary:dict];
-        
     }
-    
     return self;
-    
 }
 
 - (NSDictionary *)dictionaryRepresentation {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
     [mutableDict setValue:self.token forKey:kSNPTokenToken];
-    
+    [mutableDict setValue:self.customerDetails forKey:kSNPTokenCustomerDetails];
+    [mutableDict setValue:self.itemDetails forKey:kSNPTokenItemDetails];
+    [mutableDict setValue:self.transactionDetails forKey:kSNPTokenTransactionDetails];
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
 
@@ -59,13 +67,17 @@ NSString *const kSNPTokenToken = @"token";
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
-    
+    self.customerDetails = [aDecoder decodeObjectForKey:kSNPTokenCustomerDetails];
+    self.itemDetails = [aDecoder decodeObjectForKey:kSNPTokenItemDetails];
+    self.transactionDetails = [aDecoder decodeObjectForKey:kSNPTokenTransactionDetails];
     self.token = [aDecoder decodeObjectForKey:kSNPTokenToken];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
-    
+    [aCoder encodeObject:_customerDetails forKey:kSNPTokenCustomerDetails];
+    [aCoder encodeObject:_itemDetails forKey:kSNPTokenItemDetails];
+    [aCoder encodeObject:_transactionDetails forKey:kSNPTokenTransactionDetails];
     [aCoder encodeObject:_token forKey:kSNPTokenToken];
 }
 
@@ -73,7 +85,9 @@ NSString *const kSNPTokenToken = @"token";
     SNPToken *copy = [[SNPToken alloc] init];
     
     if (copy) {
-        
+        copy.customerDetails = [self.customerDetails copyWithZone:zone];
+        copy.itemDetails = [self.itemDetails copyWithZone:zone];
+        copy.transactionDetails = [self.transactionDetails copyWithZone:zone];
         copy.token = [self.token copyWithZone:zone];
     }
     

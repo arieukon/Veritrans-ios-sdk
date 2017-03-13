@@ -9,8 +9,8 @@
 #import "SNPPayment.h"
 #import "SNPKlikBCAResult.h"
 
-@interface SNPKlikBCAPayment : SNPPayment
-@property (nonatomic) NSString *userID;
-- (instancetype)initWithKlikBCAUserID:(NSString *)userID;
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPKlikBCAResult *result))completion;
+@interface SNPKlikBCAPayment : SNPPayment <SNPRequest>
+@property (nonatomic) NSString *klikbcaUserID;
+- (instancetype)initWithToken:(SNPToken *)token klikbcaUserID:(NSString *)klikbcaUserID;
++ (SNPKlikBCAResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

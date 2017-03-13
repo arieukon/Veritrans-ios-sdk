@@ -9,6 +9,6 @@
 #import <SnapKit/SnapKit.h>
 #import "SNPPermataVAResult.h"
 
-@interface SNPPermataVAPayment : SNPPayment
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPPermataVAResult *result))completion;
+@interface SNPPermataVAPayment : SNPPayment <SNPRequest>
++ (SNPPermataVAResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

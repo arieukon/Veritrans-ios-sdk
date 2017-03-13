@@ -14,16 +14,12 @@
     return @{@"payment_type":SNPPaymentTypeKiosOn};
 }
 
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPKiosOnResult *result))completion {
-    NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
-    [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
-        SNPKiosOnResult *result;
-        if (dictionaryResponse) {
-            result = [SNPKiosOnResult modelObjectWithDictionary:dictionaryResponse];
-        }
-        if (completion)
-            completion(error, result);
-    }];
+- (NSURLRequest *)requestObject {
+    return [self requestWithParameter:[self dictionaryValue]];
+}
+
++ (SNPKiosOnResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
+    return [SNPKiosOnResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

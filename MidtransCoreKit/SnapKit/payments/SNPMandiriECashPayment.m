@@ -14,16 +14,12 @@
     return @{@"payment_type":SNPPaymentTypeEcash};
 }
 
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPMandiriECashResult *result))completion {
-    NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
-    [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
-        SNPMandiriECashResult *result;
-        if (dictionaryResponse) {
-            result = [SNPMandiriECashResult modelObjectWithDictionary:dictionaryResponse];
-        }
-        if (completion)
-            completion(error, result);
-    }];
+- (NSURLRequest *)requestObject {
+    return [self requestWithParameter:[self dictionaryValue]];
+}
+
++ (SNPMandiriECashResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
+    return [SNPMandiriECashResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

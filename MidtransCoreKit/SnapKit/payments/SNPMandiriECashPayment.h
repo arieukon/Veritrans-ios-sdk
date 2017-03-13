@@ -9,6 +9,6 @@
 #import <SnapKit/SnapKit.h>
 #import "SNPMandiriECashResult.h"
 
-@interface SNPMandiriECashPayment : SNPPayment
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPMandiriECashResult *result))completion;
+@interface SNPMandiriECashPayment : SNPPayment <SNPRequest>
++ (SNPMandiriECashResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

@@ -9,6 +9,6 @@
 #import <SnapKit/SnapKit.h>
 #import "SNPBCAKlikpayResult.h"
 
-@interface SNPBCAKlikpayPayment : SNPPayment
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPBCAKlikpayResult *result))completion;
+@interface SNPBCAKlikpayPayment : SNPPayment <SNPRequest>
++ (SNPBCAKlikpayResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

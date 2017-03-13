@@ -16,6 +16,8 @@
 
 @interface SNPClient : NSObject
 
++ (void)chargePayment:(id<SNPRequest>)payment
+           completion:(void(^)(NSError *error, NSDictionary *response))completion;
 + (void)fetchPaymentInfoWithRequest:(id<SNPRequest>)request
                          completion:(void(^)(NSError *error, SNPPaymentInfo *paymentInfo))completion;
 + (void)tokenizeCreditCardWithRequest:(id<SNPRequest>)request

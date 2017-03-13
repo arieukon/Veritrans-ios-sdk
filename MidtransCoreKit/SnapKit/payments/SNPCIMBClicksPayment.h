@@ -9,6 +9,6 @@
 #import <SnapKit/SnapKit.h>
 #import "SNPCIMBClicksResult.h"
 
-@interface SNPCIMBClicksPayment : SNPPayment
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPCIMBClicksResult *result))completion;
+@interface SNPCIMBClicksPayment : SNPPayment <SNPRequest>
++ (SNPCIMBClicksResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

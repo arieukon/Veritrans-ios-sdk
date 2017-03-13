@@ -14,16 +14,12 @@
     return @{@"payment_type":SNPPaymentTypeCIMBClicks};
 }
 
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPCIMBClicksResult *result))completion {
-    NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
-    [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
-        SNPCIMBClicksResult *result;
-        if (dictionaryResponse) {
-            result = [SNPCIMBClicksResult modelObjectWithDictionary:dictionaryResponse];
-        }
-        if (completion)
-            completion(error, result);
-    }];
+- (NSURLRequest *)requestObject {
+    return [self requestWithParameter:[self dictionaryValue]];
+}
+
++ (SNPCIMBClicksResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
+    return [SNPCIMBClicksResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

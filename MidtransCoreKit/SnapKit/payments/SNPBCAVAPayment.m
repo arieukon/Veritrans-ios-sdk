@@ -13,22 +13,16 @@
 - (NSDictionary *)dictionaryValue {
     return @{
              @"payment_type":SNPPaymentTypeBCAVA,
-             @"customer_details":@{@"email":self.customerDetails.email}
+             @"customer_details":@{@"email":self.token.customerDetails.email}
              };
 }
 
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPBCAVAResult *result))completion {
-    NSAssert(self.customerDetails != nil, @"Customer detail cannot be nil");
-    
-    NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
-    [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
-        SNPBCAVAResult *result;
-        if (dictionaryResponse) {
-            result = [SNPBCAVAResult modelObjectWithDictionary:dictionaryResponse];
-        }
-        if (completion)
-            completion(error, result);
-    }];
+- (NSURLRequest *)requestObject {
+    return [self requestWithParameter:[self dictionaryValue]];
+}
+
++ (SNPBCAVAResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
+    return [SNPBCAVAResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

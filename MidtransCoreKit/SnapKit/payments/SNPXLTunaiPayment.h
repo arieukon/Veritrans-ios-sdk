@@ -9,6 +9,6 @@
 #import <SnapKit/SnapKit.h>
 #import "SNPXLTunaiResult.h"
 
-@interface SNPXLTunaiPayment : SNPPayment
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPXLTunaiResult *result))completion;
+@interface SNPXLTunaiPayment : SNPPayment <SNPRequest>
++ (SNPXLTunaiResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

@@ -14,16 +14,12 @@
     return @{@"payment_type":SNPPaymentTypeIndomaret};
 }
 
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPIndomaretResult *result))completion {
-    NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
-    [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
-        SNPIndomaretResult *result;
-        if (dictionaryResponse) {
-            result = [SNPIndomaretResult modelObjectWithDictionary:dictionaryResponse];
-        }
-        if (completion)
-            completion(error, result);
-    }];
+- (NSURLRequest *)requestObject {
+    return [self requestWithParameter:[self dictionaryValue]];
+}
+
++ (SNPIndomaretResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
+    return [SNPIndomaretResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

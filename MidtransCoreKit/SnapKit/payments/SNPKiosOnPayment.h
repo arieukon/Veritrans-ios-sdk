@@ -9,6 +9,6 @@
 #import <SnapKit/SnapKit.h>
 #import "SNPKiosOnResult.h"
 
-@interface SNPKiosOnPayment : SNPPayment
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPKiosOnResult *result))completion;
+@interface SNPKiosOnPayment : SNPPayment <SNPRequest>
++ (SNPKiosOnResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

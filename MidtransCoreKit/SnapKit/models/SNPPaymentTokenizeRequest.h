@@ -13,6 +13,9 @@
 #import "SNPRequest.h"
 
 @interface SNPPaymentTokenizeRequest : NSObject <SNPRequest>
+@property (nonatomic) SNPTransactionDetails *transactionDetails;
+@property (nonatomic) SNPCustomerDetails *customerDetails;
+@property (nonatomic) NSArray <SNPItemDetails*>*itemDetails;
 - (instancetype)initWithTransactionDetails:(SNPTransactionDetails *)transactionDetails
                            customerDetails:(SNPCustomerDetails *)customerDetails
                                itemDetails:(NSArray <SNPItemDetails*>*)itemDetails;

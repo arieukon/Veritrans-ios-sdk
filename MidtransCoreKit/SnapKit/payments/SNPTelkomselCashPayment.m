@@ -10,8 +10,8 @@
 
 @implementation SNPTelkomselCashPayment
 
-- (instancetype)initWithTelkomselCashToken:(NSString *)tcashToken {
-    if (self = [super init]) {
+- (instancetype)initWithToken:(SNPToken *)token tcashToken:(NSString *)tcashToken {
+    if (self = [super initWithToken:token]) {
         self.tcashToken = tcashToken;
     }
     return self;
@@ -24,18 +24,12 @@
              };
 }
 
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPTelkomselCashResult *result))completion {
-    NSAssert(self.tcashToken.length > 0, @"Telkomsel cash token cannot be nil");
-    
-    NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
-    [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
-        SNPTelkomselCashResult *result;
-        if (dictionaryResponse) {
-            result = [SNPTelkomselCashResult modelObjectWithDictionary:dictionaryResponse];
-        }
-        if (completion)
-            completion(error, result);
-    }];
+- (NSURLRequest *)requestObject {
+    return [self requestWithParameter:[self dictionaryValue]];
+}
+
++ (SNPTelkomselCashResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
+    return [SNPTelkomselCashResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

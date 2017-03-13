@@ -10,7 +10,7 @@
 
 @implementation SNPIndosatDompetkuPayment
 
-- (instancetype)initWithMSISDN:(NSString *)msisdn {
+- (instancetype)initWithToken:(SNPToken *)token msisdn:(NSString *)msisdn {
     if (self = [super init]) {
         self.msisdn = msisdn;
     }
@@ -24,18 +24,12 @@
              };
 }
 
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPIndosatDompetkuResult *result))completion {
-    NSAssert(self.msisdn.length>0, @"MSISDN number cannot be nil");
-    
-    NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
-    [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
-        SNPIndosatDompetkuResult *result;
-        if (dictionaryResponse) {
-            result = [SNPIndosatDompetkuResult modelObjectWithDictionary:dictionaryResponse];
-        }
-        if (completion)
-            completion(error, result);
-    }];
+- (NSURLRequest *)requestObject {
+    return [self requestWithParameter:[self dictionaryValue]];
+}
+
++ (SNPIndosatDompetkuResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
+    return [SNPIndosatDompetkuResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

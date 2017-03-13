@@ -9,8 +9,8 @@
 #import <SnapKit/SnapKit.h>
 #import "SNPIndosatDompetkuResult.h"
 
-@interface SNPIndosatDompetkuPayment : SNPPayment
+@interface SNPIndosatDompetkuPayment : SNPPayment <SNPRequest>
 @property (nonatomic) NSString *msisdn;
-- (instancetype)initWithMSISDN:(NSString *)msisdn;
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPIndosatDompetkuResult *result))completion;
+- (instancetype)initWithToken:(SNPToken *)token msisdn:(NSString *)msisdn;
++ (SNPIndosatDompetkuResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

@@ -9,9 +9,9 @@
 #import <SnapKit/SnapKit.h>
 #import "SNPMandiriClickpayResult.h"
 
-@interface SNPMandiriClickpayPayment : SNPPayment
+@interface SNPMandiriClickpayPayment : SNPPayment <SNPRequest>
 @property (nonatomic) NSString *cardNumber;
 @property (nonatomic) NSString *challengeToken;
-- (instancetype)initWithCardNumber:(NSString *)number challengeToken:(NSString *)challengeToken;
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPMandiriClickpayResult *result))completion;
+- (instancetype)initWithToken:(SNPToken *)token cardNumber:(NSString *)number challengeToken:(NSString *)challengeToken;
++ (SNPMandiriClickpayResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

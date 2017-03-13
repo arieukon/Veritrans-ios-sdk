@@ -14,29 +14,23 @@
 #import "NSDictionary+SNPUtils.h"
 
 @interface SNPCreditCardPayment()
-@property (nonatomic) SNPInstallmentTerm *installmentTerm;
+@property (nonatomic) SNPCustomerDetails *customerDetails;
 @end
 
 @implementation SNPCreditCardPayment
 
-- (instancetype)initWithCreditCardToken:(SNPCreditCardToken *)token
-                        customerDetails:(SNPCustomerDetails *)customerDetails
-                        installmentTerm:(SNPInstallmentTerm *)installmentTerm {
-    if (self = [super init]) {
-        self.creditCardToken = token;
-        self.customerDetails = customerDetails;
-        self.installmentTerm = installmentTerm;
+- (instancetype)initWithToken:(SNPToken *)token creditCardToken:(SNPCreditCardToken *)creditCardToken {
+    if (self = [super initWithToken:token]) {
+        self.creditCardToken = creditCardToken;
+        self.customerDetails = token.customerDetails;
     }
     return self;
 }
 
-- (instancetype)initWithMaskedCreditCard:(NSString *)maskedCreditCard
-                         customerDetails:(SNPCustomerDetails *)customerDetails
-                         installmentTerm:(SNPInstallmentTerm *)installmentTerm {
-    if (self = [super init]) {
+- (instancetype)initWithToken:(SNPToken *)token maskedCreditCard:(NSString *)maskedCreditCard {
+    if (self = [super initWithToken:token]) {
         self.maskedCreditCard = maskedCreditCard;
-        self.customerDetails = customerDetails;
-        self.installmentTerm = installmentTerm;
+        self.customerDetails = token.customerDetails;
     }
     return self;
 }
@@ -71,18 +65,12 @@
     return value;
 }
 
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPCreditCardResult *result))completion {
-    NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
-    [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
-        SNPCreditCardResult *result;
-        if (dictionaryResponse) {
-            result = [SNPCreditCardResult modelObjectWithDictionary:dictionaryResponse];
-        }
-        if (completion)
-            completion(error, result);
-    }];
+- (NSURLRequest *)requestObject {
+    return [self requestWithParameter:[self dictionaryValue]];
 }
 
-
++ (SNPCreditCardResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
+    return [SNPCreditCardResult modelObjectWithDictionary:paymentResultObject];
+}
 
 @end

@@ -56,8 +56,8 @@
     SNPCreditCardTokenizeRequest *request = [[SNPCreditCardTokenizeRequest alloc] initWithCreditCard:card transactionAmount:self.transactionDetails.grossAmount installmentTerm:nil obtainedPromo:nil];
     [SNPClient tokenizeCreditCardWithRequest:request completion:^(NSError *error, SNPCreditCardToken *cctoken) {
         [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *paymenttoken) {
-            SNPCreditCardPayment *payment = [[SNPCreditCardPayment alloc] initWithCreditCardToken:cctoken customerDetails:self.customerDetails installmentTerm:nil];
-            [payment chargeWithToken:paymenttoken completion:^(NSError * _Nullable error, SNPCreditCardResult * _Nullable result) {
+            SNPCreditCardPayment *payment = [[SNPCreditCardPayment alloc] initWithToken:paymenttoken creditCardToken:cctoken];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Credit card payment failed");
                 }
@@ -72,8 +72,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge BCA VA payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPPermataVAPayment *payment = [[SNPPermataVAPayment alloc] initWithCustomerDetails:self.customerDetails];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPPermataVAResult *result) {
+            SNPPermataVAPayment *payment = [[SNPPermataVAPayment alloc] initWithToken:token];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Mandiri Clickpay payment failed");
                 }
@@ -88,8 +88,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge BCA VA payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPEChannelPayment *payment = [[SNPEChannelPayment alloc] initWithCustomerDetails:self.customerDetails];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPEChannelResult *result) {
+            SNPEChannelPayment *payment = [[SNPEChannelPayment alloc] initWithToken:token];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Mandiri Clickpay payment failed");
                 }
@@ -104,8 +104,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge BCA VA payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPBCAVAPayment *payment = [[SNPBCAVAPayment alloc] initWithCustomerDetails:self.customerDetails];
-            [payment chargeWithToken:token completion:^(NSError *error, id result) {
+            SNPBCAVAPayment *payment = [[SNPBCAVAPayment alloc] initWithToken:token];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Mandiri Clickpay payment failed");
                 }
@@ -120,8 +120,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge indomaret payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPIndomaretPayment *payment = [SNPIndomaretPayment new];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPIndomaretResult *result) {
+            SNPIndomaretPayment *payment = [[SNPIndomaretPayment alloc] initWithToken:token];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Mandiri Clickpay payment failed");
                 }
@@ -136,8 +136,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge kios-on payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPKiosOnPayment *payment = [SNPKiosOnPayment new];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPKiosOnResult *result) {
+            SNPKiosOnPayment *payment = [[SNPKiosOnPayment alloc] initWithToken:token];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Mandiri Clickpay payment failed");
                 }
@@ -152,8 +152,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge kios-on payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPKlikBCAPayment *payment = [[SNPKlikBCAPayment alloc] initWithKlikBCAUserID:@"NANANGX0707"];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPKlikBCAResult *result) {
+            SNPKlikBCAPayment *payment = [[SNPKlikBCAPayment alloc] initWithToken:token klikbcaUserID:@"JUKIRA2922"];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Mandiri Clickpay payment failed");
                 }
@@ -168,8 +168,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge kios-on payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPCIMBClicksPayment *payment = [SNPCIMBClicksPayment new];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPCIMBClicksResult *result) {
+            SNPCIMBClicksPayment *payment = [[SNPCIMBClicksPayment alloc] initWithToken:token];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Mandiri Clickpay payment failed");
                 }
@@ -184,8 +184,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge kios-on payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPBCAKlikpayPayment *payment = [SNPBCAKlikpayPayment new];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPBCAKlikpayResult *result) {
+            SNPBCAKlikpayPayment *payment = [[SNPBCAKlikpayPayment alloc] initWithToken:token];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Mandiri Clickpay payment failed");
                 }
@@ -200,8 +200,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge kios-on payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPBRIEpayPayment *payment = [SNPBRIEpayPayment new];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPBRIEpayResult *result) {
+            SNPBRIEpayPayment *payment = [[SNPBRIEpayPayment alloc] initWithToken:token];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Mandiri Clickpay payment failed");
                 }
@@ -216,8 +216,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge kios-on payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPMandiriECashPayment *payment = [SNPMandiriECashPayment new];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPMandiriECashResult *result) {
+            SNPMandiriECashPayment *payment = [[SNPMandiriECashPayment alloc] initWithToken:token];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"E-Cash payment failed");
                 }
@@ -232,8 +232,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge clickpay payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPMandiriClickpayPayment *payment = [[SNPMandiriClickpayPayment alloc] initWithCardNumber:@"4111111111111111" challengeToken:@"000000"];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPMandiriClickpayResult *result) {
+            SNPMandiriClickpayPayment *payment = [[SNPMandiriClickpayPayment alloc] initWithToken:token cardNumber:@"4111111111111111" challengeToken:@"000000"];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Mandiri Clickpay payment failed");
                 }
@@ -248,8 +248,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge xl tunai payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPXLTunaiPayment *payment = [SNPXLTunaiPayment new];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPXLTunaiResult *result) {
+            SNPXLTunaiPayment *payment = [[SNPXLTunaiPayment alloc] initWithToken:token];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"XL Tunai payment failed");
                 }
@@ -264,8 +264,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge telkomsel cash payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPTelkomselCashPayment *payment = [[SNPTelkomselCashPayment alloc] initWithTelkomselCashToken:@"0811111111"];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPTelkomselCashResult *result) {
+            SNPTelkomselCashPayment *payment = [[SNPTelkomselCashPayment alloc] initWithToken:token tcashToken:@"0811111111"];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Telkomsel cash payment failed");
                 }
@@ -280,8 +280,8 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge indosat dompetku payment"];
     [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *token) {
         if (token) {
-            SNPIndosatDompetkuPayment *payment = [[SNPIndosatDompetkuPayment alloc] initWithMSISDN:@"08123456789"];
-            [payment chargeWithToken:token completion:^(NSError *error, SNPIndosatDompetkuResult *result) {
+            SNPIndosatDompetkuPayment *payment = [[SNPIndosatDompetkuPayment alloc] initWithToken:token msisdn:@"08123456789"];
+            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
                 if (error) {
                     XCTFail(@"Indosat dompetku payment failed");
                 }
@@ -291,6 +291,8 @@
     }];
     [self waitForExpectationsWithTimeout:61 handler:nil];
 }
+
+#pragma mark - Helper
 
 - (void)tokenizePaymentWithCompletion:(void(^)(NSError *error, SNPToken *token))completion {
     SNPPaymentTokenizeRequest *request = [[SNPPaymentTokenizeRequest alloc] initWithTransactionDetails:self.transactionDetails

@@ -9,6 +9,6 @@
 #import <SnapKit/SnapKit.h>
 #import "SNPIndomaretResult.h"
 
-@interface SNPIndomaretPayment : SNPPayment
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPIndomaretResult *result))completion;
+@interface SNPIndomaretPayment : SNPPayment <SNPRequest>
++ (SNPIndomaretResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

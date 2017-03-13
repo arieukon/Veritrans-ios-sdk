@@ -10,9 +10,9 @@
 
 @implementation SNPKlikBCAPayment
 
-- (instancetype)initWithKlikBCAUserID:(NSString *)userID {
-    if (self = [super init]) {
-        self.userID = userID;
+- (instancetype)initWithToken:(SNPToken *)token klikbcaUserID:(NSString *)klikbcaUserID {
+    if (self = [super initWithToken:token]) {
+        self.klikbcaUserID = klikbcaUserID;
     }
     return self;
 }
@@ -20,22 +20,17 @@
 - (NSDictionary *)dictionaryValue {
     return @{
              @"payment_type" : SNPPaymentTypeKlikbca,
-             @"payment_params" : @{@"user_id":self.userID}
+             @"payment_params" : @{@"user_id":self.klikbcaUserID}
              };
 }
 
-- (void)chargeWithToken:(SNPToken *)token completion:(void (^)(NSError *error, SNPKlikBCAResult *result))completion {
-    NSAssert(self.userID.length>0, @"Klik BCA User ID cannot be nil");
-    
-    NSURLRequest *request = [self requestWithParameter:[self dictionaryValue] token:token];
-    [[SNPNetworking shared] performRequest:request completion:^(NSError *error, id dictionaryResponse) {
-        SNPKlikBCAResult *result;
-        if (dictionaryResponse) {
-            result = [SNPKlikBCAResult modelObjectWithDictionary:dictionaryResponse];
-        }
-        if (completion)
-            completion(error, result);
-    }];
+- (NSURLRequest *)requestObject {
+    NSAssert(self.klikbcaUserID.length>0, @"Klik BCA User ID cannot be nil");
+    return [self requestWithParameter:[self dictionaryValue]];
+}
+
++ (SNPKlikBCAResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
+    return [SNPKlikBCAResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

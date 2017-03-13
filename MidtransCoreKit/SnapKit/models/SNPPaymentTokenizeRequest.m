@@ -23,12 +23,6 @@
 
 @end
 
-@interface SNPPaymentTokenizeRequest()
-@property (nonatomic) SNPTransactionDetails *transactionDetails;
-@property (nonatomic) SNPCustomerDetails *customerDetails;
-@property (nonatomic) NSArray <SNPItemDetails*>*itemDetails;
-@end
-
 @implementation SNPPaymentTokenizeRequest
 
 - (instancetype)initWithTransactionDetails:(SNPTransactionDetails *)transactionDetails
