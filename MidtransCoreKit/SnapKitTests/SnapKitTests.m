@@ -14,7 +14,6 @@
 @property (nonatomic) SNPTransactionDetails *transactionDetails;
 @property (nonatomic) SNPCustomerDetails *customerDetails;
 @property (nonatomic) NSArray<SNPItemDetails*>*itemDetails;
-@property (nonatomic) SNPToken *token;
 @end
 
 @implementation SnapKitTests
@@ -50,23 +49,6 @@
     [super tearDown];
 }
 
-- (void)testCreditCardPayment {
-    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge CC payment"];
-    SNPCreditCard *card = [[SNPCreditCard alloc] initWithNumber:@"4811111111111114" expiryMonth:@"02" expiryYear:@"20" cvv:@"123"];
-    SNPCreditCardTokenizeRequest *request = [[SNPCreditCardTokenizeRequest alloc] initWithCreditCard:card transactionAmount:self.transactionDetails.grossAmount installmentTerm:nil obtainedPromo:nil];
-    [SNPClient tokenizeCreditCardWithRequest:request completion:^(NSError *error, SNPCreditCardToken *cctoken) {
-        [self tokenizePaymentWithCompletion:^(NSError *error, SNPToken *paymenttoken) {
-            SNPCreditCardPayment *payment = [[SNPCreditCardPayment alloc] initWithToken:paymenttoken creditCardToken:cctoken];
-            [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
-                if (error) {
-                    XCTFail(@"Credit card payment failed");
-                }
-                [exp fulfill];
-            }];
-        }];
-    }];
-    [self waitForExpectationsWithTimeout:61 handler:nil];
-}
 
 - (void)testPermataVAPayment {
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge BCA VA payment"];

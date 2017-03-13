@@ -13,13 +13,12 @@
 #import "SNPInstallmentTerm.h"
 
 @interface SNPCreditCardTokenizeRequest : NSObject <SNPRequest>
+@property (nonatomic) SNPInstallmentTerm *installmentTerm;
+@property (nonatomic) SNPObtainedPromo *obtainedPromo;
+
 - (instancetype)initWithCreditCard:(SNPCreditCard *)creditCard
-                 transactionAmount:(NSNumber *)transactionAmount
-                   installmentTerm:(SNPInstallmentTerm *)installmentTerm
-                     obtainedPromo:(SNPObtainedPromo *)obtainedPromo;
+                 transactionAmount:(NSNumber *)transactionAmount;
 - (instancetype)initWithCreditCardToken:(NSString *)creditCardToken
                               cvvNumber:(NSString *)cvvNumber
-                      transactionAmount:(NSNumber *)transactionAmount
-                        installmentTerm:(SNPInstallmentTerm *)installmentTerm
-                          obtainedPromo:(SNPObtainedPromo *)obtainedPromo;
+                      transactionAmount:(NSNumber *)transactionAmount;
 @end

@@ -18,36 +18,26 @@
 @property (nonatomic) NSString *creditCardToken;
 @property (nonatomic) NSString *cvvNumber;
 @property (nonatomic) NSNumber *transactionAmount;
-@property (nonatomic) SNPInstallmentTerm *installmentTerm;
-@property (nonatomic) SNPObtainedPromo *obtainedPromo;
 @end
 
 @implementation SNPCreditCardTokenizeRequest
 
 - (instancetype)initWithCreditCard:(SNPCreditCard *)creditCard
-                 transactionAmount:(NSNumber *)transactionAmount
-                   installmentTerm:(SNPInstallmentTerm *)installmentTerm
-                     obtainedPromo:(SNPObtainedPromo *)obtainedPromo {
+                 transactionAmount:(NSNumber *)transactionAmount {
     if (self = [super init]) {
         self.creditCard = creditCard;
         self.transactionAmount = transactionAmount;
-        self.installmentTerm = installmentTerm;
-        self.obtainedPromo = obtainedPromo;
     }
     return self;
 }
 
 - (instancetype)initWithCreditCardToken:(NSString *)creditCardToken
                               cvvNumber:(NSString *)cvvNumber
-                      transactionAmount:(NSNumber *)transactionAmount
-                        installmentTerm:(SNPInstallmentTerm *)installmentTerm
-                          obtainedPromo:(SNPObtainedPromo *)obtainedPromo {
+                      transactionAmount:(NSNumber *)transactionAmount {
     if (self = [super init]) {
         self.creditCardToken = creditCardToken;
         self.cvvNumber = cvvNumber;
         self.transactionAmount = transactionAmount;
-        self.installmentTerm = installmentTerm;
-        self.obtainedPromo = obtainedPromo;
     }
     return self;
 }
