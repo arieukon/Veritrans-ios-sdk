@@ -19,18 +19,20 @@
 
 @implementation SNPCreditCardPayment
 
-- (instancetype)initWithToken:(SNPToken *)token creditCardToken:(SNPCreditCardToken *)creditCardToken {
+- (instancetype)initWithToken:(SNPToken *)token
+              creditCardToken:(SNPCreditCardToken *)creditCardToken
+              customerDetails:(SNPCustomerDetails *)customerDetails {
     if (self = [super initWithToken:token]) {
         self.creditCardToken = creditCardToken;
-        self.customerDetails = token.customerDetails;
+        self.customerDetails = customerDetails;
     }
     return self;
 }
 
-- (instancetype)initWithToken:(SNPToken *)token maskedCreditCard:(NSString *)maskedCreditCard {
+- (instancetype)initWithToken:(SNPToken *)token savedCreditCard:(SNPSavedCreditCard *)savedCreditCard customerDetails:(SNPCustomerDetails *)customerDetails {
     if (self = [super initWithToken:token]) {
-        self.maskedCreditCard = maskedCreditCard;
-        self.customerDetails = token.customerDetails;
+        self.savedCreditCard = savedCreditCard;
+        self.customerDetails = customerDetails;
     }
     return self;
 }
@@ -38,12 +40,13 @@
 - (NSDictionary *)paymentParameter {
     NSMutableDictionary *parameters = [NSMutableDictionary new];
     [parameters setObject:@(SHAREDCONFIG.creditCardConfig.saveCardEnabled) forKey:@"save_card"];
-    if (self.maskedCreditCard) {
-        [parameters setObject:self.maskedCreditCard forKey:@"masked_card"];
+    if (self.savedCreditCard) {
+        [parameters setObject:self.savedCreditCard.maskedCard forKey:@"masked_card"];
     }
     else {
         [parameters setObject:self.creditCardToken.tokenId forKey:@"card_token"];
     }
+    
     if (self.installmentTerm) {
         [parameters setObject:[self.installmentTerm chargeParameter] forKey:@"installment"];
     }
@@ -67,10 +70,6 @@
 
 - (NSURLRequest *)requestObject {
     return [self requestWithParameter:[self dictionaryValue]];
-}
-
-+ (SNPCreditCardResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
-    return [SNPCreditCardResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

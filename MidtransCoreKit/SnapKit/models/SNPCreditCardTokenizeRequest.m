@@ -13,13 +13,6 @@
 #import "SNPCreditCardConfig.h"
 #import "NSDictionary+SNPUtils.h"
 
-@interface SNPCreditCardTokenizeRequest()
-@property (nonatomic) SNPCreditCard *creditCard;
-@property (nonatomic) NSString *creditCardToken;
-@property (nonatomic) NSString *cvvNumber;
-@property (nonatomic) NSNumber *transactionAmount;
-@end
-
 @implementation SNPCreditCardTokenizeRequest
 
 - (instancetype)initWithCreditCard:(SNPCreditCard *)creditCard
@@ -31,11 +24,11 @@
     return self;
 }
 
-- (instancetype)initWithCreditCardToken:(NSString *)creditCardToken
+- (instancetype)initWithSavedCreditCard:(SNPSavedCreditCard *)savedCard
                               cvvNumber:(NSString *)cvvNumber
                       transactionAmount:(NSNumber *)transactionAmount {
     if (self = [super init]) {
-        self.creditCardToken = creditCardToken;
+        self.savedCreditCard = savedCard;
         self.cvvNumber = cvvNumber;
         self.transactionAmount = transactionAmount;
     }
@@ -52,11 +45,12 @@
     result[@"secure"] = SHAREDCONFIG.creditCardConfig.secure3DEnabled ? @"true":@"false";
     result[@"gross_amount"] = self.transactionAmount;
     
-    if (self.creditCardToken) {
+    if (self.savedCreditCard) {
+        NSAssert([self.savedCreditCard.tokenType isEqualToString:SNPCreditCardPaymentTwoClicks], @"Saved card type should 2 clicks type");
         [result addEntriesFromDictionary:@{
                                            @"card_cvv":self.cvvNumber,
                                            @"two_click":@"true",
-                                           @"token_id":self.creditCardToken
+                                           @"token_id":self.savedCreditCard.token
                                            }];
     }
     else {

@@ -14,7 +14,8 @@
 typedef NS_ENUM(NSUInteger, SNPEnvironment) {
     SNPEnvironmentSandbox = 1,
     SNPEnvironmentStaging = 2,
-    SNPEnvironmentProduction = 3
+    SNPEnvironmentProduction = 3,
+    SNPEnvironmentMock = 4
 };
 
 @interface SNPSharedConfig : NSObject

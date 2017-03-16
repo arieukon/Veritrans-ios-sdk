@@ -106,34 +106,38 @@
 		E511CF4D1E48612300926FC7 /* MidtransObtainedPromo.m in Sources */ = {isa = PBXBuildFile; fileRef = E511CF4B1E48612300926FC7 /* MidtransObtainedPromo.m */; };
 		E518A6571E71161600746DE3 /* SNPXLTunaiPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E518A6551E71161600746DE3 /* SNPXLTunaiPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E518A6581E71161600746DE3 /* SNPXLTunaiPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E518A6561E71161600746DE3 /* SNPXLTunaiPayment.m */; };
-		E518A65B1E7118F900746DE3 /* SNPXLTunaiResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E518A6591E7118F900746DE3 /* SNPXLTunaiResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E518A65C1E7118F900746DE3 /* SNPXLTunaiResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E518A65A1E7118F900746DE3 /* SNPXLTunaiResult.m */; };
 		E518A65F1E711F9C00746DE3 /* SNPTelkomselCashPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E518A65D1E711F9C00746DE3 /* SNPTelkomselCashPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E518A6601E711F9C00746DE3 /* SNPTelkomselCashPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E518A65E1E711F9C00746DE3 /* SNPTelkomselCashPayment.m */; };
-		E518A6631E7127A800746DE3 /* SNPTelkomselCashResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E518A6611E7127A800746DE3 /* SNPTelkomselCashResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E518A6641E7127A800746DE3 /* SNPTelkomselCashResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E518A6621E7127A800746DE3 /* SNPTelkomselCashResult.m */; };
-		E51945041E71081F00B4122B /* SNPMandiriClickpayResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E51945021E71081F00B4122B /* SNPMandiriClickpayResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E51945051E71081F00B4122B /* SNPMandiriClickpayResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E51945031E71081F00B4122B /* SNPMandiriClickpayResult.m */; };
 		E525E1211CFD402D009448A5 /* MidtransPrivateConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E525E11F1CFD402D009448A5 /* MidtransPrivateConfig.h */; };
 		E525E1221CFD402D009448A5 /* MidtransPrivateConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E525E1201CFD402D009448A5 /* MidtransPrivateConfig.m */; };
 		E52CFB021E713A0A00181A41 /* SNPIndosatDompetkuPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E52CFB001E713A0A00181A41 /* SNPIndosatDompetkuPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E52CFB031E713A0A00181A41 /* SNPIndosatDompetkuPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E52CFB011E713A0A00181A41 /* SNPIndosatDompetkuPayment.m */; };
-		E52CFB061E713C2B00181A41 /* SNPIndosatDompetkuResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E52CFB041E713C2B00181A41 /* SNPIndosatDompetkuResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E52CFB071E713C2B00181A41 /* SNPIndosatDompetkuResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E52CFB051E713C2B00181A41 /* SNPIndosatDompetkuResult.m */; };
 		E53BD0181D124AB7001FADDE /* MidtransPaymentWebController.h in Headers */ = {isa = PBXBuildFile; fileRef = E53BD0161D124AB7001FADDE /* MidtransPaymentWebController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E53BD0191D124AB7001FADDE /* MidtransPaymentWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53BD0171D124AB7001FADDE /* MidtransPaymentWebController.m */; };
 		E53BD0261D128F4C001FADDE /* MidtransMandiriClickpayHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E53BD0221D128F4C001FADDE /* MidtransMandiriClickpayHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E53BD0271D128F4C001FADDE /* MidtransMandiriClickpayHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E53BD0231D128F4C001FADDE /* MidtransMandiriClickpayHelper.m */; };
 		E53BD03D1D14322B001FADDE /* MidtransPaymentEpayBRI.h in Headers */ = {isa = PBXBuildFile; fileRef = E53BD03B1D14322B001FADDE /* MidtransPaymentEpayBRI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E53BD03E1D14322B001FADDE /* MidtransPaymentEpayBRI.m in Sources */ = {isa = PBXBuildFile; fileRef = E53BD03C1D14322B001FADDE /* MidtransPaymentEpayBRI.m */; };
+		E54F2B721E794D0C00A3D64C /* SNPMockSession.h in Headers */ = {isa = PBXBuildFile; fileRef = E54F2B701E794D0C00A3D64C /* SNPMockSession.h */; };
+		E54F2B731E794D0C00A3D64C /* SNPMockSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E54F2B711E794D0C00A3D64C /* SNPMockSession.m */; };
+		E54F2B761E794FDE00A3D64C /* SNPMockSource.h in Headers */ = {isa = PBXBuildFile; fileRef = E54F2B741E794FDE00A3D64C /* SNPMockSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E54F2B771E794FDE00A3D64C /* SNPMockSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E54F2B751E794FDE00A3D64C /* SNPMockSource.m */; };
+		E54F2B7A1E79523200A3D64C /* SNPMock.h in Headers */ = {isa = PBXBuildFile; fileRef = E54F2B781E79523200A3D64C /* SNPMock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E54F2B7B1E79523200A3D64C /* SNPMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E54F2B791E79523200A3D64C /* SNPMock.m */; };
+		E54F2B7F1E7A29EC00A3D64C /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = E54F2B7E1E7A29EC00A3D64C /* mock.json */; };
+		E54F2B821E7A412800A3D64C /* SNPMockDataTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E54F2B801E7A412800A3D64C /* SNPMockDataTask.h */; };
+		E54F2B831E7A412800A3D64C /* SNPMockDataTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E54F2B811E7A412800A3D64C /* SNPMockDataTask.m */; };
 		E5504E0C1D0E58BE00137655 /* MidtransPaymentCIMBClicks.h in Headers */ = {isa = PBXBuildFile; fileRef = E5504E0A1D0E58BE00137655 /* MidtransPaymentCIMBClicks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5504E0D1D0E58BE00137655 /* MidtransPaymentCIMBClicks.m in Sources */ = {isa = PBXBuildFile; fileRef = E5504E0B1D0E58BE00137655 /* MidtransPaymentCIMBClicks.m */; };
+		E55A246E1E7A5E5400F6426D /* cc-mock.json in Resources */ = {isa = PBXBuildFile; fileRef = E55A246D1E7A5E5400F6426D /* cc-mock.json */; };
 		E55DB9421C912ED300813B81 /* MidtransCustomerDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DB9301C912ED300813B81 /* MidtransCustomerDetails.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55DB9431C912ED300813B81 /* MidtransCustomerDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = E55DB9311C912ED300813B81 /* MidtransCustomerDetails.m */; };
 		E55DB9461C912ED300813B81 /* MidtransPaymentBankTransfer.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DB9341C912ED300813B81 /* MidtransPaymentBankTransfer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55DB9471C912ED300813B81 /* MidtransPaymentBankTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55DB9351C912ED300813B81 /* MidtransPaymentBankTransfer.m */; };
 		E57931D91E764C1100379C3C /* SNPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = E57931D81E764C1100379C3C /* SNPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E57931E01E76682000379C3C /* SNPCreditCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E57931DF1E76682000379C3C /* SNPCreditCardTests.m */; };
+		E57931E31E7692CF00379C3C /* SNPObtainPromoRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = E57931E11E7692CF00379C3C /* SNPObtainPromoRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E57931E41E7692CF00379C3C /* SNPObtainPromoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E57931E21E7692CF00379C3C /* SNPObtainPromoRequest.m */; };
 		E58017D91D584256007D2DEC /* MidtransPaymentTelkomselCash.h in Headers */ = {isa = PBXBuildFile; fileRef = E58017D71D584256007D2DEC /* MidtransPaymentTelkomselCash.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E58017DA1D584256007D2DEC /* MidtransPaymentTelkomselCash.m in Sources */ = {isa = PBXBuildFile; fileRef = E58017D81D584256007D2DEC /* MidtransPaymentTelkomselCash.m */; };
 		E58017DD1D584264007D2DEC /* MidtransPaymentXLTunai.h in Headers */ = {isa = PBXBuildFile; fileRef = E58017DB1D584264007D2DEC /* MidtransPaymentXLTunai.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -142,38 +146,25 @@
 		E58017E21D584271007D2DEC /* MidtransPaymentIndosatDompetku.m in Sources */ = {isa = PBXBuildFile; fileRef = E58017E01D584271007D2DEC /* MidtransPaymentIndosatDompetku.m */; };
 		E5AB975C1D7403AC00466A44 /* MidtransPaymentKiosOn.h in Headers */ = {isa = PBXBuildFile; fileRef = E5AB975A1D7403AC00466A44 /* MidtransPaymentKiosOn.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5AB975D1D7403AC00466A44 /* MidtransPaymentKiosOn.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AB975B1D7403AC00466A44 /* MidtransPaymentKiosOn.m */; };
-		E5BA55FE1E6E9BE900D06C7E /* SNPPaymentResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA55FC1E6E9BE900D06C7E /* SNPPaymentResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5BA55FF1E6E9BE900D06C7E /* SNPPaymentResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA55FD1E6E9BE900D06C7E /* SNPPaymentResult.m */; };
 		E5BA56061E6EB64900D06C7E /* SNPNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA56041E6EB64900D06C7E /* SNPNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5BA56071E6EB64900D06C7E /* SNPNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA56051E6EB64900D06C7E /* SNPNetworking.m */; };
 		E5BA560A1E6EB97500D06C7E /* SNPPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA56081E6EB97500D06C7E /* SNPPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5BA560B1E6EB97500D06C7E /* SNPPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA56091E6EB97500D06C7E /* SNPPayment.m */; };
 		E5BA560E1E6EBD9500D06C7E /* SNPNetworkingLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA560C1E6EBD9500D06C7E /* SNPNetworkingLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5BA560F1E6EBD9500D06C7E /* SNPNetworkingLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA560D1E6EBD9500D06C7E /* SNPNetworkingLogger.m */; };
-		E5BA56161E6EC20900D06C7E /* SNPVANumber.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA56121E6EC20900D06C7E /* SNPVANumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5BA56171E6EC20900D06C7E /* SNPVANumber.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA56131E6EC20900D06C7E /* SNPVANumber.m */; };
 		E5BA561A1E6EC51C00D06C7E /* SNPIndomaretPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA56181E6EC51C00D06C7E /* SNPIndomaretPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5BA561B1E6EC51C00D06C7E /* SNPIndomaretPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA56191E6EC51C00D06C7E /* SNPIndomaretPayment.m */; };
-		E5BA561E1E6EC74900D06C7E /* SNPIndomaretResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA561C1E6EC74900D06C7E /* SNPIndomaretResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5BA561F1E6EC74900D06C7E /* SNPIndomaretResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA561D1E6EC74900D06C7E /* SNPIndomaretResult.m */; };
 		E5BA56221E6EC9E500D06C7E /* SNPBCAVAPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA56201E6EC9E500D06C7E /* SNPBCAVAPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5BA56231E6EC9E500D06C7E /* SNPBCAVAPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA56211E6EC9E500D06C7E /* SNPBCAVAPayment.m */; };
-		E5BA56261E6ECB0B00D06C7E /* SNPBCAVAResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA56241E6ECB0B00D06C7E /* SNPBCAVAResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5BA56271E6ECB0B00D06C7E /* SNPBCAVAResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA56251E6ECB0B00D06C7E /* SNPBCAVAResult.m */; };
 		E5BA562A1E6ECBF300D06C7E /* SNPEChannelPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA56281E6ECBF300D06C7E /* SNPEChannelPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5BA562B1E6ECBF300D06C7E /* SNPEChannelPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA56291E6ECBF300D06C7E /* SNPEChannelPayment.m */; };
-		E5BA562E1E6ED2A100D06C7E /* SNPEChannelResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA562C1E6ED2A100D06C7E /* SNPEChannelResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5BA562F1E6ED2A100D06C7E /* SNPEChannelResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA562D1E6ED2A100D06C7E /* SNPEChannelResult.m */; };
 		E5BA56321E6ED42600D06C7E /* SNPPermataVAPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA56301E6ED42600D06C7E /* SNPPermataVAPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5BA56331E6ED42600D06C7E /* SNPPermataVAPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA56311E6ED42600D06C7E /* SNPPermataVAPayment.m */; };
-		E5BA56361E6ED4D600D06C7E /* SNPPermataVAResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA56341E6ED4D600D06C7E /* SNPPermataVAResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5BA56371E6ED4D600D06C7E /* SNPPermataVAResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA56351E6ED4D600D06C7E /* SNPPermataVAResult.m */; };
-		E5BA56401E6EF08400D06C7E /* SNPCreditCardResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5BA563E1E6EF08400D06C7E /* SNPCreditCardResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5BA56411E6EF08400D06C7E /* SNPCreditCardResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BA563F1E6EF08400D06C7E /* SNPCreditCardResult.m */; };
 		E5C00EEB1D61BC50008DD9C5 /* MidtransImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E5C00EE91D61BC50008DD9C5 /* MidtransImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5C00EEC1D61BC50008DD9C5 /* MidtransImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C00EEA1D61BC50008DD9C5 /* MidtransImageManager.m */; };
 		E5C2329A1D5AAEBF00A0A486 /* MidtransCreditCardConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E5C232981D5AAEBF00A0A486 /* MidtransCreditCardConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5C2329B1D5AAEBF00A0A486 /* MidtransCreditCardConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C232991D5AAEBF00A0A486 /* MidtransCreditCardConfig.m */; };
+		E5C9DE101E77A26100B15671 /* bins.json in Resources */ = {isa = PBXBuildFile; fileRef = E5C9DE0F1E77A26100B15671 /* bins.json */; };
 		E5DACA921D034E7000F5BE0A /* MidtransLuhn.h in Headers */ = {isa = PBXBuildFile; fileRef = E5DACA901D034E7000F5BE0A /* MidtransLuhn.h */; };
 		E5DACA931D034E7000F5BE0A /* MidtransLuhn.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DACA911D034E7000F5BE0A /* MidtransLuhn.m */; };
 		E5E436071CE31ACE00F688ED /* MidtransTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E436031CE31ACE00F688ED /* MidtransTransaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -207,32 +198,16 @@
 		E5E4363C1CE31E8D00F688ED /* Midtrans3DSController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E4363A1CE31E8D00F688ED /* Midtrans3DSController.m */; };
 		E5E6FAD41E6F98E000B706C5 /* SNPKiosOnPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FAD21E6F98E000B706C5 /* SNPKiosOnPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6FAD51E6F98E000B706C5 /* SNPKiosOnPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FAD31E6F98E000B706C5 /* SNPKiosOnPayment.m */; };
-		E5E6FADC1E6F9B6700B706C5 /* SNPKiosOnResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FADA1E6F9B6700B706C5 /* SNPKiosOnResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5E6FADD1E6F9B6700B706C5 /* SNPKiosOnResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FADB1E6F9B6700B706C5 /* SNPKiosOnResult.m */; };
 		E5E6FAE21E6FA6E700B706C5 /* SNPKlikBCAPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FAE01E6FA6E700B706C5 /* SNPKlikBCAPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6FAE31E6FA6E700B706C5 /* SNPKlikBCAPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FAE11E6FA6E700B706C5 /* SNPKlikBCAPayment.m */; };
-		E5E6FAE61E6FA87900B706C5 /* SNPKlikBCAResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FAE41E6FA87900B706C5 /* SNPKlikBCAResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5E6FAE71E6FA87900B706C5 /* SNPKlikBCAResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FAE51E6FA87900B706C5 /* SNPKlikBCAResult.m */; };
 		E5E6FAEE1E6FAA3500B706C5 /* SNPCIMBClicksPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FAEC1E6FAA3500B706C5 /* SNPCIMBClicksPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6FAEF1E6FAA3500B706C5 /* SNPCIMBClicksPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FAED1E6FAA3500B706C5 /* SNPCIMBClicksPayment.m */; };
 		E5E6FAF21E6FABB800B706C5 /* SNPBCAKlikpayPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FAF01E6FABB800B706C5 /* SNPBCAKlikpayPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6FAF31E6FABB800B706C5 /* SNPBCAKlikpayPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FAF11E6FABB800B706C5 /* SNPBCAKlikpayPayment.m */; };
-		E5E6FAF61E6FACEA00B706C5 /* SNPBCAKlikpayResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FAF41E6FACEA00B706C5 /* SNPBCAKlikpayResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5E6FAF71E6FACEA00B706C5 /* SNPBCAKlikpayResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FAF51E6FACEA00B706C5 /* SNPBCAKlikpayResult.m */; };
-		E5E6FAFE1E6FAD0400B706C5 /* SNPCIMBClicksResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FAF81E6FAD0400B706C5 /* SNPCIMBClicksResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5E6FAFF1E6FAD0400B706C5 /* SNPCIMBClicksResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FAF91E6FAD0400B706C5 /* SNPCIMBClicksResult.m */; };
-		E5E6FB081E6FAE1D00B706C5 /* SNPKlikpayRedirect.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FB041E6FAE1D00B706C5 /* SNPKlikpayRedirect.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5E6FB091E6FAE1D00B706C5 /* SNPKlikpayRedirect.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FB051E6FAE1D00B706C5 /* SNPKlikpayRedirect.m */; };
-		E5E6FB0A1E6FAE1D00B706C5 /* SNPKlikpayRedirectParam.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FB061E6FAE1D00B706C5 /* SNPKlikpayRedirectParam.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5E6FB0B1E6FAE1D00B706C5 /* SNPKlikpayRedirectParam.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FB071E6FAE1D00B706C5 /* SNPKlikpayRedirectParam.m */; };
 		E5E6FB0E1E6FB32100B706C5 /* SNPBRIEpayPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FB0C1E6FB32100B706C5 /* SNPBRIEpayPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6FB0F1E6FB32100B706C5 /* SNPBRIEpayPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FB0D1E6FB32100B706C5 /* SNPBRIEpayPayment.m */; };
 		E5E6FB121E6FB35A00B706C5 /* SNPMandiriECashPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FB101E6FB35A00B706C5 /* SNPMandiriECashPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6FB131E6FB35A00B706C5 /* SNPMandiriECashPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FB111E6FB35A00B706C5 /* SNPMandiriECashPayment.m */; };
-		E5E6FB181E6FB4AE00B706C5 /* SNPBRIEpayResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FB141E6FB4AE00B706C5 /* SNPBRIEpayResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5E6FB191E6FB4AE00B706C5 /* SNPBRIEpayResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FB151E6FB4AE00B706C5 /* SNPBRIEpayResult.m */; };
-		E5E6FB1A1E6FB4AE00B706C5 /* SNPMandiriECashResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FB161E6FB4AE00B706C5 /* SNPMandiriECashResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5E6FB1B1E6FB4AE00B706C5 /* SNPMandiriECashResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FB171E6FB4AE00B706C5 /* SNPMandiriECashResult.m */; };
 		E5E6FB1F1E70024500B706C5 /* SNPMandiriClickpayPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FB1D1E70024500B706C5 /* SNPMandiriClickpayPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6FB201E70024500B706C5 /* SNPMandiriClickpayPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FB1E1E70024500B706C5 /* SNPMandiriClickpayPayment.m */; };
 		E5EDA9641E6E648400F3A76E /* SnapKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EDA9631E6E648400F3A76E /* SnapKitTests.m */; };
@@ -425,20 +400,12 @@
 		E511CF4B1E48612300926FC7 /* MidtransObtainedPromo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransObtainedPromo.m; sourceTree = "<group>"; };
 		E518A6551E71161600746DE3 /* SNPXLTunaiPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPXLTunaiPayment.h; path = SnapKit/payments/SNPXLTunaiPayment.h; sourceTree = SOURCE_ROOT; };
 		E518A6561E71161600746DE3 /* SNPXLTunaiPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPXLTunaiPayment.m; path = SnapKit/payments/SNPXLTunaiPayment.m; sourceTree = SOURCE_ROOT; };
-		E518A6591E7118F900746DE3 /* SNPXLTunaiResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPXLTunaiResult.h; path = SnapKit/models/SNPXLTunaiResult.h; sourceTree = SOURCE_ROOT; };
-		E518A65A1E7118F900746DE3 /* SNPXLTunaiResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPXLTunaiResult.m; path = SnapKit/models/SNPXLTunaiResult.m; sourceTree = SOURCE_ROOT; };
 		E518A65D1E711F9C00746DE3 /* SNPTelkomselCashPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPTelkomselCashPayment.h; path = SnapKit/payments/SNPTelkomselCashPayment.h; sourceTree = SOURCE_ROOT; };
 		E518A65E1E711F9C00746DE3 /* SNPTelkomselCashPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPTelkomselCashPayment.m; path = SnapKit/payments/SNPTelkomselCashPayment.m; sourceTree = SOURCE_ROOT; };
-		E518A6611E7127A800746DE3 /* SNPTelkomselCashResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPTelkomselCashResult.h; path = SnapKit/models/SNPTelkomselCashResult.h; sourceTree = SOURCE_ROOT; };
-		E518A6621E7127A800746DE3 /* SNPTelkomselCashResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPTelkomselCashResult.m; path = SnapKit/models/SNPTelkomselCashResult.m; sourceTree = SOURCE_ROOT; };
-		E51945021E71081F00B4122B /* SNPMandiriClickpayResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPMandiriClickpayResult.h; path = SnapKit/models/SNPMandiriClickpayResult.h; sourceTree = SOURCE_ROOT; };
-		E51945031E71081F00B4122B /* SNPMandiriClickpayResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPMandiriClickpayResult.m; path = SnapKit/models/SNPMandiriClickpayResult.m; sourceTree = SOURCE_ROOT; };
 		E525E11F1CFD402D009448A5 /* MidtransPrivateConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransPrivateConfig.h; sourceTree = "<group>"; };
 		E525E1201CFD402D009448A5 /* MidtransPrivateConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransPrivateConfig.m; sourceTree = "<group>"; };
 		E52CFB001E713A0A00181A41 /* SNPIndosatDompetkuPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPIndosatDompetkuPayment.h; path = SnapKit/payments/SNPIndosatDompetkuPayment.h; sourceTree = SOURCE_ROOT; };
 		E52CFB011E713A0A00181A41 /* SNPIndosatDompetkuPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPIndosatDompetkuPayment.m; path = SnapKit/payments/SNPIndosatDompetkuPayment.m; sourceTree = SOURCE_ROOT; };
-		E52CFB041E713C2B00181A41 /* SNPIndosatDompetkuResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPIndosatDompetkuResult.h; path = SnapKit/models/SNPIndosatDompetkuResult.h; sourceTree = SOURCE_ROOT; };
-		E52CFB051E713C2B00181A41 /* SNPIndosatDompetkuResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPIndosatDompetkuResult.m; path = SnapKit/models/SNPIndosatDompetkuResult.m; sourceTree = SOURCE_ROOT; };
 		E53BD0161D124AB7001FADDE /* MidtransPaymentWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransPaymentWebController.h; sourceTree = "<group>"; };
 		E53BD0171D124AB7001FADDE /* MidtransPaymentWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransPaymentWebController.m; sourceTree = "<group>"; };
 		E53BD0221D128F4C001FADDE /* MidtransMandiriClickpayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransMandiriClickpayHelper.h; sourceTree = "<group>"; };
@@ -459,14 +426,26 @@
 		E54421E91E5DE8A3001FBFDA /* NSObject+SNPUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SNPUtils.m"; path = "../SnapKit/utils/NSObject+SNPUtils.m"; sourceTree = "<group>"; };
 		E54421EC1E5E31DE001FBFDA /* SNPPromo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPPromo.h; path = ../SnapKit/models/SNPPromo.h; sourceTree = "<group>"; };
 		E54421ED1E5E31DE001FBFDA /* SNPPromo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPPromo.m; path = ../SnapKit/models/SNPPromo.m; sourceTree = "<group>"; };
+		E54F2B701E794D0C00A3D64C /* SNPMockSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPMockSession.h; path = SnapKit/utils/SNPMockSession.h; sourceTree = SOURCE_ROOT; };
+		E54F2B711E794D0C00A3D64C /* SNPMockSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPMockSession.m; path = SnapKit/utils/SNPMockSession.m; sourceTree = SOURCE_ROOT; };
+		E54F2B741E794FDE00A3D64C /* SNPMockSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPMockSource.h; path = SnapKit/utils/SNPMockSource.h; sourceTree = SOURCE_ROOT; };
+		E54F2B751E794FDE00A3D64C /* SNPMockSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPMockSource.m; path = SnapKit/utils/SNPMockSource.m; sourceTree = SOURCE_ROOT; };
+		E54F2B781E79523200A3D64C /* SNPMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPMock.h; path = SnapKit/models/SNPMock.h; sourceTree = SOURCE_ROOT; };
+		E54F2B791E79523200A3D64C /* SNPMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPMock.m; path = SnapKit/models/SNPMock.m; sourceTree = SOURCE_ROOT; };
+		E54F2B7E1E7A29EC00A3D64C /* mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock.json; sourceTree = "<group>"; };
+		E54F2B801E7A412800A3D64C /* SNPMockDataTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPMockDataTask.h; path = SnapKit/utils/SNPMockDataTask.h; sourceTree = SOURCE_ROOT; };
+		E54F2B811E7A412800A3D64C /* SNPMockDataTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPMockDataTask.m; path = SnapKit/utils/SNPMockDataTask.m; sourceTree = SOURCE_ROOT; };
 		E5504E0A1D0E58BE00137655 /* MidtransPaymentCIMBClicks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransPaymentCIMBClicks.h; sourceTree = "<group>"; };
 		E5504E0B1D0E58BE00137655 /* MidtransPaymentCIMBClicks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransPaymentCIMBClicks.m; sourceTree = "<group>"; };
+		E55A246D1E7A5E5400F6426D /* cc-mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cc-mock.json"; sourceTree = "<group>"; };
 		E55DB9301C912ED300813B81 /* MidtransCustomerDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransCustomerDetails.h; sourceTree = "<group>"; };
 		E55DB9311C912ED300813B81 /* MidtransCustomerDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransCustomerDetails.m; sourceTree = "<group>"; };
 		E55DB9341C912ED300813B81 /* MidtransPaymentBankTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransPaymentBankTransfer.h; sourceTree = "<group>"; };
 		E55DB9351C912ED300813B81 /* MidtransPaymentBankTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransPaymentBankTransfer.m; sourceTree = "<group>"; };
 		E57931D81E764C1100379C3C /* SNPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPRequest.h; path = ../SnapKit/protocols/SNPRequest.h; sourceTree = "<group>"; };
 		E57931DF1E76682000379C3C /* SNPCreditCardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNPCreditCardTests.m; sourceTree = "<group>"; };
+		E57931E11E7692CF00379C3C /* SNPObtainPromoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPObtainPromoRequest.h; path = SnapKit/models/SNPObtainPromoRequest.h; sourceTree = SOURCE_ROOT; };
+		E57931E21E7692CF00379C3C /* SNPObtainPromoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPObtainPromoRequest.m; path = SnapKit/models/SNPObtainPromoRequest.m; sourceTree = SOURCE_ROOT; };
 		E58017D71D584256007D2DEC /* MidtransPaymentTelkomselCash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransPaymentTelkomselCash.h; sourceTree = "<group>"; };
 		E58017D81D584256007D2DEC /* MidtransPaymentTelkomselCash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransPaymentTelkomselCash.m; sourceTree = "<group>"; };
 		E58017DB1D584264007D2DEC /* MidtransPaymentXLTunai.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransPaymentXLTunai.h; sourceTree = "<group>"; };
@@ -513,38 +492,25 @@
 		E59977D71E5BBFF60012AD99 /* SNPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPClient.m; path = ../SnapKit/payments/SNPClient.m; sourceTree = "<group>"; };
 		E5AB975A1D7403AC00466A44 /* MidtransPaymentKiosOn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransPaymentKiosOn.h; sourceTree = "<group>"; };
 		E5AB975B1D7403AC00466A44 /* MidtransPaymentKiosOn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransPaymentKiosOn.m; sourceTree = "<group>"; };
-		E5BA55FC1E6E9BE900D06C7E /* SNPPaymentResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPPaymentResult.h; path = SnapKit/models/SNPPaymentResult.h; sourceTree = SOURCE_ROOT; };
-		E5BA55FD1E6E9BE900D06C7E /* SNPPaymentResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPPaymentResult.m; path = SnapKit/models/SNPPaymentResult.m; sourceTree = SOURCE_ROOT; };
 		E5BA56041E6EB64900D06C7E /* SNPNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPNetworking.h; path = SnapKit/utils/SNPNetworking.h; sourceTree = SOURCE_ROOT; };
 		E5BA56051E6EB64900D06C7E /* SNPNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPNetworking.m; path = SnapKit/utils/SNPNetworking.m; sourceTree = SOURCE_ROOT; };
 		E5BA56081E6EB97500D06C7E /* SNPPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPPayment.h; path = SnapKit/payments/SNPPayment.h; sourceTree = SOURCE_ROOT; };
 		E5BA56091E6EB97500D06C7E /* SNPPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPPayment.m; path = SnapKit/payments/SNPPayment.m; sourceTree = SOURCE_ROOT; };
 		E5BA560C1E6EBD9500D06C7E /* SNPNetworkingLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPNetworkingLogger.h; path = SnapKit/utils/SNPNetworkingLogger.h; sourceTree = SOURCE_ROOT; };
 		E5BA560D1E6EBD9500D06C7E /* SNPNetworkingLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPNetworkingLogger.m; path = SnapKit/utils/SNPNetworkingLogger.m; sourceTree = SOURCE_ROOT; };
-		E5BA56121E6EC20900D06C7E /* SNPVANumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPVANumber.h; path = ../SnapKit/models/SNPVANumber.h; sourceTree = "<group>"; };
-		E5BA56131E6EC20900D06C7E /* SNPVANumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPVANumber.m; path = ../SnapKit/models/SNPVANumber.m; sourceTree = "<group>"; };
 		E5BA56181E6EC51C00D06C7E /* SNPIndomaretPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPIndomaretPayment.h; path = SnapKit/payments/SNPIndomaretPayment.h; sourceTree = SOURCE_ROOT; };
 		E5BA56191E6EC51C00D06C7E /* SNPIndomaretPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPIndomaretPayment.m; path = SnapKit/payments/SNPIndomaretPayment.m; sourceTree = SOURCE_ROOT; };
-		E5BA561C1E6EC74900D06C7E /* SNPIndomaretResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPIndomaretResult.h; path = ../SnapKit/models/SNPIndomaretResult.h; sourceTree = "<group>"; };
-		E5BA561D1E6EC74900D06C7E /* SNPIndomaretResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPIndomaretResult.m; path = ../SnapKit/models/SNPIndomaretResult.m; sourceTree = "<group>"; };
 		E5BA56201E6EC9E500D06C7E /* SNPBCAVAPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPBCAVAPayment.h; path = SnapKit/payments/SNPBCAVAPayment.h; sourceTree = SOURCE_ROOT; };
 		E5BA56211E6EC9E500D06C7E /* SNPBCAVAPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPBCAVAPayment.m; path = SnapKit/payments/SNPBCAVAPayment.m; sourceTree = SOURCE_ROOT; };
-		E5BA56241E6ECB0B00D06C7E /* SNPBCAVAResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPBCAVAResult.h; path = ../SnapKit/models/SNPBCAVAResult.h; sourceTree = "<group>"; };
-		E5BA56251E6ECB0B00D06C7E /* SNPBCAVAResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPBCAVAResult.m; path = ../SnapKit/models/SNPBCAVAResult.m; sourceTree = "<group>"; };
 		E5BA56281E6ECBF300D06C7E /* SNPEChannelPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPEChannelPayment.h; path = SnapKit/payments/SNPEChannelPayment.h; sourceTree = SOURCE_ROOT; };
 		E5BA56291E6ECBF300D06C7E /* SNPEChannelPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPEChannelPayment.m; path = SnapKit/payments/SNPEChannelPayment.m; sourceTree = SOURCE_ROOT; };
-		E5BA562C1E6ED2A100D06C7E /* SNPEChannelResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPEChannelResult.h; path = ../SnapKit/models/SNPEChannelResult.h; sourceTree = "<group>"; };
-		E5BA562D1E6ED2A100D06C7E /* SNPEChannelResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPEChannelResult.m; path = ../SnapKit/models/SNPEChannelResult.m; sourceTree = "<group>"; };
 		E5BA56301E6ED42600D06C7E /* SNPPermataVAPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPPermataVAPayment.h; path = SnapKit/payments/SNPPermataVAPayment.h; sourceTree = SOURCE_ROOT; };
 		E5BA56311E6ED42600D06C7E /* SNPPermataVAPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPPermataVAPayment.m; path = SnapKit/payments/SNPPermataVAPayment.m; sourceTree = SOURCE_ROOT; };
-		E5BA56341E6ED4D600D06C7E /* SNPPermataVAResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPPermataVAResult.h; path = ../SnapKit/models/SNPPermataVAResult.h; sourceTree = "<group>"; };
-		E5BA56351E6ED4D600D06C7E /* SNPPermataVAResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPPermataVAResult.m; path = ../SnapKit/models/SNPPermataVAResult.m; sourceTree = "<group>"; };
-		E5BA563E1E6EF08400D06C7E /* SNPCreditCardResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPCreditCardResult.h; path = ../SnapKit/models/SNPCreditCardResult.h; sourceTree = "<group>"; };
-		E5BA563F1E6EF08400D06C7E /* SNPCreditCardResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPCreditCardResult.m; path = ../SnapKit/models/SNPCreditCardResult.m; sourceTree = "<group>"; };
 		E5C00EE91D61BC50008DD9C5 /* MidtransImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransImageManager.h; sourceTree = "<group>"; };
 		E5C00EEA1D61BC50008DD9C5 /* MidtransImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransImageManager.m; sourceTree = "<group>"; };
 		E5C232981D5AAEBF00A0A486 /* MidtransCreditCardConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransCreditCardConfig.h; sourceTree = "<group>"; };
 		E5C232991D5AAEBF00A0A486 /* MidtransCreditCardConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransCreditCardConfig.m; sourceTree = "<group>"; };
+		E5C9DE0F1E77A26100B15671 /* bins.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bins.json; sourceTree = "<group>"; };
 		E5DACA901D034E7000F5BE0A /* MidtransLuhn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransLuhn.h; sourceTree = "<group>"; };
 		E5DACA911D034E7000F5BE0A /* MidtransLuhn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransLuhn.m; sourceTree = "<group>"; };
 		E5E436031CE31ACE00F688ED /* MidtransTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransTransaction.h; sourceTree = "<group>"; };
@@ -578,32 +544,16 @@
 		E5E4363A1CE31E8D00F688ED /* Midtrans3DSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Midtrans3DSController.m; sourceTree = "<group>"; };
 		E5E6FAD21E6F98E000B706C5 /* SNPKiosOnPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPKiosOnPayment.h; path = SnapKit/payments/SNPKiosOnPayment.h; sourceTree = SOURCE_ROOT; };
 		E5E6FAD31E6F98E000B706C5 /* SNPKiosOnPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPKiosOnPayment.m; path = SnapKit/payments/SNPKiosOnPayment.m; sourceTree = SOURCE_ROOT; };
-		E5E6FADA1E6F9B6700B706C5 /* SNPKiosOnResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPKiosOnResult.h; path = ../SnapKit/models/SNPKiosOnResult.h; sourceTree = "<group>"; };
-		E5E6FADB1E6F9B6700B706C5 /* SNPKiosOnResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPKiosOnResult.m; path = ../SnapKit/models/SNPKiosOnResult.m; sourceTree = "<group>"; };
 		E5E6FAE01E6FA6E700B706C5 /* SNPKlikBCAPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPKlikBCAPayment.h; path = SnapKit/payments/SNPKlikBCAPayment.h; sourceTree = SOURCE_ROOT; };
 		E5E6FAE11E6FA6E700B706C5 /* SNPKlikBCAPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPKlikBCAPayment.m; path = SnapKit/payments/SNPKlikBCAPayment.m; sourceTree = SOURCE_ROOT; };
-		E5E6FAE41E6FA87900B706C5 /* SNPKlikBCAResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPKlikBCAResult.h; path = ../SnapKit/models/SNPKlikBCAResult.h; sourceTree = "<group>"; };
-		E5E6FAE51E6FA87900B706C5 /* SNPKlikBCAResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPKlikBCAResult.m; path = ../SnapKit/models/SNPKlikBCAResult.m; sourceTree = "<group>"; };
 		E5E6FAEC1E6FAA3500B706C5 /* SNPCIMBClicksPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPCIMBClicksPayment.h; path = SnapKit/payments/SNPCIMBClicksPayment.h; sourceTree = SOURCE_ROOT; };
 		E5E6FAED1E6FAA3500B706C5 /* SNPCIMBClicksPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPCIMBClicksPayment.m; path = SnapKit/payments/SNPCIMBClicksPayment.m; sourceTree = SOURCE_ROOT; };
 		E5E6FAF01E6FABB800B706C5 /* SNPBCAKlikpayPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPBCAKlikpayPayment.h; path = SnapKit/payments/SNPBCAKlikpayPayment.h; sourceTree = SOURCE_ROOT; };
 		E5E6FAF11E6FABB800B706C5 /* SNPBCAKlikpayPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPBCAKlikpayPayment.m; path = SnapKit/payments/SNPBCAKlikpayPayment.m; sourceTree = SOURCE_ROOT; };
-		E5E6FAF41E6FACEA00B706C5 /* SNPBCAKlikpayResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPBCAKlikpayResult.h; path = SnapKit/models/SNPBCAKlikpayResult.h; sourceTree = SOURCE_ROOT; };
-		E5E6FAF51E6FACEA00B706C5 /* SNPBCAKlikpayResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPBCAKlikpayResult.m; path = SnapKit/models/SNPBCAKlikpayResult.m; sourceTree = SOURCE_ROOT; };
-		E5E6FAF81E6FAD0400B706C5 /* SNPCIMBClicksResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPCIMBClicksResult.h; path = SnapKit/models/SNPCIMBClicksResult.h; sourceTree = SOURCE_ROOT; };
-		E5E6FAF91E6FAD0400B706C5 /* SNPCIMBClicksResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPCIMBClicksResult.m; path = SnapKit/models/SNPCIMBClicksResult.m; sourceTree = SOURCE_ROOT; };
-		E5E6FB041E6FAE1D00B706C5 /* SNPKlikpayRedirect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPKlikpayRedirect.h; path = SnapKit/models/SNPKlikpayRedirect.h; sourceTree = SOURCE_ROOT; };
-		E5E6FB051E6FAE1D00B706C5 /* SNPKlikpayRedirect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPKlikpayRedirect.m; path = SnapKit/models/SNPKlikpayRedirect.m; sourceTree = SOURCE_ROOT; };
-		E5E6FB061E6FAE1D00B706C5 /* SNPKlikpayRedirectParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPKlikpayRedirectParam.h; path = SnapKit/models/SNPKlikpayRedirectParam.h; sourceTree = SOURCE_ROOT; };
-		E5E6FB071E6FAE1D00B706C5 /* SNPKlikpayRedirectParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPKlikpayRedirectParam.m; path = SnapKit/models/SNPKlikpayRedirectParam.m; sourceTree = SOURCE_ROOT; };
 		E5E6FB0C1E6FB32100B706C5 /* SNPBRIEpayPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPBRIEpayPayment.h; path = SnapKit/payments/SNPBRIEpayPayment.h; sourceTree = SOURCE_ROOT; };
 		E5E6FB0D1E6FB32100B706C5 /* SNPBRIEpayPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPBRIEpayPayment.m; path = SnapKit/payments/SNPBRIEpayPayment.m; sourceTree = SOURCE_ROOT; };
 		E5E6FB101E6FB35A00B706C5 /* SNPMandiriECashPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPMandiriECashPayment.h; path = SnapKit/payments/SNPMandiriECashPayment.h; sourceTree = SOURCE_ROOT; };
 		E5E6FB111E6FB35A00B706C5 /* SNPMandiriECashPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPMandiriECashPayment.m; path = SnapKit/payments/SNPMandiriECashPayment.m; sourceTree = SOURCE_ROOT; };
-		E5E6FB141E6FB4AE00B706C5 /* SNPBRIEpayResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPBRIEpayResult.h; path = SnapKit/models/SNPBRIEpayResult.h; sourceTree = SOURCE_ROOT; };
-		E5E6FB151E6FB4AE00B706C5 /* SNPBRIEpayResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPBRIEpayResult.m; path = SnapKit/models/SNPBRIEpayResult.m; sourceTree = SOURCE_ROOT; };
-		E5E6FB161E6FB4AE00B706C5 /* SNPMandiriECashResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPMandiriECashResult.h; path = SnapKit/models/SNPMandiriECashResult.h; sourceTree = SOURCE_ROOT; };
-		E5E6FB171E6FB4AE00B706C5 /* SNPMandiriECashResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPMandiriECashResult.m; path = SnapKit/models/SNPMandiriECashResult.m; sourceTree = SOURCE_ROOT; };
 		E5E6FB1D1E70024500B706C5 /* SNPMandiriClickpayPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPMandiriClickpayPayment.h; path = SnapKit/payments/SNPMandiriClickpayPayment.h; sourceTree = SOURCE_ROOT; };
 		E5E6FB1E1E70024500B706C5 /* SNPMandiriClickpayPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPMandiriClickpayPayment.m; path = SnapKit/payments/SNPMandiriClickpayPayment.m; sourceTree = SOURCE_ROOT; };
 		E5E7BDE81E63C2960035B99C /* SNPStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNPStringUtils.h; path = ../SnapKit/utils/SNPStringUtils.h; sourceTree = "<group>"; };
@@ -991,6 +941,12 @@
 				E5BA56051E6EB64900D06C7E /* SNPNetworking.m */,
 				E5BA560C1E6EBD9500D06C7E /* SNPNetworkingLogger.h */,
 				E5BA560D1E6EBD9500D06C7E /* SNPNetworkingLogger.m */,
+				E54F2B741E794FDE00A3D64C /* SNPMockSource.h */,
+				E54F2B751E794FDE00A3D64C /* SNPMockSource.m */,
+				E54F2B701E794D0C00A3D64C /* SNPMockSession.h */,
+				E54F2B711E794D0C00A3D64C /* SNPMockSession.m */,
+				E54F2B801E7A412800A3D64C /* SNPMockDataTask.h */,
+				E54F2B811E7A412800A3D64C /* SNPMockDataTask.m */,
 			);
 			name = utils;
 			path = ../MidtransCoreKit;
@@ -1008,6 +964,32 @@
 		E59977781E5B95C10012AD99 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				E599779A1E5B9C750012AD99 /* SNPPaymentInfo.h */,
+				E599779B1E5B9C750012AD99 /* SNPPaymentInfo.m */,
+				E54421EC1E5E31DE001FBFDA /* SNPPromo.h */,
+				E54421ED1E5E31DE001FBFDA /* SNPPromo.m */,
+				E599778A1E5B9C750012AD99 /* SNPCallbacks.h */,
+				E599778B1E5B9C750012AD99 /* SNPCallbacks.m */,
+				E599778C1E5B9C750012AD99 /* SNPCreditCardDetails.h */,
+				E599778D1E5B9C750012AD99 /* SNPCreditCardDetails.m */,
+				E54421E01E5DC373001FBFDA /* SNPSavedCreditCard.h */,
+				E54421E11E5DC373001FBFDA /* SNPSavedCreditCard.m */,
+				E59977921E5B9C750012AD99 /* SNPExpiry.h */,
+				E59977931E5B9C750012AD99 /* SNPExpiry.m */,
+				E59977981E5B9C750012AD99 /* SNPMerchant.h */,
+				E59977991E5B9C750012AD99 /* SNPMerchant.m */,
+				E599779C1E5B9C750012AD99 /* SNPPreference.h */,
+				E599779D1E5B9C750012AD99 /* SNPPreference.m */,
+				E59977961E5B9C750012AD99 /* SNPItemDetails.h */,
+				E59977971E5B9C750012AD99 /* SNPItemDetails.m */,
+				E599778E1E5B9C750012AD99 /* SNPCustomerDetails.h */,
+				E599778F1E5B9C750012AD99 /* SNPCustomerDetails.m */,
+				E59977881E5B9C750012AD99 /* SNPAddress.h */,
+				E59977891E5B9C750012AD99 /* SNPAddress.m */,
+				E59977A41E5B9C750012AD99 /* SNPTransactionDetails.h */,
+				E59977A51E5B9C750012AD99 /* SNPTransactionDetails.m */,
+				E59977901E5B9C750012AD99 /* SNPEnabledPayment.h */,
+				E59977911E5B9C750012AD99 /* SNPEnabledPayment.m */,
 				E59977941E5B9C750012AD99 /* SNPInstallment.h */,
 				E59977951E5B9C750012AD99 /* SNPInstallment.m */,
 				E59977A01E5B9C750012AD99 /* SNPTerm.h */,
@@ -1022,9 +1004,8 @@
 				E54421CC1E5D0C2B001FBFDA /* SNPCreditCardToken.m */,
 				E59977A21E5B9C750012AD99 /* SNPToken.h */,
 				E59977A31E5B9C750012AD99 /* SNPToken.m */,
-				E5E6FB1C1E6FFD3E00B706C5 /* payment info */,
-				E5BA55FB1E6E9BBF00D06C7E /* payment results */,
-				E5E7BDEC1E63CD8A0035B99C /* requests */,
+				E54F2B781E79523200A3D64C /* SNPMock.h */,
+				E54F2B791E79523200A3D64C /* SNPMock.m */,
 			);
 			name = models;
 			path = ../MidtransCoreKit;
@@ -1053,49 +1034,14 @@
 			path = ../MidtransCoreKit;
 			sourceTree = "<group>";
 		};
-		E5BA55FB1E6E9BBF00D06C7E /* payment results */ = {
+		E5C9DE0E1E77A25300B15671 /* sources */ = {
 			isa = PBXGroup;
 			children = (
-				E5E6FAF81E6FAD0400B706C5 /* SNPCIMBClicksResult.h */,
-				E5E6FAF91E6FAD0400B706C5 /* SNPCIMBClicksResult.m */,
-				E5E6FB061E6FAE1D00B706C5 /* SNPKlikpayRedirectParam.h */,
-				E5E6FB071E6FAE1D00B706C5 /* SNPKlikpayRedirectParam.m */,
-				E5E6FB041E6FAE1D00B706C5 /* SNPKlikpayRedirect.h */,
-				E5E6FB051E6FAE1D00B706C5 /* SNPKlikpayRedirect.m */,
-				E5E6FAF41E6FACEA00B706C5 /* SNPBCAKlikpayResult.h */,
-				E5E6FAF51E6FACEA00B706C5 /* SNPBCAKlikpayResult.m */,
-				E5E6FAE41E6FA87900B706C5 /* SNPKlikBCAResult.h */,
-				E5E6FAE51E6FA87900B706C5 /* SNPKlikBCAResult.m */,
-				E5E6FADA1E6F9B6700B706C5 /* SNPKiosOnResult.h */,
-				E5E6FADB1E6F9B6700B706C5 /* SNPKiosOnResult.m */,
-				E5BA55FC1E6E9BE900D06C7E /* SNPPaymentResult.h */,
-				E5BA55FD1E6E9BE900D06C7E /* SNPPaymentResult.m */,
-				E5BA56241E6ECB0B00D06C7E /* SNPBCAVAResult.h */,
-				E5BA56251E6ECB0B00D06C7E /* SNPBCAVAResult.m */,
-				E5BA56121E6EC20900D06C7E /* SNPVANumber.h */,
-				E5BA56131E6EC20900D06C7E /* SNPVANumber.m */,
-				E5BA561C1E6EC74900D06C7E /* SNPIndomaretResult.h */,
-				E5BA561D1E6EC74900D06C7E /* SNPIndomaretResult.m */,
-				E5BA562C1E6ED2A100D06C7E /* SNPEChannelResult.h */,
-				E5BA562D1E6ED2A100D06C7E /* SNPEChannelResult.m */,
-				E5BA56341E6ED4D600D06C7E /* SNPPermataVAResult.h */,
-				E5BA56351E6ED4D600D06C7E /* SNPPermataVAResult.m */,
-				E5BA563E1E6EF08400D06C7E /* SNPCreditCardResult.h */,
-				E5BA563F1E6EF08400D06C7E /* SNPCreditCardResult.m */,
-				E5E6FB141E6FB4AE00B706C5 /* SNPBRIEpayResult.h */,
-				E5E6FB151E6FB4AE00B706C5 /* SNPBRIEpayResult.m */,
-				E5E6FB161E6FB4AE00B706C5 /* SNPMandiriECashResult.h */,
-				E5E6FB171E6FB4AE00B706C5 /* SNPMandiriECashResult.m */,
-				E51945021E71081F00B4122B /* SNPMandiriClickpayResult.h */,
-				E51945031E71081F00B4122B /* SNPMandiriClickpayResult.m */,
-				E518A6591E7118F900746DE3 /* SNPXLTunaiResult.h */,
-				E518A65A1E7118F900746DE3 /* SNPXLTunaiResult.m */,
-				E518A6611E7127A800746DE3 /* SNPTelkomselCashResult.h */,
-				E518A6621E7127A800746DE3 /* SNPTelkomselCashResult.m */,
-				E52CFB041E713C2B00181A41 /* SNPIndosatDompetkuResult.h */,
-				E52CFB051E713C2B00181A41 /* SNPIndosatDompetkuResult.m */,
+				E5C9DE0F1E77A26100B15671 /* bins.json */,
+				E54F2B7E1E7A29EC00A3D64C /* mock.json */,
+				E55A246D1E7A5E5400F6426D /* cc-mock.json */,
 			);
-			name = "payment results";
+			name = sources;
 			sourceTree = "<group>";
 		};
 		E5E6FADE1E6FA4C400B706C5 /* payments */ = {
@@ -1138,39 +1084,6 @@
 			path = ../MidtransCoreKit;
 			sourceTree = "<group>";
 		};
-		E5E6FB1C1E6FFD3E00B706C5 /* payment info */ = {
-			isa = PBXGroup;
-			children = (
-				E599779A1E5B9C750012AD99 /* SNPPaymentInfo.h */,
-				E599779B1E5B9C750012AD99 /* SNPPaymentInfo.m */,
-				E54421EC1E5E31DE001FBFDA /* SNPPromo.h */,
-				E54421ED1E5E31DE001FBFDA /* SNPPromo.m */,
-				E599778A1E5B9C750012AD99 /* SNPCallbacks.h */,
-				E599778B1E5B9C750012AD99 /* SNPCallbacks.m */,
-				E599778C1E5B9C750012AD99 /* SNPCreditCardDetails.h */,
-				E599778D1E5B9C750012AD99 /* SNPCreditCardDetails.m */,
-				E54421E01E5DC373001FBFDA /* SNPSavedCreditCard.h */,
-				E54421E11E5DC373001FBFDA /* SNPSavedCreditCard.m */,
-				E59977921E5B9C750012AD99 /* SNPExpiry.h */,
-				E59977931E5B9C750012AD99 /* SNPExpiry.m */,
-				E59977981E5B9C750012AD99 /* SNPMerchant.h */,
-				E59977991E5B9C750012AD99 /* SNPMerchant.m */,
-				E599779C1E5B9C750012AD99 /* SNPPreference.h */,
-				E599779D1E5B9C750012AD99 /* SNPPreference.m */,
-				E59977961E5B9C750012AD99 /* SNPItemDetails.h */,
-				E59977971E5B9C750012AD99 /* SNPItemDetails.m */,
-				E599778E1E5B9C750012AD99 /* SNPCustomerDetails.h */,
-				E599778F1E5B9C750012AD99 /* SNPCustomerDetails.m */,
-				E59977881E5B9C750012AD99 /* SNPAddress.h */,
-				E59977891E5B9C750012AD99 /* SNPAddress.m */,
-				E59977A41E5B9C750012AD99 /* SNPTransactionDetails.h */,
-				E59977A51E5B9C750012AD99 /* SNPTransactionDetails.m */,
-				E59977901E5B9C750012AD99 /* SNPEnabledPayment.h */,
-				E59977911E5B9C750012AD99 /* SNPEnabledPayment.m */,
-			);
-			name = "payment info";
-			sourceTree = "<group>";
-		};
 		E5E7BDEC1E63CD8A0035B99C /* requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1180,8 +1093,11 @@
 				E50D85041E5BE4B900154327 /* SNPPaymentTokenizeRequest.m */,
 				E5E7BDF21E63DD1E0035B99C /* SNPPaymentInfoRequest.h */,
 				E5E7BDF31E63DD1E0035B99C /* SNPPaymentInfoRequest.m */,
+				E57931E11E7692CF00379C3C /* SNPObtainPromoRequest.h */,
+				E57931E21E7692CF00379C3C /* SNPObtainPromoRequest.m */,
 			);
 			name = requests;
+			path = ../MidtransCoreKit;
 			sourceTree = "<group>";
 		};
 		E5EDA90D1E6E641000F3A76E /* SnapKit */ = {
@@ -1192,8 +1108,9 @@
 				E59977CD1E5BB2DC0012AD99 /* configs */,
 				E599777D1E5B99E90012AD99 /* protocols */,
 				E59977781E5B95C10012AD99 /* models */,
-				E5E6FADE1E6FA4C400B706C5 /* payments */,
 				E50E41221E5AD754001DCC67 /* utils */,
+				E5E7BDEC1E63CD8A0035B99C /* requests */,
+				E5E6FADE1E6FA4C400B706C5 /* payments */,
 				E5EDA90F1E6E641000F3A76E /* Info.plist */,
 			);
 			path = SnapKit;
@@ -1203,6 +1120,7 @@
 			isa = PBXGroup;
 			children = (
 				E5EDA9651E6E648400F3A76E /* Info.plist */,
+				E5C9DE0E1E77A25300B15671 /* sources */,
 				E57931DE1E76680800379C3C /* utils */,
 				E5EDA9631E6E648400F3A76E /* SnapKitTests.m */,
 				E57931DF1E76682000379C3C /* SNPCreditCardTests.m */,
@@ -1304,72 +1222,58 @@
 				E5EDA99A1E6E66B100F3A76E /* SNPSharedConfig.h in Headers */,
 				E5EDA99C1E6E66B100F3A76E /* SNPSystemConfig.h in Headers */,
 				E57931D91E764C1100379C3C /* SNPRequest.h in Headers */,
-				E5BA56161E6EC20900D06C7E /* SNPVANumber.h in Headers */,
 				E518A65F1E711F9C00746DE3 /* SNPTelkomselCashPayment.h in Headers */,
 				E5E6FB121E6FB35A00B706C5 /* SNPMandiriECashPayment.h in Headers */,
 				E5EDA99E1E6E66B100F3A76E /* SNPCreditCardConfig.h in Headers */,
-				E5E6FB081E6FAE1D00B706C5 /* SNPKlikpayRedirect.h in Headers */,
 				E5BA562A1E6ECBF300D06C7E /* SNPEChannelPayment.h in Headers */,
 				E5EDA9A21E6E66B100F3A76E /* SNPPromo.h in Headers */,
-				E5E6FAFE1E6FAD0400B706C5 /* SNPCIMBClicksResult.h in Headers */,
-				E518A6631E7127A800746DE3 /* SNPTelkomselCashResult.h in Headers */,
 				E5EDA9A41E6E66B100F3A76E /* SNPSavedCreditCard.h in Headers */,
-				E52CFB061E713C2B00181A41 /* SNPIndosatDompetkuResult.h in Headers */,
 				E52CFB021E713A0A00181A41 /* SNPIndosatDompetkuPayment.h in Headers */,
-				E5BA561E1E6EC74900D06C7E /* SNPIndomaretResult.h in Headers */,
+				E54F2B761E794FDE00A3D64C /* SNPMockSource.h in Headers */,
 				E5EDA9A61E6E66B100F3A76E /* SNPCallbacks.h in Headers */,
 				E5EDA9A81E6E66B100F3A76E /* SNPCreditCardDetails.h in Headers */,
 				E5BA560A1E6EB97500D06C7E /* SNPPayment.h in Headers */,
-				E5BA56261E6ECB0B00D06C7E /* SNPBCAVAResult.h in Headers */,
-				E5E6FB181E6FB4AE00B706C5 /* SNPBRIEpayResult.h in Headers */,
 				E5EDA9AA1E6E66B100F3A76E /* SNPEnabledPayment.h in Headers */,
 				E5BA561A1E6EC51C00D06C7E /* SNPIndomaretPayment.h in Headers */,
+				E54F2B7A1E79523200A3D64C /* SNPMock.h in Headers */,
 				E5EDA9AC1E6E66B100F3A76E /* SNPExpiry.h in Headers */,
 				E5E6FAEE1E6FAA3500B706C5 /* SNPCIMBClicksPayment.h in Headers */,
 				E5BA560E1E6EBD9500D06C7E /* SNPNetworkingLogger.h in Headers */,
+				E54F2B821E7A412800A3D64C /* SNPMockDataTask.h in Headers */,
 				E5EDA9AE1E6E66B100F3A76E /* SNPInstallment.h in Headers */,
 				E5BA56061E6EB64900D06C7E /* SNPNetworking.h in Headers */,
 				E5E6FB0E1E6FB32100B706C5 /* SNPBRIEpayPayment.h in Headers */,
 				E5EDA9B01E6E66B100F3A76E /* SNPMerchant.h in Headers */,
 				E5EDA9B21E6E66B100F3A76E /* SNPPreference.h in Headers */,
+				E57931E31E7692CF00379C3C /* SNPObtainPromoRequest.h in Headers */,
 				E5EDA9B41E6E66B100F3A76E /* SNPTerm.h in Headers */,
 				E5EDA9B61E6E66B100F3A76E /* SNPCreditCard.h in Headers */,
 				E518A6571E71161600746DE3 /* SNPXLTunaiPayment.h in Headers */,
 				E5EDA9B81E6E66B100F3A76E /* SNPObtainedPromo.h in Headers */,
 				E5EDA9BA1E6E66B100F3A76E /* SNPInstallmentTerm.h in Headers */,
-				E5BA56361E6ED4D600D06C7E /* SNPPermataVAResult.h in Headers */,
-				E5E6FB0A1E6FAE1D00B706C5 /* SNPKlikpayRedirectParam.h in Headers */,
 				E5EDA9BC1E6E66B100F3A76E /* SNPItemDetails.h in Headers */,
 				E5EDA9BE1E6E66B100F3A76E /* SNPCustomerDetails.h in Headers */,
 				E5BA56321E6ED42600D06C7E /* SNPPermataVAPayment.h in Headers */,
 				E5EDA9C01E6E66B100F3A76E /* SNPTransactionDetails.h in Headers */,
-				E5BA56401E6EF08400D06C7E /* SNPCreditCardResult.h in Headers */,
 				E5E6FAE21E6FA6E700B706C5 /* SNPKlikBCAPayment.h in Headers */,
-				E5BA55FE1E6E9BE900D06C7E /* SNPPaymentResult.h in Headers */,
 				E5EDA9C21E6E66B100F3A76E /* SNPAddress.h in Headers */,
 				E5E6FAF21E6FABB800B706C5 /* SNPBCAKlikpayPayment.h in Headers */,
-				E5E6FAF61E6FACEA00B706C5 /* SNPBCAKlikpayResult.h in Headers */,
-				E5E6FAE61E6FA87900B706C5 /* SNPKlikBCAResult.h in Headers */,
 				E5EDA9C61E6E66B100F3A76E /* SNPCreditCardToken.h in Headers */,
-				E5E6FB1A1E6FB4AE00B706C5 /* SNPMandiriECashResult.h in Headers */,
 				E5EDA9C81E6E66B100F3A76E /* SNPPaymentInfo.h in Headers */,
 				E5EDA9CA1E6E66B100F3A76E /* SNPToken.h in Headers */,
 				E5EDA9CC1E6E66B100F3A76E /* SNPCreditCardPayment.h in Headers */,
 				E5EDA9D01E6E66B100F3A76E /* SNPCreditCardTokenizeRequest.h in Headers */,
-				E518A65B1E7118F900746DE3 /* SNPXLTunaiResult.h in Headers */,
 				E5E6FB1F1E70024500B706C5 /* SNPMandiriClickpayPayment.h in Headers */,
 				E5EDA9D21E6E66B100F3A76E /* SNPPaymentTokenizeRequest.h in Headers */,
-				E5E6FADC1E6F9B6700B706C5 /* SNPKiosOnResult.h in Headers */,
 				E5EDA9D61E6E66B100F3A76E /* SNPPaymentInfoRequest.h in Headers */,
 				E5E6FAD41E6F98E000B706C5 /* SNPKiosOnPayment.h in Headers */,
 				E5EDA9D81E6E66B100F3A76E /* NSDictionary+SNPUtils.h in Headers */,
 				E5EDA9DA1E6E66B100F3A76E /* NSError+SNPUtils.h in Headers */,
 				E5EDA9DC1E6E66B100F3A76E /* NSObject+SNPUtils.h in Headers */,
 				E5EDA9DE1E6E66B100F3A76E /* SNPStringUtils.h in Headers */,
+				E54F2B721E794D0C00A3D64C /* SNPMockSession.h in Headers */,
 				E5BA56221E6EC9E500D06C7E /* SNPBCAVAPayment.h in Headers */,
 				E5EDA9E01E6E66B100F3A76E /* SNPClient.h in Headers */,
-				E5BA562E1E6ED2A100D06C7E /* SNPEChannelResult.h in Headers */,
-				E51945041E71081F00B4122B /* SNPMandiriClickpayResult.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1456,6 +1360,7 @@
 					E5EDA9601E6E648300F3A76E = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = G92YEQF267;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1492,6 +1397,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E55A246E1E7A5E5400F6426D /* cc-mock.json in Resources */,
+				E5C9DE101E77A26100B15671 /* bins.json in Resources */,
+				E54F2B7F1E7A29EC00A3D64C /* mock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1637,59 +1545,45 @@
 			files = (
 				E5BA560B1E6EB97500D06C7E /* SNPPayment.m in Sources */,
 				E5E6FAE31E6FA6E700B706C5 /* SNPKlikBCAPayment.m in Sources */,
-				E518A65C1E7118F900746DE3 /* SNPXLTunaiResult.m in Sources */,
-				E5BA56271E6ECB0B00D06C7E /* SNPBCAVAResult.m in Sources */,
 				E5EDA9E71E6E684000F3A76E /* SNPSharedConfig.m in Sources */,
 				E5EDA9E81E6E684000F3A76E /* SNPSystemConfig.m in Sources */,
-				E5BA56371E6ED4D600D06C7E /* SNPPermataVAResult.m in Sources */,
 				E5EDA9E91E6E684000F3A76E /* SNPCreditCardConfig.m in Sources */,
 				E5EDA9EA1E6E684000F3A76E /* SNPPromo.m in Sources */,
-				E5E6FAE71E6FA87900B706C5 /* SNPKlikBCAResult.m in Sources */,
-				E5BA56171E6EC20900D06C7E /* SNPVANumber.m in Sources */,
 				E5EDA9EB1E6E684000F3A76E /* SNPSavedCreditCard.m in Sources */,
 				E5BA56331E6ED42600D06C7E /* SNPPermataVAPayment.m in Sources */,
 				E5EDA9EC1E6E684000F3A76E /* SNPCallbacks.m in Sources */,
 				E5BA560F1E6EBD9500D06C7E /* SNPNetworkingLogger.m in Sources */,
+				E57931E41E7692CF00379C3C /* SNPObtainPromoRequest.m in Sources */,
 				E5EDA9ED1E6E684000F3A76E /* SNPCreditCardDetails.m in Sources */,
 				E518A6601E711F9C00746DE3 /* SNPTelkomselCashPayment.m in Sources */,
 				E5EDA9EE1E6E684000F3A76E /* SNPEnabledPayment.m in Sources */,
 				E518A6581E71161600746DE3 /* SNPXLTunaiPayment.m in Sources */,
 				E5EDA9EF1E6E684000F3A76E /* SNPExpiry.m in Sources */,
 				E5EDA9F01E6E684000F3A76E /* SNPInstallment.m in Sources */,
-				E5E6FB191E6FB4AE00B706C5 /* SNPBRIEpayResult.m in Sources */,
-				E51945051E71081F00B4122B /* SNPMandiriClickpayResult.m in Sources */,
 				E5EDA9F11E6E684000F3A76E /* SNPMerchant.m in Sources */,
+				E54F2B771E794FDE00A3D64C /* SNPMockSource.m in Sources */,
 				E5EDA9F21E6E684000F3A76E /* SNPPreference.m in Sources */,
 				E5BA56231E6EC9E500D06C7E /* SNPBCAVAPayment.m in Sources */,
-				E518A6641E7127A800746DE3 /* SNPTelkomselCashResult.m in Sources */,
 				E52CFB031E713A0A00181A41 /* SNPIndosatDompetkuPayment.m in Sources */,
+				E54F2B7B1E79523200A3D64C /* SNPMock.m in Sources */,
 				E5E6FB201E70024500B706C5 /* SNPMandiriClickpayPayment.m in Sources */,
 				E5EDA9F31E6E684000F3A76E /* SNPTerm.m in Sources */,
-				E5BA561F1E6EC74900D06C7E /* SNPIndomaretResult.m in Sources */,
 				E5E6FAEF1E6FAA3500B706C5 /* SNPCIMBClicksPayment.m in Sources */,
-				E5E6FB091E6FAE1D00B706C5 /* SNPKlikpayRedirect.m in Sources */,
-				E5E6FB1B1E6FB4AE00B706C5 /* SNPMandiriECashResult.m in Sources */,
-				E5E6FAFF1E6FAD0400B706C5 /* SNPCIMBClicksResult.m in Sources */,
 				E5BA56071E6EB64900D06C7E /* SNPNetworking.m in Sources */,
 				E5EDA9F41E6E684000F3A76E /* SNPCreditCard.m in Sources */,
 				E5EDA9F51E6E684000F3A76E /* SNPObtainedPromo.m in Sources */,
 				E5E6FAD51E6F98E000B706C5 /* SNPKiosOnPayment.m in Sources */,
-				E5E6FAF71E6FACEA00B706C5 /* SNPBCAKlikpayResult.m in Sources */,
-				E52CFB071E713C2B00181A41 /* SNPIndosatDompetkuResult.m in Sources */,
+				E54F2B731E794D0C00A3D64C /* SNPMockSession.m in Sources */,
 				E5EDA9F61E6E684000F3A76E /* SNPInstallmentTerm.m in Sources */,
-				E5BA56411E6EF08400D06C7E /* SNPCreditCardResult.m in Sources */,
 				E5EDA9F71E6E684000F3A76E /* SNPItemDetails.m in Sources */,
-				E5E6FADD1E6F9B6700B706C5 /* SNPKiosOnResult.m in Sources */,
-				E5BA562F1E6ED2A100D06C7E /* SNPEChannelResult.m in Sources */,
 				E5E6FB131E6FB35A00B706C5 /* SNPMandiriECashPayment.m in Sources */,
+				E54F2B831E7A412800A3D64C /* SNPMockDataTask.m in Sources */,
 				E5EDA9F81E6E684000F3A76E /* SNPCustomerDetails.m in Sources */,
-				E5E6FB0B1E6FAE1D00B706C5 /* SNPKlikpayRedirectParam.m in Sources */,
 				E5EDA9F91E6E684000F3A76E /* SNPTransactionDetails.m in Sources */,
 				E5EDA9FA1E6E684000F3A76E /* SNPAddress.m in Sources */,
 				E5EDA9FC1E6E684000F3A76E /* SNPCreditCardToken.m in Sources */,
 				E5BA561B1E6EC51C00D06C7E /* SNPIndomaretPayment.m in Sources */,
 				E5EDA9FD1E6E684000F3A76E /* SNPPaymentInfo.m in Sources */,
-				E5BA55FF1E6E9BE900D06C7E /* SNPPaymentResult.m in Sources */,
 				E5EDA9FE1E6E684000F3A76E /* SNPToken.m in Sources */,
 				E5E6FB0F1E6FB32100B706C5 /* SNPBRIEpayPayment.m in Sources */,
 				E5EDA9FF1E6E684000F3A76E /* SNPCreditCardPayment.m in Sources */,
@@ -1911,6 +1805,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEVELOPMENT_TEAM = G92YEQF267;
 				INFOPLIST_FILE = SnapKitTests/Info.plist;
@@ -1918,6 +1813,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.midtrans.SnapKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SnapKitTests/SnapKitTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1925,6 +1823,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEVELOPMENT_TEAM = G92YEQF267;
 				INFOPLIST_FILE = SnapKitTests/Info.plist;
@@ -1932,6 +1831,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.midtrans.SnapKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SnapKitTests/SnapKitTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

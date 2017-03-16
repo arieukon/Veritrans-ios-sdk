@@ -7,8 +7,6 @@
 //
 
 #import <SnapKit/SnapKit.h>
-#import "SNPIndomaretResult.h"
 
 @interface SNPIndomaretPayment : SNPPayment <SNPRequest>
-+ (SNPIndomaretResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

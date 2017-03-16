@@ -11,5 +11,6 @@
 #import "SNPRequest.h"
 
 @interface SNPPaymentInfoRequest : NSObject <SNPRequest>
+@property (nonatomic) SNPToken *token;
 - (instancetype)initWithToken:(SNPToken *)token;
 @end

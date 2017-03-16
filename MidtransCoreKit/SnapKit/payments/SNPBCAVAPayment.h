@@ -7,8 +7,8 @@
 //
 
 #import <SnapKit/SnapKit.h>
-#import "SNPBCAVAResult.h"
 
 @interface SNPBCAVAPayment : SNPPayment <SNPRequest>
-+ (SNPBCAVAResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
+@property (nonatomic) SNPCustomerDetails *customerDetails;
+- (instancetype)initWithToken:(SNPToken *)token customerDetails:(SNPCustomerDetails *)customerDetails;
 @end

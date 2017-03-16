@@ -7,8 +7,7 @@
 //
 
 #import <SnapKit/SnapKit.h>
-#import "SNPBCAKlikpayResult.h"
 
 @interface SNPBCAKlikpayPayment : SNPPayment <SNPRequest>
-+ (SNPBCAKlikpayResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
+
 @end

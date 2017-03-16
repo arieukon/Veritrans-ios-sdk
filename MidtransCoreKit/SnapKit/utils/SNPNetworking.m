@@ -8,6 +8,8 @@
 
 #import "SNPNetworking.h"
 #import "NSError+SNPUtils.h"
+#import "SNPSharedConfig.h"
+#import "SNPMockSession.h"
 
 @interface SNPNetworking()
 @property (nonatomic) NSURLSession *session;
@@ -39,7 +41,7 @@
                                                         object:@{
                                                                  kNetworkingRequest:request
                                                                  }];
-    [[self.session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    [[self.activeSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSDictionary *dictResponse;
         if (error) {
             [[NSNotificationCenter defaultCenter] postNotificationName:SNPNetworkingDidError
@@ -71,6 +73,15 @@
         }
         if (completion) completion(error, dictResponse);
     }] resume];
+}
+
+- (NSURLSession *)activeSession {
+    if (SHAREDCONFIG.environment == SNPEnvironmentMock) {
+        return [SNPMockSession new];
+    }
+    else {
+        return self.session;
+    }
 }
 
 @end

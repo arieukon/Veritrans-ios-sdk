@@ -18,8 +18,4 @@
     return [self requestWithParameter:[self dictionaryValue]];
 }
 
-+ (SNPKiosOnResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
-    return [SNPKiosOnResult modelObjectWithDictionary:paymentResultObject];
-}
-
 @end

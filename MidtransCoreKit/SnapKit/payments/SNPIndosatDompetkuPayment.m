@@ -11,7 +11,7 @@
 @implementation SNPIndosatDompetkuPayment
 
 - (instancetype)initWithToken:(SNPToken *)token msisdn:(NSString *)msisdn {
-    if (self = [super init]) {
+    if (self = [super initWithToken:token]) {
         self.msisdn = msisdn;
     }
     return self;
@@ -26,10 +26,6 @@
 
 - (NSURLRequest *)requestObject {
     return [self requestWithParameter:[self dictionaryValue]];
-}
-
-+ (SNPIndosatDompetkuResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
-    return [SNPIndosatDompetkuResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

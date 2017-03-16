@@ -6,8 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class SNPTerm;
+#import "SNPTerm.h"
 
 @interface SNPInstallment : NSObject <NSCoding, NSCopying>
 

@@ -32,21 +32,24 @@
 
 - (void)didStart:(NSNotification *)sender {
     NSURLRequest *request = sender.object[kNetworkingRequest];
-    NSLog(@"[request start] -> %@", request.URL.absoluteString);
+    NSLog(@"[%@ start] -> %@", request.HTTPMethod, request.URL.absoluteString);
+    if (request.HTTPBody) {
+        NSLog(@"[%@ body] -> %@", request.HTTPMethod, [[NSString alloc] initWithData:request.HTTPBody encoding:NSUTF8StringEncoding]);
+    }
 }
 
 - (void)didSuccess:(NSNotification *)sender {
     NSURLRequest *request = sender.object[kNetworkingRequest];
     NSData *data = [NSJSONSerialization dataWithJSONObject:sender.object[kNetworkingResponse] options:kNilOptions error:nil];
-    NSLog(@"[request end] -> %@", request.URL.absoluteString);
-    NSLog(@"[response JSON] -> %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    NSLog(@"[%@ end] -> %@", request.HTTPMethod, request.URL.absoluteString);
+    NSLog(@"[%@ response] -> %@", request.HTTPMethod, [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
 }
 
 - (void)didError:(NSNotification *)sender {
     NSURLRequest *request = sender.object[kNetworkingRequest];
     NSError *error = sender.object[kNetworkingError];
-    NSLog(@"[request end] -> %@", request.URL.absoluteString);
-    NSLog(@"[error] -> %@", error);
+    NSLog(@"[%@ end] -> %@", request.HTTPMethod, request.URL.absoluteString);
+    NSLog(@"[%@ error] -> %@", request.HTTPMethod, error);
 }
 
 @end

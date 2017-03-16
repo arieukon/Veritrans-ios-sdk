@@ -1,0 +1,605 @@
+[
+    {
+        "body": {
+            "payment_type": "indomaret"
+        },
+        "method": "POST",
+        "response": {
+            "store": "indomaret",
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=9rlZdYJeC8QbxuP3Dci4&status_code=201&transaction_status=pending",
+            "transaction_status": "pending",
+            "payment_code": "115649319231231",
+            "transaction_id": "e30630c4-6c49-4497-b2e7-f0ddbb05b16e",
+            "gross_amount": "1000.00",
+            "payment_type": "cstore",
+            "order_id": "9rlZdYJeC8QbxuP3Dci4",
+            "pdf_url": "https://app.sandbox.veritrans.co.id/snap/v1/transactions/d0a982d6-56b5-470f-9935-c02bc436f600/pdf",
+            "indomaret_expire_time": "17 March 08:40 WIB",
+            "status_message": "Transaksi sedang diproses",
+            "status_code": "201",
+            "transaction_time": "2017-03-16 08:40:51"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "kioson"
+        },
+        "method": "POST",
+        "response": {
+            "store": "kioson",
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=6EUb7ihbrYC8exf0KhLo&status_code=201&transaction_status=pending",
+            "transaction_status": "pending",
+            "payment_code": "909319231231",
+            "transaction_id": "44a29acb-37c6-4e94-adf4-a4cdf0cc5572",
+            "gross_amount": "1000.00",
+            "payment_type": "cstore",
+            "order_id": "6EUb7ihbrYC8exf0KhLo",
+            "kioson_expire_time": "16 March 08:41 WIB",
+            "status_message": "Transaksi sedang diproses",
+            "fraud_status": "accept",
+            "status_code": "201",
+            "transaction_time": "2017-03-16 08:41:52"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "bca_klikbca",
+            "payment_params": {
+                "user_id": "JUKIRA2922"
+            }
+        },
+        "method": "POST",
+        "response": {
+            "redirect_url": "https://api.sandbox.midtrans.com:7676/bca/klikbca/index",
+            "approval_code": "781e1de30684495299",
+            "transaction_status": "pending",
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=OY1YT8BlOs6UHSZm45xn&status_code=201&transaction_status=pending",
+            "transaction_id": "781e1de3-0684-4952-9911-e3057b42b9a1",
+            "gross_amount": "1000.00",
+            "payment_type": "bca_klikbca",
+            "bca_klikbca_expire_time": "16 March 10:42 WIB",
+            "order_id": "OY1YT8BlOs6UHSZm45xn",
+            "status_message": "Transaksi sedang diproses",
+            "status_code": "201",
+            "transaction_time": "2017-03-16 08:42:39"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "cimb_clicks"
+        },
+        "method": "POST",
+        "response": {
+            "order_id": "dz2lAILLBS4zVgVm3cT0",
+            "redirect_url": "https://api.sandbox.veritrans.co.id/cimb-clicks/request?id=6ef324d8-71a8-44de-aa79-6f4003dad392",
+            "status_message": "Transaksi sedang diproses",
+            "status_code": "201",
+            "transaction_id": "6ef324d8-71a8-44de-aa79-6f4003dad392",
+            "gross_amount": "1000.00",
+            "payment_type": "cimb_clicks",
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=dz2lAILLBS4zVgVm3cT0&status_code=201&transaction_status=pending",
+            "transaction_time": "2017-03-16 08:44:15",
+            "transaction_status": "pending"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "bca_klikpay"
+        },
+        "method": "POST",
+        "response": {
+            "redirect_url": "https://api.sandbox.veritrans.co.id/v3/bca/klikpay/redirect/3b7bd034-60bb-4c93-84d8-5fe5eb5bbeca",
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=RljV2cRTb4gMQmr5ZAys&status_code=201&transaction_status=pending",
+            "transaction_status": "pending",
+            "transaction_id": "3b7bd034-60bb-4c93-84d8-5fe5eb5bbeca",
+            "gross_amount": "1000.00",
+            "payment_type": "bca_klikpay",
+            "order_id": "RljV2cRTb4gMQmr5ZAys",
+            "redirect_data": {
+                "url": "https://api.sandbox.midtrans.com:7676/bca/klikpay/index",
+                "method": "post",
+                "params": {
+                    "klikPayCode": "03KHAN079217",
+                    "payType": "01",
+                    "descp": "Midtrans Example Merchant",
+                    "miscFee": "0.00",
+                    "totalAmount": "1000",
+                    "signature": "2995923370",
+                    "transactionNo": "10319",
+                    "currency": "IDR",
+                    "callback": "http://www.example.com/finish?id=3b7bd034-60bb-4c93-84d8-5fe5eb5bbeca",
+                    "transactionDate": "16/03/2017 08:44:58"
+                }
+            },
+            "status_message": "Transaksi sedang diproses",
+            "fraud_status": "accept",
+            "status_code": "201",
+            "transaction_time": "2017-03-16 08:44:58"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "bri_epay"
+        },
+        "method": "POST",
+        "response": {
+            "order_id": "369zP05zzt2WQGezt1XV",
+            "transaction_id": "98ffc0ce-e96f-4c27-b189-53584e1f7bab",
+            "status_message": "Transaksi sedang diproses",
+            "status_code": "201",
+            "redirect_url": "https://api.sandbox.veritrans.co.id/v3/bri/epay/redirect/98ffc0ce-e96f-4c27-b189-53584e1f7bab",
+            "gross_amount": "1000.00",
+            "payment_type": "bri_epay",
+            "fraud_status": "accept",
+            "transaction_time": "2017-03-16 08:46:31",
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=369zP05zzt2WQGezt1XV&status_code=201&transaction_status=pending",
+            "transaction_status": "pending"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "mandiri_ecash"
+        },
+        "method": "POST",
+        "response": {
+            "order_id": "4nowh3Cii3sq24AcFHCn",
+            "redirect_url": "https://api.sandbox.midtrans.com:7676/mandiri/ecash/payment?id=56ca25dd-be21-4292-bacb-0c9a686ae70c",
+            "status_message": "Transaksi sedang diproses",
+            "status_code": "201",
+            "transaction_id": "c5e4b619-ae8e-48d9-a8fc-1bdcb4af360a",
+            "gross_amount": "1000.00",
+            "payment_type": "mandiri_ecash",
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=4nowh3Cii3sq24AcFHCn&status_code=201&transaction_status=pending",
+            "transaction_time": "2017-03-16 08:54:14",
+            "transaction_status": "pending"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "mandiri_clickpay",
+            "payment_params": {
+                "mandiri_card_no": "4111111111111111",
+                "input3": "95986",
+                "token_response": "000000"
+            }
+        },
+        "method": "POST",
+        "response": {
+            "approval_code": "1489629312057",
+            "transaction_status": "settlement",
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=GeiGwEvOND4TCw6X6aQk&status_code=200&transaction_status=settlement",
+            "transaction_id": "f49f634e-9703-4d63-9a63-a307196251ad",
+            "gross_amount": "1000.00",
+            "payment_type": "mandiri_clickpay",
+            "order_id": "GeiGwEvOND4TCw6X6aQk",
+            "masked_card": "411111-1111",
+            "status_message": "Success, Mandiri Clickpay transaction is successful",
+            "fraud_status": "accept",
+            "status_code": "200",
+            "transaction_time": "2017-03-16 08:55:09"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "xl_tunai"
+        },
+        "method": "POST",
+        "response": {
+            "xl_tunai_order_id": "01787",
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=7MV2ezB5qZ6tCu0n7nDm&status_code=201&transaction_status=pending",
+            "transaction_status": "pending",
+            "transaction_id": "326c76d0-57c5-49dd-81e8-dd0ab19df6af",
+            "gross_amount": "1000.00",
+            "payment_type": "xl_tunai",
+            "order_id": "7MV2ezB5qZ6tCu0n7nDm",
+            "xl_tunai_merchant_id": "1079217",
+            "status_message": "Transaksi sedang diproses",
+            "xl_expiration": "17 March 08:57 WIB",
+            "status_code": "201",
+            "transaction_time": "2017-03-16 08:57:10"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "telkomsel_cash",
+            "payment_params": {
+                "customer": "0811111111"
+            }
+        },
+        "method": "POST",
+        "response": {
+            "order_id": "7j2ZWNFOf0s8ZwsoDWOC",
+            "transaction_id": "2c4e97bd-52df-4b73-a4a8-e2dc0d8ad07c",
+            "status_message": "Success, T-Cash transaction is successful",
+            "status_code": "200",
+            "gross_amount": "1000.00",
+            "payment_type": "telkomsel_cash",
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=7j2ZWNFOf0s8ZwsoDWOC&status_code=200&transaction_status=settlement",
+            "transaction_time": "2017-03-16 08:59:53",
+            "transaction_status": "settlement"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "indosat_dompetku",
+            "payment_params": {
+                "msisdn": "08123456789"
+            }
+        },
+        "method": "POST",
+        "response": {
+            "order_id": "m4e0f0gEmeYXRpSD3Qj3",
+            "transaction_id": "d95b54f6-8307-4504-9559-a4d01863b98e",
+            "status_message": "Success",
+            "status_code": "200",
+            "gross_amount": "1000.00",
+            "payment_type": "indosat_dompetku",
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=m4e0f0gEmeYXRpSD3Qj3&status_code=200&transaction_status=settlement",
+            "transaction_time": "2017-03-16 09:00:37",
+            "transaction_status": "settlement"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "bca_va",
+            "customer_details": {
+                "email": "juki@ginanjar.com"
+            }
+        },
+        "method": "POST",
+        "response": {
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=KFn1Ulv4LTjYbeCxMStg&status_code=201&transaction_status=pending",
+            "transaction_status": "pending",
+            "transaction_id": "298ea3a8-e80a-46bd-ba03-65a6cfaa6692",
+            "gross_amount": "1000.00",
+            "payment_type": "bank_transfer",
+            "va_numbers": [
+                {
+                    "bank": "bca",
+                    "va_number": "79217319376"
+                }
+            ],
+            "order_id": "KFn1Ulv4LTjYbeCxMStg",
+            "bca_va_number": "79217319376",
+            "bca_expiration": "17 March 08:05 WIB",
+            "pdf_url": "https://app.sandbox.veritrans.co.id/snap/v1/transactions/8fd3741b-5351-455b-9300-22e9f14effeb/pdf",
+            "status_message": "Transaksi sedang diproses",
+            "fraud_status": "accept",
+            "status_code": "201",
+            "transaction_time": "2017-03-16 08:05:19"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "echannel",
+            "customer_details": {
+                "email": "juki@ginanjar.com"
+            }
+        },
+        "method": "POST",
+        "response": {
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=s8ljRfmOiXv61SOiwi6w&status_code=201&transaction_status=pending",
+            "transaction_status": "pending",
+            "transaction_id": "12d4b250-3653-4540-aef5-130012fd01e0",
+            "gross_amount": "1000.00",
+            "payment_type": "echannel",
+            "order_id": "s8ljRfmOiXv61SOiwi6w",
+            "biller_code": "70012",
+            "billpayment_expiration": "16 March 20:07 WIB",
+            "pdf_url": "https://app.sandbox.veritrans.co.id/snap/v1/transactions/c78313cc-0e6c-4ffc-9fb5-f764d076f248/pdf",
+            "status_message": "Transaksi sedang diproses",
+            "bill_key": "121693015683",
+            "fraud_status": "accept",
+            "status_code": "201",
+            "transaction_time": "2017-03-15 20:07:50"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "payment_type": "permata_va",
+            "customer_details": {
+                "email": "juki@ginanjar.com"
+            }
+        },
+        "method": "POST",
+        "response": {
+            "finish_redirect_url": "http://snap.rakawm.id/finish_snap?order_id=wEnFKvcdFnWhOk6NwkDo&status_code=201&transaction_status=pending",
+            "transaction_status": "pending",
+            "transaction_id": "13c31d21-09b8-4c4f-bb0a-1cc01e208b4b",
+            "gross_amount": "1000.00",
+            "payment_type": "bank_transfer",
+            "permata_va_number": "8778007370978890",
+            "order_id": "wEnFKvcdFnWhOk6NwkDo",
+            "pdf_url": "https://app.sandbox.veritrans.co.id/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pdf",
+            "permata_expiration": "16 March 19:56 WIB",
+            "status_message": "Transaksi sedang diproses",
+            "fraud_status": "accept",
+            "status_code": "201",
+            "transaction_time": "2017-03-15 19:56:14"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "body": {
+            "transaction_details": {
+                "order_id": "wEnFKvcdFnWhOk6NwkDo",
+                "gross_amount": 1000
+            },
+            "customer_details": {
+                "email": "juki@ginanjar.com",
+                "phone": "9289319231231",
+                "last_name": "rafsanjani",
+                "first_name": "nanang"
+            },
+            "user_id": "E477025C-8398-467B-8038-B6FB22BF725F",
+            "item_details": [
+                {
+                    "quantity": 1000,
+                    "id": "NygBlZXhdWv5SNik0nIb",
+                    "name": "barang1",
+                    "price": 1
+                }
+            ],
+            "credit_card": {
+                "secure": false,
+                "save_card": false
+            }
+        },
+        "method": "POST",
+        "response": {
+            "token": "1cda5d90-8d4f-40ab-b76f-d2316530c45e"
+        },
+        "url": "https://rakawm-snap.herokuapp.com/installment/charge"
+    },
+    {
+        "body": null,
+        "method": "GET",
+        "response": {
+            "transaction_details": {
+                "order_id": "wEnFKvcdFnWhOk6NwkDo",
+                "gross_amount": "10000"
+            },
+            "enabled_payments": [
+                {
+                    "type": "credit_card"
+                },
+                {
+                    "type": "bca_klikbca"
+                },
+                {
+                    "type": "bca_klikpay"
+                },
+                {
+                    "type": "mandiri_clickpay"
+                },
+                {
+                    "type": "cimb_clicks"
+                },
+                {
+                    "type": "bri_epay"
+                },
+                {
+                    "type": "mandiri_ecash"
+                },
+                {
+                    "type": "telkomsel_cash"
+                },
+                {
+                    "type": "xl_tunai"
+                },
+                {
+                    "type": "indomaret",
+                    "category": "cstore"
+                },
+                {
+                    "type": "indosat_dompetku"
+                },
+                {
+                    "type": "kioson",
+                    "category": "cstore"
+                },
+                {
+                    "type": "gci"
+                },
+                {
+                    "type": "bca_va",
+                    "category": "bank_transfer"
+                },
+                {
+                    "type": "echannel"
+                },
+                {
+                    "type": "permata_va",
+                    "category": "bank_transfer"
+                },
+                {
+                    "type": "other_va",
+                    "category": "bank_transfer"
+                }
+            ],
+            "credit_card": {
+                "saved_tokens": [
+                    {
+                        "token_type": "one_click",
+                        "expires_at": "2027-03-14T20:20:01.000Z",
+                        "masked_card": "410505-1467"
+                    },
+                    {
+                        "expires_at": "2027-03-09T18:41:21.000Z",
+                        "token_type": "two_clicks",
+                        "token": "481111vBpIHoyIWroYFzuHxwSPcA1114",
+                        "masked_card": "481111-1114"
+                    },
+                    {
+                        "token_type": "one_click",
+                        "expires_at": "2027-02-23T05:30:34.000Z",
+                        "masked_card": "521111-1117"
+                    }
+                ],
+                "save_card": false,
+                "whitelist_bins": [
+                    "481111",
+                    "521111",
+                    "461700",
+                    "459920",
+                    "410505",
+                    "477377",
+                    "405577",
+                    "43650263"
+                ],
+                "installment": {
+                    "terms": {
+                        "mandiri": [
+                            6,
+                            12
+                        ],
+                        "bni": [
+                            6,
+                            12
+                        ],
+                        "bca": [
+                            3,
+                            6,
+                            12
+                        ],
+                        "offline": [
+                            3,
+                            6,
+                            12
+                        ]
+                    },
+                    "required": false
+                },
+                "secure": false
+            },
+            "promos": [
+                {
+                    "sponsor_message_id": "Promo BNI",
+                    "bins": [
+                        "410505"
+                    ],
+                    "discount_type": "FIXED",
+                    "id": 11,
+                    "start_date": "2017-02-01T05:00:00.000Z",
+                    "promo_code": "BNI_4",
+                    "sponsor_name": "BNI",
+                    "end_date": "2017-03-31T04:00:00.000Z",
+                    "discount_amount": 1000,
+                    "sponsor_message_en": "BNI promo"
+                },
+                {
+                    "sponsor_message_id": "Promo BNI",
+                    "bins": [
+                        "410505"
+                    ],
+                    "discount_type": "PERCENTED",
+                    "id": 12,
+                    "start_date": "2017-02-01T05:00:00.000Z",
+                    "promo_code": "BNI_5",
+                    "sponsor_name": "BNI",
+                    "end_date": "2017-03-31T04:00:00.000Z",
+                    "discount_amount": 15,
+                    "sponsor_message_en": "BNI promo"
+                },
+                {
+                    "sponsor_message_id": "Promo BNI",
+                    "bins": [
+                        "410505"
+                    ],
+                    "discount_type": "PERCENTED",
+                    "id": 13,
+                    "start_date": "2017-02-01T05:00:00.000Z",
+                    "promo_code": "BNI_6",
+                    "sponsor_name": "BNI",
+                    "end_date": "2017-03-31T04:00:00.000Z",
+                    "discount_amount": 20,
+                    "sponsor_message_en": "BNI Promo"
+                },
+                {
+                    "sponsor_message_id": "Diskon dari mandiri",
+                    "bins": [
+                        "461700"
+                    ],
+                    "discount_type": "FIXED",
+                    "id": 14,
+                    "start_date": null,
+                    "promo_code": "MANDIRI_99",
+                    "sponsor_name": "Mandiri",
+                    "end_date": null,
+                    "discount_amount": 1000,
+                    "sponsor_message_en": "Diskon from mandiri"
+                },
+                {
+                    "sponsor_message_id": null,
+                    "bins": [
+                        "436502"
+                    ],
+                    "discount_type": "PERCENTED",
+                    "id": 21,
+                    "start_date": "2017-02-01T05:00:00.000Z",
+                    "promo_code": "BRI",
+                    "sponsor_name": "BRI",
+                    "end_date": "2017-03-31T04:00:00.000Z",
+                    "discount_amount": 25,
+                    "sponsor_message_en": null
+                }
+            ],
+            "merchant": {
+                "client_key": "VT-client-E4f1bsi1LpL1p5cF",
+                "preference": {
+                    "locale": "en",
+                    "finish_url": "http:\/\/snap.rakawm.id\/finish_snap",
+                    "color_scheme_url": "\/\/d15o910bptsmae.cloudfront.net\/snap\/assets\/v3\/minty-d327eb33c0ac1708560174e99431aa888a457cdd6ccbf45eb1f01b6d4ee401f1.css",
+                    "pending_url": "http:\/\/snap.rakawm.id\/unfinish_snap",
+                    "logo_url": "https:\/\/vtcheckout-sandbox-assets.s3.amazonaws.com\/snap\/logos\/M079217\/thumb_retina_snap_2Flogos_2FM079217_2Fefc7d2b5-72af-4e26-a5cb-186b30c7709c_2Fthumb_retina_COCO.png",
+                    "display_name": "Coco",
+                    "error_url": "http:\/\/snap.rakawm.id\/error_snap",
+                    "color_scheme": "minty"
+                },
+                "enabled_principles": [
+                    "visa",
+                    "mastercard",
+                    "jcb",
+                    "amex"
+                ],
+                "point_banks": [
+                    "bni",
+                    "mandiri"
+                ]
+            },
+            "customer_details": {
+                "email": "juki@ginanjar.com",
+                "phone": "9289319231231",
+                "last_name": "rafsanjani",
+                "first_name": "nanang"
+            },
+            "item_details": [
+                {
+                    "quantity": 10,
+                    "id": "NygBlZXhdWv5SNik0nIb",
+                    "name": "barang1",
+                    "price": 1000
+                }
+            ],
+            "token": "1cda5d90-8d4f-40ab-b76f-d2316530c45e",
+            "callbacks": {
+                "error": "http:\/\/snap.rakawm.id\/error_snap",
+                "finish": "http:\/\/snap.rakawm.id\/finish_snap"
+            }
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e"
+    }
+]

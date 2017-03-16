@@ -16,8 +16,12 @@
 
 @implementation SNPClient
 
-+ (void)chargePayment:(id<SNPRequest>)payment completion:(void(^)(NSError *error, NSDictionary *response))completion {
-    [[SNPNetworking shared] performRequest:[payment requestObject] completion:completion];
++ (void)chargePayment:(id<SNPRequest>)payment
+           completion:(void(^)(NSError *error, NSDictionary *response))completion {
+    [[SNPNetworking shared] performRequest:[payment requestObject] completion:^(NSError *error, id dictionaryResponse) {
+        if (completion)
+            completion(error, dictionaryResponse);
+    }];
 }
 
 + (void)fetchPaymentInfoWithRequest:(id<SNPRequest>)request
@@ -49,10 +53,22 @@
         if (dictionaryResponse) {
             error = [NSError errorFromMerchantServerResponse:dictionaryResponse];
             if (!error) {
-                token = [SNPToken modelObjectWithDictionary:dictionaryResponse request:request];
+                token = [SNPToken modelObjectWithDictionary:dictionaryResponse];
             }
         }
         if (completion) completion(error, token);
+    }];
+}
+
++ (void)obtainPromoWithRequest:(id<SNPRequest>)request
+                    completion:(void(^)(NSError *error, SNPObtainedPromo *obtainedPromo))completion {
+    [[SNPNetworking shared] performRequest:[request requestObject] completion:^(NSError *error, id dictionaryResponse) {
+        SNPObtainedPromo *result;
+        if (dictionaryResponse) {
+            result = [SNPObtainedPromo modelObjectWithDictionary:dictionaryResponse];
+        }
+        if (completion)
+            completion(error, result);
     }];
 }
 

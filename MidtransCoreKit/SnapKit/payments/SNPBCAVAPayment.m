@@ -10,19 +10,22 @@
 
 @implementation SNPBCAVAPayment
 
+- (instancetype)initWithToken:(SNPToken *)token customerDetails:(SNPCustomerDetails *)customerDetails {
+    if (self = [super initWithToken:token]) {
+        self.customerDetails = customerDetails;
+    }
+    return self;
+}
+
 - (NSDictionary *)dictionaryValue {
     return @{
              @"payment_type":SNPPaymentTypeBCAVA,
-             @"customer_details":@{@"email":self.token.customerDetails.email}
+             @"customer_details":@{@"email":self.customerDetails.email}
              };
 }
 
 - (NSURLRequest *)requestObject {
     return [self requestWithParameter:[self dictionaryValue]];
-}
-
-+ (SNPBCAVAResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
-    return [SNPBCAVAResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

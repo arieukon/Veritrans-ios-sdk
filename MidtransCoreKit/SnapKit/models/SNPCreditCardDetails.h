@@ -7,8 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SNPSavedCreditCard.h"
-
-@class SNPInstallment;
+#import "SNPInstallment.h"
 
 @interface SNPCreditCardDetails : NSObject <NSCoding, NSCopying>
 

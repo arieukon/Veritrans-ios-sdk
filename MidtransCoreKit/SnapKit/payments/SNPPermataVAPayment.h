@@ -7,8 +7,8 @@
 //
 
 #import <SnapKit/SnapKit.h>
-#import "SNPPermataVAResult.h"
 
 @interface SNPPermataVAPayment : SNPPayment <SNPRequest>
-+ (SNPPermataVAResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
+@property (nonatomic) SNPCustomerDetails *customerDetails;
+- (instancetype)initWithToken:(SNPToken *)token customerDetails:(SNPCustomerDetails *)customerDetails;
 @end

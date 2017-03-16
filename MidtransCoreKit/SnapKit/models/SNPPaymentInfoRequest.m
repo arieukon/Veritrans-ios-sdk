@@ -9,11 +9,8 @@
 #import "SNPPaymentInfoRequest.h"
 #import "SNPSystemConfig.h"
 
-@interface SNPPaymentInfoRequest()
-@property (nonatomic) SNPToken *token;
-@end
-
 @implementation SNPPaymentInfoRequest
+
 - (instancetype)initWithToken:(SNPToken *)token {
     if (self = [super init]) {
         self.token = token;
@@ -26,4 +23,5 @@
     NSURL *url = [SYSTEMCONFIG.snapURL URLByAppendingPathComponent:endpoint];
     return [NSURLRequest requestWithURL:url];
 }
+
 @end

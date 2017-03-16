@@ -18,8 +18,4 @@
     return [self requestWithParameter:[self dictionaryValue]];
 }
 
-+ (SNPCIMBClicksResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
-    return [SNPCIMBClicksResult modelObjectWithDictionary:paymentResultObject];
-}
-
 @end

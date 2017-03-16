@@ -18,8 +18,4 @@
     return [self requestWithParameter:[self dictionaryValue]];
 }
 
-+ (SNPXLTunaiResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
-    return [SNPXLTunaiResult modelObjectWithDictionary:paymentResultObject];
-}
-
 @end

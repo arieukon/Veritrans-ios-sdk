@@ -11,7 +11,7 @@
 #import "SNPPayment.h"
 #import "SNPCreditCardToken.h"
 #import "SNPInstallmentTerm.h"
-#import "SNPCreditCardResult.h"
+#import "SNPSavedCreditCard.h"
 
 @interface SNPCreditCardPayment : SNPPayment <SNPRequest>
 
@@ -21,9 +21,8 @@
 @property (nonatomic, nullable) NSString *discountToken;
 
 /**
- Credit card number that have been masked, for 2-clicks transaction
  */
-@property (nonatomic, nullable) NSString *maskedCreditCard;
+@property (nonatomic, nullable) SNPSavedCreditCard *savedCreditCard;
 
 /**
  This token is from Token Storage, used for 1-click or 2-clicks transaction
@@ -32,8 +31,12 @@
 
 @property (nonatomic, nullable) SNPInstallmentTerm *installmentTerm;
 
-- (instancetype _Nonnull)initWithToken:(SNPToken *_Nonnull)token creditCardToken:(SNPCreditCardToken *_Nonnull)creditCardToken;
-- (instancetype _Nonnull)initWithToken:(SNPToken *_Nonnull)token maskedCreditCard:(NSString *_Nonnull)maskedCreditCard;
-+ (SNPCreditCardResult *_Nonnull)decodePaymentResultObject:(NSDictionary *_Nonnull)paymentResultObject;
+- (instancetype _Nonnull)initWithToken:(SNPToken *_Nonnull)token
+                       creditCardToken:(SNPCreditCardToken *_Nonnull)creditCardToken
+                       customerDetails:(SNPCustomerDetails *_Nonnull)customerDetails;
+
+- (instancetype _Nonnull)initWithToken:(SNPToken *_Nonnull)token
+                       savedCreditCard:(SNPSavedCreditCard *_Nonnull)savedCreditCard
+                       customerDetails:(SNPCustomerDetails *_Nonnull)customerDetails;
 
 @end

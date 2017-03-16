@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SnapKit/SnapKit.h>
 
 @interface SNPTestHelper : NSObject
 
@@ -14,4 +15,10 @@
 
 @interface NSString (random)
 + (NSString *)randomWithLength:(NSUInteger)length;
+@end
+
+@interface SNPPaymentInfo (utils)
+- (SNPPromo *)promoWithCardNumber:(NSString *)number;
+- (SNPInstallmentTerm *)installmentTermWithCardNumber:(NSString *)number;
+- (SNPSavedCreditCard *)savedCardOfCardNumber:(NSString *)cardNumber;
 @end

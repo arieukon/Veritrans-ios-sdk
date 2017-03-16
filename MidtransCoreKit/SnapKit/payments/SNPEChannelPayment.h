@@ -7,8 +7,8 @@
 //
 
 #import <SnapKit/SnapKit.h>
-#import "SNPEChannelResult.h"
 
 @interface SNPEChannelPayment : SNPPayment <SNPRequest>
-+ (SNPEChannelResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
+@property (nonatomic) SNPCustomerDetails *customerDetails;
+- (instancetype)initWithToken:(SNPToken *)token customerDetails:(SNPCustomerDetails *)customerDetails;
 @end

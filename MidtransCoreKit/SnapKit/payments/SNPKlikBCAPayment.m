@@ -29,8 +29,4 @@
     return [self requestWithParameter:[self dictionaryValue]];
 }
 
-+ (SNPKlikBCAResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
-    return [SNPKlikBCAResult modelObjectWithDictionary:paymentResultObject];
-}
-
 @end

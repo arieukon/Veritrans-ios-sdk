@@ -65,15 +65,9 @@ static NSString *const PromoStagingURL = @"https://promo.vt-stage.info/v2";
 }
 
 - (void)setEnvironment:(SNPEnvironment)environment {
+    _environment = environment;
+    
     switch (environment) {
-        case SNPEnvironmentSandbox: {
-            SYSTEMCONFIG.papiURL = [NSURL URLWithString:PAPISandboxURL];
-            SYSTEMCONFIG.snapURL = [NSURL URLWithString:SnapSandboxURL];
-            SYSTEMCONFIG.binURL = [NSURL URLWithString:BINSandboxURL];
-            SYSTEMCONFIG.promoEngineURL = [NSURL URLWithString:PromoSandboxURL];
-            SYSTEMCONFIG.mixpanelToken = MixpanelSandboxToken;
-            break;
-        }
         case SNPEnvironmentStaging: {
             SYSTEMCONFIG.papiURL = [NSURL URLWithString:PAPIStagingURL];
             SYSTEMCONFIG.snapURL = [NSURL URLWithString:SnapStagingURL];
@@ -88,6 +82,15 @@ static NSString *const PromoStagingURL = @"https://promo.vt-stage.info/v2";
             SYSTEMCONFIG.binURL = [NSURL URLWithString:BINProductionURL];
             SYSTEMCONFIG.promoEngineURL = [NSURL URLWithString:PromoProductionURL];
             SYSTEMCONFIG.mixpanelToken = MixpanelProductionToken;
+            break;
+        }
+        case SNPEnvironmentMock:
+        case SNPEnvironmentSandbox: {
+            SYSTEMCONFIG.papiURL = [NSURL URLWithString:PAPISandboxURL];
+            SYSTEMCONFIG.snapURL = [NSURL URLWithString:SnapSandboxURL];
+            SYSTEMCONFIG.binURL = [NSURL URLWithString:BINSandboxURL];
+            SYSTEMCONFIG.promoEngineURL = [NSURL URLWithString:PromoSandboxURL];
+            SYSTEMCONFIG.mixpanelToken = MixpanelSandboxToken;
             break;
         }
     }

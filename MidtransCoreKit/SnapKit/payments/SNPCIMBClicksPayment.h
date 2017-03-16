@@ -7,8 +7,6 @@
 //
 
 #import <SnapKit/SnapKit.h>
-#import "SNPCIMBClicksResult.h"
 
 @interface SNPCIMBClicksPayment : SNPPayment <SNPRequest>
-+ (SNPCIMBClicksResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

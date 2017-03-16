@@ -7,8 +7,7 @@
 //
 
 #import <SnapKit/SnapKit.h>
-#import "SNPXLTunaiResult.h"
 
 @interface SNPXLTunaiPayment : SNPPayment <SNPRequest>
-+ (SNPXLTunaiResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
+
 @end

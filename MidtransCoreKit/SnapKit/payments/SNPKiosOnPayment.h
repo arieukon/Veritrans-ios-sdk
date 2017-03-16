@@ -7,8 +7,6 @@
 //
 
 #import <SnapKit/SnapKit.h>
-#import "SNPKiosOnResult.h"
 
 @interface SNPKiosOnPayment : SNPPayment <SNPRequest>
-+ (SNPKiosOnResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

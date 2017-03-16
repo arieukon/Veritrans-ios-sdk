@@ -23,7 +23,6 @@ FOUNDATION_EXPORT const unsigned char SnapKitVersionString[];
 #import "SNPCreditCardTokenizeRequest.h"
 #import "SNPPaymentInfoRequest.h"
 #import "SNPIndomaretPayment.h"
-#import "SNPPaymentResult.h"
 #import "SNPNetworkingLogger.h"
 #import "SNPBCAVAPayment.h"
 #import "SNPEChannelPayment.h"
@@ -49,3 +48,6 @@ FOUNDATION_EXPORT const unsigned char SnapKitVersionString[];
 #import "SNPTelkomselCashPayment.h"
 #import "SNPIndosatDompetkuPayment.h"
 #import "SNPNetworking.h"
+#import "SNPObtainPromoRequest.h"
+#import "SNPMockSource.h"
+

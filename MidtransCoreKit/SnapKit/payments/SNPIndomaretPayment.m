@@ -18,8 +18,4 @@
     return [self requestWithParameter:[self dictionaryValue]];
 }
 
-+ (SNPIndomaretResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
-    return [SNPIndomaretResult modelObjectWithDictionary:paymentResultObject];
-}
-
 @end

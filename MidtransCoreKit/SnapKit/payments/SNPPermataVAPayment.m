@@ -10,19 +10,22 @@
 
 @implementation SNPPermataVAPayment
 
+- (instancetype)initWithToken:(SNPToken *)token customerDetails:(SNPCustomerDetails *)customerDetails {
+    if (self = [super initWithToken:token]) {
+        self.customerDetails = customerDetails;
+    }
+    return self;
+}
+
 - (NSDictionary *)dictionaryValue {
     return @{
              @"payment_type":SNPPaymentTypePermataVA,
-             @"customer_details":@{@"email":self.token.customerDetails.email}
+             @"customer_details":@{@"email":self.customerDetails.email}
              };
 }
 
 - (NSURLRequest *)requestObject {
     return [self requestWithParameter:[self dictionaryValue]];
-}
-
-+ (SNPPermataVAResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
-    return [SNPPermataVAResult modelObjectWithDictionary:paymentResultObject];
 }
 
 @end

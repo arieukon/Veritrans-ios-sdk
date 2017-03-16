@@ -7,10 +7,8 @@
 //
 
 #import <SnapKit/SnapKit.h>
-#import "SNPTelkomselCashResult.h"
 
 @interface SNPTelkomselCashPayment : SNPPayment <SNPRequest>
 @property (nonatomic) NSString *tcashToken;
 - (instancetype)initWithToken:(SNPToken *)token tcashToken:(NSString *)tcashToken;
-+ (SNPTelkomselCashResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject;
 @end

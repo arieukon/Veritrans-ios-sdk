@@ -28,8 +28,4 @@
     return [self requestWithParameter:[self dictionaryValue]];
 }
 
-+ (SNPTelkomselCashResult *)decodePaymentResultObject:(NSDictionary *)paymentResultObject {
-    return [SNPTelkomselCashResult modelObjectWithDictionary:paymentResultObject];
-}
-
 @end
