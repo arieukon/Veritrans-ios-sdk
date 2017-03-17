@@ -14,7 +14,7 @@
 @end
 
 @interface NSString (random)
-+ (NSString *)randomWithLength:(NSUInteger)length;
+//+ (NSString *)randomWithLength:(NSUInteger)length;
 @end
 
 @interface SNPPaymentInfo (utils)

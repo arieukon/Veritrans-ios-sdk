@@ -10,19 +10,17 @@
 #import <SnapKit/SnapKit.h>
 #import "SNPTestHelper.h"
 
-@interface SnapKitTests : XCTestCase
+@interface SNPPaymentTests : XCTestCase
 @property (nonatomic) SNPTransactionDetails *transactionDetails;
 @property (nonatomic) SNPCustomerDetails *customerDetails;
 @property (nonatomic) NSArray<SNPItemDetails*>*itemDetails;
 @end
 
-@implementation SnapKitTests
+@implementation SNPPaymentTests
 
 - (void)setUp {
     [super setUp];
-    
-    [[SNPNetworkingLogger shared] start];
-    
+
     NSBundle *bundle = [NSBundle bundleForClass:[SNPTestHelper class]];
     NSData *mockData = [[NSData alloc] initWithContentsOfFile:[bundle pathForResource:@"mock" ofType:@"json"]];
     NSArray *mock = [NSJSONSerialization JSONObjectWithData:mockData options:kNilOptions error:nil];
@@ -48,9 +46,6 @@
 }
 
 - (void)tearDown {
-    
-    [[SNPNetworkingLogger shared] stop];
-    
     [super tearDown];
 }
 
@@ -200,7 +195,8 @@
     [self fetchPaymentInfoWithCompletion:^(SNPToken *token, SNPPaymentInfo *paymentInfo) {
         SNPMandiriClickpayPayment *payment = [[SNPMandiriClickpayPayment alloc] initWithToken:token
                                                                                    cardNumber:@"4111111111111111"
-                                                                               challengeToken:@"000000"];
+                                                                               challengeToken:@"000000"
+                                                                                       input3:@"95986"];
         [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
             if (error) {
                 XCTFail(@"Error %@", error.localizedDescription);

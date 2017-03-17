@@ -129,7 +129,7 @@
 		E54F2B831E7A412800A3D64C /* SNPMockDataTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E54F2B811E7A412800A3D64C /* SNPMockDataTask.m */; };
 		E5504E0C1D0E58BE00137655 /* MidtransPaymentCIMBClicks.h in Headers */ = {isa = PBXBuildFile; fileRef = E5504E0A1D0E58BE00137655 /* MidtransPaymentCIMBClicks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5504E0D1D0E58BE00137655 /* MidtransPaymentCIMBClicks.m in Sources */ = {isa = PBXBuildFile; fileRef = E5504E0B1D0E58BE00137655 /* MidtransPaymentCIMBClicks.m */; };
-		E55A246E1E7A5E5400F6426D /* cc-mock.json in Resources */ = {isa = PBXBuildFile; fileRef = E55A246D1E7A5E5400F6426D /* cc-mock.json */; };
+		E55A24701E7AA1A500F6426D /* mock-cc.json in Resources */ = {isa = PBXBuildFile; fileRef = E55A246F1E7AA1A500F6426D /* mock-cc.json */; };
 		E55DB9421C912ED300813B81 /* MidtransCustomerDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DB9301C912ED300813B81 /* MidtransCustomerDetails.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55DB9431C912ED300813B81 /* MidtransCustomerDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = E55DB9311C912ED300813B81 /* MidtransCustomerDetails.m */; };
 		E55DB9461C912ED300813B81 /* MidtransPaymentBankTransfer.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DB9341C912ED300813B81 /* MidtransPaymentBankTransfer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -210,7 +210,7 @@
 		E5E6FB131E6FB35A00B706C5 /* SNPMandiriECashPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FB111E6FB35A00B706C5 /* SNPMandiriECashPayment.m */; };
 		E5E6FB1F1E70024500B706C5 /* SNPMandiriClickpayPayment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6FB1D1E70024500B706C5 /* SNPMandiriClickpayPayment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6FB201E70024500B706C5 /* SNPMandiriClickpayPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6FB1E1E70024500B706C5 /* SNPMandiriClickpayPayment.m */; };
-		E5EDA9641E6E648400F3A76E /* SnapKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EDA9631E6E648400F3A76E /* SnapKitTests.m */; };
+		E5EDA9641E6E648400F3A76E /* SNPPaymentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EDA9631E6E648400F3A76E /* SNPPaymentTests.m */; };
 		E5EDA9991E6E66B100F3A76E /* SNPErrorConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = E50D851F1E5BF28700154327 /* SNPErrorConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5EDA99A1E6E66B100F3A76E /* SNPSharedConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E59977CE1E5BB35B0012AD99 /* SNPSharedConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5EDA99C1E6E66B100F3A76E /* SNPSystemConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E59977D21E5BB36D0012AD99 /* SNPSystemConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -437,7 +437,7 @@
 		E54F2B811E7A412800A3D64C /* SNPMockDataTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNPMockDataTask.m; path = SnapKit/utils/SNPMockDataTask.m; sourceTree = SOURCE_ROOT; };
 		E5504E0A1D0E58BE00137655 /* MidtransPaymentCIMBClicks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransPaymentCIMBClicks.h; sourceTree = "<group>"; };
 		E5504E0B1D0E58BE00137655 /* MidtransPaymentCIMBClicks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransPaymentCIMBClicks.m; sourceTree = "<group>"; };
-		E55A246D1E7A5E5400F6426D /* cc-mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cc-mock.json"; sourceTree = "<group>"; };
+		E55A246F1E7AA1A500F6426D /* mock-cc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mock-cc.json"; sourceTree = "<group>"; };
 		E55DB9301C912ED300813B81 /* MidtransCustomerDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransCustomerDetails.h; sourceTree = "<group>"; };
 		E55DB9311C912ED300813B81 /* MidtransCustomerDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransCustomerDetails.m; sourceTree = "<group>"; };
 		E55DB9341C912ED300813B81 /* MidtransPaymentBankTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransPaymentBankTransfer.h; sourceTree = "<group>"; };
@@ -566,7 +566,7 @@
 		E5EDA90E1E6E641000F3A76E /* SnapKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapKit.h; sourceTree = "<group>"; };
 		E5EDA90F1E6E641000F3A76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5EDA9611E6E648300F3A76E /* SnapKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5EDA9631E6E648400F3A76E /* SnapKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapKitTests.m; sourceTree = "<group>"; };
+		E5EDA9631E6E648400F3A76E /* SNPPaymentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNPPaymentTests.m; sourceTree = "<group>"; };
 		E5EDA9651E6E648400F3A76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5FBC7EF1E39E3FF006B574D /* MidtransNetworkLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MidtransNetworkLogger.h; sourceTree = "<group>"; };
 		E5FBC7F01E39E3FF006B574D /* MidtransNetworkLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MidtransNetworkLogger.m; sourceTree = "<group>"; };
@@ -1039,7 +1039,7 @@
 			children = (
 				E5C9DE0F1E77A26100B15671 /* bins.json */,
 				E54F2B7E1E7A29EC00A3D64C /* mock.json */,
-				E55A246D1E7A5E5400F6426D /* cc-mock.json */,
+				E55A246F1E7AA1A500F6426D /* mock-cc.json */,
 			);
 			name = sources;
 			sourceTree = "<group>";
@@ -1122,7 +1122,7 @@
 				E5EDA9651E6E648400F3A76E /* Info.plist */,
 				E5C9DE0E1E77A25300B15671 /* sources */,
 				E57931DE1E76680800379C3C /* utils */,
-				E5EDA9631E6E648400F3A76E /* SnapKitTests.m */,
+				E5EDA9631E6E648400F3A76E /* SNPPaymentTests.m */,
 				E57931DF1E76682000379C3C /* SNPCreditCardTests.m */,
 			);
 			path = SnapKitTests;
@@ -1397,9 +1397,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E55A246E1E7A5E5400F6426D /* cc-mock.json in Resources */,
 				E5C9DE101E77A26100B15671 /* bins.json in Resources */,
 				E54F2B7F1E7A29EC00A3D64C /* mock.json in Resources */,
+				E55A24701E7AA1A500F6426D /* mock-cc.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1604,7 +1604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5EDA9641E6E648400F3A76E /* SnapKitTests.m in Sources */,
+				E5EDA9641E6E648400F3A76E /* SNPPaymentTests.m in Sources */,
 				E5EDA9E41E6E67A700F3A76E /* SNPTestHelper.m in Sources */,
 				E57931E01E76682000379C3C /* SNPCreditCardTests.m in Sources */,
 			);

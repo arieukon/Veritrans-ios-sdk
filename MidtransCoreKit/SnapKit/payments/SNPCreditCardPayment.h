@@ -12,13 +12,13 @@
 #import "SNPCreditCardToken.h"
 #import "SNPInstallmentTerm.h"
 #import "SNPSavedCreditCard.h"
+#import "SNPObtainedPromo.h"
 
 @interface SNPCreditCardPayment : SNPPayment <SNPRequest>
 
 /**
- Token for adding discount to the transaction, you can get this from promo engine
  */
-@property (nonatomic, nullable) NSString *discountToken;
+@property (nonatomic, nullable) SNPObtainedPromo *obtainedPromo;
 
 /**
  */

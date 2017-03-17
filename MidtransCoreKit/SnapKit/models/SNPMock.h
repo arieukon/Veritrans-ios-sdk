@@ -12,4 +12,5 @@
 @property (nonatomic) NSURLRequest *request;
 @property (nonatomic) NSData *response;
 - (instancetype)initWithRequest:(NSURLRequest *)request response:(id)response;
+- (BOOL)isEqualRequest:(NSURLRequest *)request2;
 @end

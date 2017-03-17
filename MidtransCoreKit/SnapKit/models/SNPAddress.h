@@ -15,9 +15,20 @@
 @property (nonatomic, strong) NSString *address;
 @property (nonatomic, strong) NSString *lastName;
 @property (nonatomic, strong) NSString *email;
-@property (nonatomic, strong) NSString *countryCode;
 @property (nonatomic, strong) NSString *firstName;
+/*
+ use ISO 3166-1 alpha-3
+ */
+@property (nonatomic, strong) NSString *countryCode;
 
+- (instancetype)initWithFirstName:(NSString *)firstName
+                         lastName:(NSString *)lastName
+                            email:(NSString *)email
+                            phone:(NSString *)phone
+                          address:(NSString *)address
+                       postalCode:(NSString *)postalCode
+                             city:(NSString *)city
+                      countryCode:(NSString *)countryCode;
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 - (NSDictionary *)dictionaryRepresentation;

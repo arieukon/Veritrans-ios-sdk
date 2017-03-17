@@ -43,25 +43,8 @@
 }
 
 - (SNPMock *)mockWithRequest:(NSURLRequest *)request {
-    id body;
-    if (request.HTTPBody) {
-        body = [NSJSONSerialization JSONObjectWithData:request.HTTPBody options:kNilOptions error:nil];
-    }
-    
     for (SNPMock *mock in self.mocks) {
-        NSURLRequest *thisRequest = mock.request;
-        id thisBody;
-        if (thisRequest.HTTPBody) {
-            thisBody = [NSJSONSerialization JSONObjectWithData:thisRequest.HTTPBody options:kNilOptions error:nil];
-        }
-        
-        if ([thisRequest.URL.absoluteString isEqualToString:request.URL.absoluteString] &&
-            [thisRequest.HTTPMethod isEqualToString:request.HTTPMethod]) {
-            if (body) {
-                if ([body isEqualToDictionary:thisBody]) {
-                    return mock;
-                }
-            }
+        if ([mock isEqualRequest:request]) {
             return mock;
         }
     }

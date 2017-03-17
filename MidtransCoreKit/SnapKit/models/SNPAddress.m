@@ -33,6 +33,26 @@ NSString *const kSNPAddressFirstName = @"first_name";
 @synthesize countryCode = _countryCode;
 @synthesize firstName = _firstName;
 
+- (instancetype)initWithFirstName:(NSString *)firstName
+                         lastName:(NSString *)lastName
+                            email:(NSString *)email
+                            phone:(NSString *)phone
+                          address:(NSString *)address
+                       postalCode:(NSString *)postalCode
+                             city:(NSString *)city
+                      countryCode:(NSString *)countryCode {
+    if (self = [super init]) {
+        self.firstName = firstName;
+        self.lastName = lastName;
+        self.email = email;
+        self.phone = phone;
+        self.address = address;
+        self.postalCode = postalCode;
+        self.city = city;
+        self.countryCode = countryCode;
+    }
+    return self;
+}
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict {
     return [[self alloc] initWithDictionary:dict];
@@ -41,14 +61,14 @@ NSString *const kSNPAddressFirstName = @"first_name";
 - (instancetype)initWithDictionary:(NSDictionary *)dict {
     self = [super init];
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-        self.phone = [self objectOrNilForKey:kSNPAddressPhone fromDictionary:dict];
-        self.postalCode = [self objectOrNilForKey:kSNPAddressPostalCode fromDictionary:dict];
-        self.city = [self objectOrNilForKey:kSNPAddressCity fromDictionary:dict];
-        self.address = [self objectOrNilForKey:kSNPAddressAddress fromDictionary:dict];
+        self.firstName = [self objectOrNilForKey:kSNPAddressFirstName fromDictionary:dict];
         self.lastName = [self objectOrNilForKey:kSNPAddressLastName fromDictionary:dict];
         self.email = [self objectOrNilForKey:kSNPAddressEmail fromDictionary:dict];
+        self.phone = [self objectOrNilForKey:kSNPAddressPhone fromDictionary:dict];
+        self.address = [self objectOrNilForKey:kSNPAddressAddress fromDictionary:dict];
+        self.postalCode = [self objectOrNilForKey:kSNPAddressPostalCode fromDictionary:dict];
+        self.city = [self objectOrNilForKey:kSNPAddressCity fromDictionary:dict];
         self.countryCode = [self objectOrNilForKey:kSNPAddressCountryCode fromDictionary:dict];
-        self.firstName = [self objectOrNilForKey:kSNPAddressFirstName fromDictionary:dict];
     }
     return self;
 }

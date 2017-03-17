@@ -11,10 +11,14 @@
 
 @implementation SNPMandiriClickpayPayment
 
-- (instancetype)initWithToken:(SNPToken *)token cardNumber:(NSString *)number challengeToken:(NSString *)challengeToken {
+- (instancetype)initWithToken:(SNPToken *)token
+                   cardNumber:(NSString *)number
+               challengeToken:(NSString *)challengeToken
+                       input3:(NSString *)input3 {
     if (self = [super initWithToken:token]) {
         self.cardNumber = [number stringByReplacingOccurrencesOfString:@" " withString:@""];
         self.challengeToken = challengeToken;
+        self.input3 = input3;
     }
     return self;
 }
@@ -23,7 +27,7 @@
     return @{
              @"payment_type":SNPPaymentTypeClickpay,
              @"payment_params":@{@"mandiri_card_no":self.cardNumber,
-                                 @"input3":[NSString generateInput3],
+                                 @"input3":self.input3,
                                  @"token_response":self.challengeToken}
              };
 }

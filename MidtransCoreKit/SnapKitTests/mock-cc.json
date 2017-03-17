@@ -1,0 +1,190 @@
+[
+    {
+        "comment": "normal tokenize",
+        "body": null,
+        "method": "GET",
+        "response": {
+            "status_message": "OK, success request new token",
+            "token_id": "410505-1467-e5156a61-d830-4092-87f3-93564f1f0463",
+            "status_code": "200"
+        },
+        "url": "https://api.sandbox.midtrans.com/v2/token?card_type=Visa&card_number=4105058689481467&secure=false&card_exp_month=02&client_key=VT-client-E4f1bsi1LpL1p5cF&gross_amount=10000&card_cvv=123&card_exp_year=20"
+    },
+    {
+        "comment": "normal charge",
+        "body": {
+            "payment_type": "credit_card",
+            "payment_params": {
+                "card_token": "410505-1467-e5156a61-d830-4092-87f3-93564f1f0463",
+                "save_card": false
+            },
+            "customer_details": {
+                "email": "juki@ginanjar.com",
+                "phone": "9289319231231",
+                "full_name": "nanang"
+            }
+        },
+        "method": "POST",
+        "response": {
+            "approval_code": "1489660420391",
+            "transaction_status": "capture",
+            "finish_redirect_url": "http:\/\/snap.rakawm.id\/finish_snap?order_id=T7jgE7i42anIS6BqjYTK&status_code=200&transaction_status=capture",
+            "transaction_id": "e5156a61-d830-4092-87f3-93564f1f0463",
+            "gross_amount": "10000.00",
+            "payment_type": "credit_card",
+            "order_id": "T7jgE7i42anIS6BqjYTK",
+            "masked_card": "410505-1467",
+            "status_message": "Success, Credit Card transaction is successful",
+            "bank": "bni",
+            "fraud_status": "accept",
+            "status_code": "200",
+            "transaction_time": "2017-03-16 17:33:40"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "comment": "installment tokenize",
+        "body": null,
+        "method": "GET",
+        "response": {
+            "status_message": "OK, success request new token",
+            "token_id": "410505-1467-bcb98e11-f473-4e98-aaf9-0d8ea09980e5",
+            "status_code": "200"
+        },
+        "url": "https://api.sandbox.midtrans.com/v2/token?card_type=Visa&card_number=4105058689481467&secure=false&card_exp_month=02&client_key=VT-client-E4f1bsi1LpL1p5cF&gross_amount=10000&card_cvv=123&installment_term=6&installment=true&card_exp_year=20"
+    },
+    {
+        "comment": "installment charge",
+        "body": {
+            "payment_type": "credit_card",
+            "payment_params": {
+                "installment": "bni_6",
+                "card_token": "410505-1467-bcb98e11-f473-4e98-aaf9-0d8ea09980e5",
+                "save_card": false
+            },
+            "customer_details": {
+                "email": "juki@ginanjar.com",
+                "phone": "9289319231231",
+                "full_name": "nanang"
+            }
+        },
+        "method": "POST",
+        "response": {
+            "approval_code": "1489661321871",
+            "transaction_status": "capture",
+            "installment_term": "6",
+            "transaction_id": "bcb98e11-f473-4e98-aaf9-0d8ea09980e5",
+            "gross_amount": "10000.00",
+            "payment_type": "credit_card",
+            "finish_redirect_url": "http:\/\/snap.rakawm.id\/finish_snap?order_id=cEcC6V7OJ2HQQ9hLKTQB&status_code=200&transaction_status=capture",
+            "order_id": "cEcC6V7OJ2HQQ9hLKTQB",
+            "masked_card": "410505-1467",
+            "status_message": "Success, Credit Card transaction is successful",
+            "bank": "bni",
+            "fraud_status": "accept",
+            "status_code": "200",
+            "transaction_time": "2017-03-16 17:48:41"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "comment": "obtain promo",
+        "body": {
+            "amount": "10000",
+            "promo_id": 11,
+            "client_key": "VT-client-E4f1bsi1LpL1p5cF"
+        },
+        "method": "POST",
+        "response": {
+            "discount_amount": 1000,
+            "promo_code": "BNI_4",
+            "payment_amount": 9000,
+            "sponsor_name": "BNI",
+            "expires_at": "2017-03-16T11:07:52.201Z",
+            "success": true,
+            "message": "Yey! You got a discount",
+            "sponsor_message_en": "BNI promo",
+            "sponsor_message_id": "Promo BNI",
+            "discount_token": "BNI_4-1000-000000-3c79356aad-dc8561da9aa1"
+        },
+        "url": "https://promo.vt-stage.info/v2/promo/obtain_promo?amount=10000&promo_id=11&client_key=VT-client-E4f1bsi1LpL1p5cF"
+    },
+    {
+        "comment": "promo tokenize",
+        "body": null,
+        "method": "GET",
+        "response": {
+            "status_message": "OK, success request new token",
+            "token_id": "410505-1467-ad9eda51-1d30-4420-9e4f-26b00753d85f",
+            "status_code": "200"
+        },
+        "url": "https://api.sandbox.midtrans.com/v2/token?card_type=Visa&card_number=4105058689481467&secure=false&card_exp_month=02&client_key=VT-client-E4f1bsi1LpL1p5cF&gross_amount=9000&card_cvv=123&card_exp_year=20"
+    },
+    {
+        "comment": "promo charge",
+        "body": {
+            "customer_details": {
+                "email": "juki@ginanjar.com",
+                "phone": "9289319231231",
+                "full_name": "nanang"
+            },
+            "payment_type": "credit_card",
+            "discount_token": "BNI_4-1000-000000-3c79356aad-dc8561da9aa1",
+            "payment_params": {
+                "card_token": "410505-1467-ad9eda51-1d30-4420-9e4f-26b00753d85f",
+                "save_card": false
+            }
+        },
+        "method": "POST",
+        "response": {
+            "approval_code": "1489661574220",
+            "transaction_status": "capture",
+            "discount_token": "BNI_4-1000-000000-3c79356aad-dc8561da9aa1",
+            "transaction_id": "ad9eda51-1d30-4420-9e4f-26b00753d85f",
+            "gross_amount": "9000.00",
+            "payment_type": "credit_card",
+            "discount_amount": 1000,
+            "order_id": "MWlFgsL79UqEPs5bwUtb",
+            "masked_card": "410505-1467",
+            "finish_redirect_url": "http:\/\/snap.rakawm.id\/finish_snap?order_id=MWlFgsL79UqEPs5bwUtb&status_code=200&transaction_status=capture",
+            "status_message": "Success, Credit Card transaction is successful",
+            "bank": "bni",
+            "fraud_status": "accept",
+            "status_code": "200",
+            "transaction_time": "2017-03-16 17:52:53"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "comment": "oneclick charge",
+        "body": {
+            "payment_type": "credit_card",
+            "payment_params": {
+                "masked_card": "410505-1467",
+                "save_card": true
+            },
+            "customer_details": {
+                "email": "juki@ginanjar.com",
+                "phone": "9289319231231",
+                "full_name": "nanang"
+            }
+        },
+        "method": "POST",
+        "response": {
+            "approval_code": "1489660420391",
+            "transaction_status": "capture",
+            "finish_redirect_url": "http:\/\/snap.rakawm.id\/finish_snap?order_id=T7jgE7i42anIS6BqjYTK&status_code=200&transaction_status=capture",
+            "transaction_id": "e5156a61-d830-4092-87f3-93564f1f0463",
+            "gross_amount": "10000.00",
+            "payment_type": "credit_card",
+            "order_id": "T7jgE7i42anIS6BqjYTK",
+            "masked_card": "410505-1467",
+            "status_message": "Success, Credit Card transaction is successful",
+            "bank": "bni",
+            "fraud_status": "accept",
+            "status_code": "200",
+            "transaction_time": "2017-03-16 17:33:40"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    }
+]

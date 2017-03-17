@@ -62,8 +62,8 @@
                                    @"phone":[NSObject valueOrNull:self.customerDetails.phone],
                                    @"full_name":[NSObject valueOrNull:self.customerDetails.firstName]
                                    };
-    if (self.discountToken) {
-        value[@"discount_token"] = self.discountToken;
+    if (self.obtainedPromo) {
+        value[@"discount_token"] = self.obtainedPromo.discountToken;
     }
     return value;
 }
