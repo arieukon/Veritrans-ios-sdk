@@ -9,7 +9,7 @@
 
 
 
-@interface SNPPromo : NSObject <NSCoding, NSCopying>
+@interface SNPPromo : NSObject
 
 @property (nonatomic, strong) NSString *discountAmount;
 @property (nonatomic, strong) NSString *promoCode;

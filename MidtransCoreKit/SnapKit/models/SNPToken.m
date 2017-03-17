@@ -48,26 +48,4 @@ NSString *const kSNPTokenToken = @"token";
     return [object isEqual:[NSNull null]] ? nil : object;
 }
 
-
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    self.token = [aDecoder decodeObjectForKey:kSNPTokenToken];
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:_token forKey:kSNPTokenToken];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    SNPToken *copy = [[SNPToken alloc] init];
-    if (copy) {
-        copy.token = [self.token copyWithZone:zone];
-    }
-    return copy;
-}
-
-
 @end

@@ -55,30 +55,4 @@ NSString *const kSNPExpiryUnit = @"unit";
     return [object isEqual:[NSNull null]] ? nil : object;
 }
 
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    self.startTime = [aDecoder decodeObjectForKey:kSNPExpiryStartTime];
-    self.duration = [aDecoder decodeDoubleForKey:kSNPExpiryDuration];
-    self.unit = [aDecoder decodeObjectForKey:kSNPExpiryUnit];
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:_startTime forKey:kSNPExpiryStartTime];
-    [aCoder encodeDouble:_duration forKey:kSNPExpiryDuration];
-    [aCoder encodeObject:_unit forKey:kSNPExpiryUnit];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    SNPExpiry *copy = [[SNPExpiry alloc] init];
-    if (copy) {
-        copy.startTime = [self.startTime copyWithZone:zone];
-        copy.duration = self.duration;
-        copy.unit = [self.unit copyWithZone:zone];
-    }
-    return copy;
-}
-
 @end

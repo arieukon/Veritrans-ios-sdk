@@ -96,42 +96,4 @@ NSString *const kSNPCreditCardSavedTokens = @"saved_tokens";
     return [object isEqual:[NSNull null]] ? nil : object;
 }
 
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    self.whitelistBins = [aDecoder decodeObjectForKey:kSNPCreditCardWhitelistBins];
-    self.saveCard = [aDecoder decodeBoolForKey:kSNPCreditCardSaveCard];
-    self.installment = [aDecoder decodeObjectForKey:kSNPCreditCardInstallment];
-    self.channel = [aDecoder decodeObjectForKey:kSNPCreditCardChannel];
-    self.bank = [aDecoder decodeObjectForKey:kSNPCreditCardBank];
-    self.secure = [aDecoder decodeBoolForKey:kSNPCreditCardSecure];
-    self.savedCreditCards = [aDecoder decodeObjectForKey:kSNPCreditCardSavedTokens];
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:_savedCreditCards forKey:kSNPCreditCardSavedTokens];
-    [aCoder encodeObject:_whitelistBins forKey:kSNPCreditCardWhitelistBins];
-    [aCoder encodeBool:_saveCard forKey:kSNPCreditCardSaveCard];
-    [aCoder encodeObject:_installment forKey:kSNPCreditCardInstallment];
-    [aCoder encodeObject:_channel forKey:kSNPCreditCardChannel];
-    [aCoder encodeObject:_bank forKey:kSNPCreditCardBank];
-    [aCoder encodeBool:_secure forKey:kSNPCreditCardSecure];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    SNPCreditCardDetails *copy = [[SNPCreditCardDetails alloc] init];
-    if (copy) {
-        self.savedCreditCards = [self.savedCreditCards copyWithZone:zone];
-        copy.whitelistBins = [self.whitelistBins copyWithZone:zone];
-        copy.saveCard = self.saveCard;
-        copy.installment = [self.installment copyWithZone:zone];
-        copy.channel = [self.channel copyWithZone:zone];
-        copy.bank = [self.bank copyWithZone:zone];
-        copy.secure = self.secure;
-    }
-    return copy;
-}
-
 @end

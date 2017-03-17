@@ -10,11 +10,8 @@
 #import <SnapKit/SnapKit.h>
 
 @interface SNPTestHelper : NSObject
-
-@end
-
-@interface NSString (random)
-//+ (NSString *)randomWithLength:(NSUInteger)length;
++ (void)fetchPaymentInfoFinishedSuccess:(void(^)(SNPToken *token, SNPPaymentInfo *paymentInfo))finishedSuccess
+                          finishedError:(void(^)(NSError *error))finishedError;
 @end
 
 @interface SNPPaymentInfo (utils)

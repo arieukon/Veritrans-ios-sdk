@@ -9,18 +9,49 @@
 #import "SNPTestHelper.h"
 
 @implementation SNPTestHelper
-
-@end
-
-@implementation NSString (random)
-//+ (NSString *)randomWithLength:(NSUInteger)length {
-//    NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-//    NSMutableString *randomString = [NSMutableString stringWithCapacity:length];
-//    for (int i=0; i<length; i++) {
-//        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform((int)[letters length])]];
-//    }
-//    return randomString;
-//}
++ (void)fetchPaymentInfoFinishedSuccess:(void(^)(SNPToken *token, SNPPaymentInfo *paymentInfo))finishedSuccess
+                          finishedError:(void(^)(NSError *error))finishedError {
+    SNPCustomerDetails *cust = [[SNPCustomerDetails alloc] initWithCustomerID:@"E477025C-8398-467B-8038-B6FB22BF725F"
+                                                                    firstName:@"nanang"
+                                                                     lastName:@"rafsanjani"
+                                                                        email:@"juki@ginanjar.com"
+                                                                        phone:@"9289319231231"];
+    cust.shippingAddress = [[SNPAddress alloc] initWithFirstName:@"nanang"
+                                                        lastName:@"rafsanjani"
+                                                           email:@"juki@ginanjar.com"
+                                                           phone:@"9289319231231"
+                                                         address:@"lengkong"
+                                                      postalCode:@"477474"
+                                                            city:@"bandung"
+                                                     countryCode:@"IDN"];;
+    cust.billingAddress = cust.shippingAddress;
+    
+    SNPItemDetails *item = [[SNPItemDetails alloc] initWithItemID:@"NygBlZXhdWv5SNik0nIb"
+                                                             name:@"barang1"
+                                                            price:@1
+                                                         quantity:@1000];
+    NSArray *items = @[item];
+    SNPTransactionDetails *trx = [[SNPTransactionDetails alloc] initWithOrderID:@"wEnFKvcdFnWhOk6NwkDo"
+                                                                    grossAmount:@1000];
+    SNPPaymentTokenizeRequest *request = [[SNPPaymentTokenizeRequest alloc] initWithTransactionDetails:trx
+                                                                                       customerDetails:cust
+                                                                                           itemDetails:items];
+    [SNPClient tokenizePaymentWithRequest:request completion:^(NSError *error, SNPToken *token) {
+        if (error) {
+            if (finishedError) finishedError(error);
+            return;
+        }
+        SNPPaymentInfoRequest *request = [[SNPPaymentInfoRequest alloc] initWithToken:token];
+        [SNPClient fetchPaymentInfoWithRequest:request completion:^(NSError *error, SNPPaymentInfo *paymentInfo) {
+            if (error) {
+                if (finishedError) finishedError(error);
+            }
+            else {
+                if (finishedSuccess) finishedSuccess(token, paymentInfo);
+            }
+        }];
+    }];
+}
 @end
 
 @implementation SNPPaymentInfo (utils)
@@ -68,4 +99,5 @@
     }
     return nil;
 }
+
 @end

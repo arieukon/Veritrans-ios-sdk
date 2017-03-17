@@ -46,7 +46,7 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge CC payment"];
     [SNPSharedConfig shared].creditCardConfig = [SNPCreditCardConfig defaultConfig];
     NSString *cardNumber = @"4105058689481467";
-    [self fetchPaymentInfoWithCompletion:^(SNPToken *token, SNPPaymentInfo *paymentInfo) {
+    [SNPTestHelper fetchPaymentInfoFinishedSuccess:^(SNPToken *token, SNPPaymentInfo *paymentInfo) {
         SNPCreditCard *card = [[SNPCreditCard alloc] initWithNumber:cardNumber
                                                         expiryMonth:@"02"
                                                          expiryYear:@"20"
@@ -60,6 +60,8 @@
                           completion:^{
                               [exp fulfill];
                           }];
+    } finishedError:^(NSError *error) {
+        XCTFail(@"Error %@", error.localizedDescription);
     }];
     [self waitForExpectationsWithTimeout:61 handler:nil];
 }
@@ -68,7 +70,7 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge CC payment"];
     [SNPSharedConfig shared].creditCardConfig = [SNPCreditCardConfig defaultConfig];
     NSString *cardNumber = @"4105058689481467";
-    [self fetchPaymentInfoWithCompletion:^(SNPToken *token, SNPPaymentInfo *paymentInfo) {
+    [SNPTestHelper fetchPaymentInfoFinishedSuccess:^(SNPToken *token, SNPPaymentInfo *paymentInfo) {
         SNPInstallmentTerm *term = [paymentInfo installmentTermWithCardNumber:cardNumber];
         SNPCreditCard *card = [[SNPCreditCard alloc] initWithNumber:cardNumber
                                                         expiryMonth:@"02"
@@ -83,6 +85,8 @@
                           completion:^{
                               [exp fulfill];
                           }];
+    } finishedError:^(NSError *error) {
+        XCTFail(@"Error %@", error.localizedDescription);
     }];
     [self waitForExpectationsWithTimeout:120 handler:nil];
 }
@@ -93,7 +97,7 @@
     [SNPSharedConfig shared].creditCardConfig.promoEnabled = YES;
     NSString *cardNumber = @"4105058689481467";
     
-    [self fetchPaymentInfoWithCompletion:^(SNPToken *token, SNPPaymentInfo *paymentInfo) {
+    [SNPTestHelper fetchPaymentInfoFinishedSuccess:^(SNPToken *token, SNPPaymentInfo *paymentInfo) {
         SNPPromo *promo = [paymentInfo promoWithCardNumber:cardNumber];
         NSNumber *amount = paymentInfo.transactionDetails.grossAmount;
         SNPObtainPromoRequest *request = [[SNPObtainPromoRequest alloc] initWithPromo:promo
@@ -116,6 +120,8 @@
                                   [exp fulfill];
                               }];
         }];
+    } finishedError:^(NSError *error) {
+        XCTFail(@"Error %@", error.localizedDescription);
     }];
     [self waitForExpectationsWithTimeout:120 handler:nil];
 }
@@ -124,7 +130,7 @@
     XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge CC payment"];
     [SNPSharedConfig shared].creditCardConfig = [SNPCreditCardConfig defaultConfig];
     [SNPSharedConfig shared].creditCardConfig.paymentType = SNPCreditCardPaymentTypeOneclick;
-    [self fetchPaymentInfoWithCompletion:^(SNPToken *token, SNPPaymentInfo *paymentInfo) {
+    [SNPTestHelper fetchPaymentInfoFinishedSuccess:^(SNPToken *token, SNPPaymentInfo *paymentInfo) {
         SNPSavedCreditCard *savedCard = paymentInfo.creditCard.savedCreditCards.firstObject;
         SNPCreditCardPayment *payment = [[SNPCreditCardPayment alloc] initWithToken:token
                                                                     savedCreditCard:savedCard
@@ -135,11 +141,91 @@
             }
             [exp fulfill];
         }];
+    } finishedError:^(NSError *error) {
+        XCTFail(@"Error %@", error.localizedDescription);
+    }];
+    [self waitForExpectationsWithTimeout:120 handler:nil];
+}
+
+- (void)testTwoClicksPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge CC payment"];
+    [SNPSharedConfig shared].creditCardConfig = [SNPCreditCardConfig defaultConfig];
+    [SNPSharedConfig shared].creditCardConfig.paymentType = SNPCreditCardPaymentTypeTwoclick;
+    [SNPTestHelper fetchPaymentInfoFinishedSuccess:^(SNPToken *token, SNPPaymentInfo *paymentInfo) {
+        SNPSavedCreditCard *savedCard = paymentInfo.creditCard.savedCreditCards[1];
+        [self performPaymentWithSavedCard:savedCard
+                             paymentToken:token customer:paymentInfo.customerDetails
+                                   amount:paymentInfo.transactionDetails.grossAmount
+                               completion:^{
+                                   [exp fulfill];
+                               }];
+    } finishedError:^(NSError *error) {
+        XCTFail(@"Error %@", error.localizedDescription);
+    }];
+    [self waitForExpectationsWithTimeout:120 handler:nil];
+}
+
+- (void)testMIGSPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge CC payment"];
+    [SNPSharedConfig shared].creditCardConfig = [SNPCreditCardConfig defaultConfig];
+    [SNPSharedConfig shared].creditCardConfig.acquiringBank = SNPAcquiringBankMaybank;    
+    [SNPTestHelper fetchPaymentInfoFinishedSuccess:^(SNPToken *token, SNPPaymentInfo *paymentInfo) {
+        SNPSavedCreditCard *savedCard = paymentInfo.creditCard.savedCreditCards[1];
+        [self performPaymentWithSavedCard:savedCard
+                             paymentToken:token customer:paymentInfo.customerDetails
+                                   amount:paymentInfo.transactionDetails.grossAmount
+                               completion:^{
+                                   [exp fulfill];
+                               }];
+    } finishedError:^(NSError *error) {
+        XCTFail(@"Error %@", error.localizedDescription);
+    }];
+    [self waitForExpectationsWithTimeout:120 handler:nil];
+}
+
+- (void)testPreauthPayment {
+    XCTestExpectation *exp = [self expectationWithDescription:@"Successfully charge CC payment"];
+    [SNPSharedConfig shared].creditCardConfig = [SNPCreditCardConfig defaultConfig];
+    [SNPSharedConfig shared].creditCardConfig.preauthEnabled = YES;
+    [SNPTestHelper fetchPaymentInfoFinishedSuccess:^(SNPToken *token, SNPPaymentInfo *paymentInfo) {
+        SNPSavedCreditCard *savedCard = paymentInfo.creditCard.savedCreditCards[1];
+        [self performPaymentWithSavedCard:savedCard
+                             paymentToken:token customer:paymentInfo.customerDetails
+                                   amount:paymentInfo.transactionDetails.grossAmount
+                               completion:^{
+                                   [exp fulfill];
+                               }];
+    } finishedError:^(NSError *error) {
+        XCTFail(@"Error %@", error.localizedDescription);
     }];
     [self waitForExpectationsWithTimeout:120 handler:nil];
 }
 
 #pragma mark - Helper
+
+- (void)performPaymentWithSavedCard:(SNPSavedCreditCard *)savedCard
+                       paymentToken:(SNPToken *)payToken
+                           customer:(SNPCustomerDetails *)customer
+                             amount:(NSNumber *)amount
+                         completion:(void(^)())completion {
+    SNPCreditCardTokenizeRequest *request = [[SNPCreditCardTokenizeRequest alloc] initWithSavedCreditCard:savedCard
+                                                                                                cvvNumber:@"123"
+                                                                                        transactionAmount:amount];
+    [SNPClient tokenizeCreditCardWithRequest:request completion:^(NSError *error, SNPCreditCardToken *token) {
+        if (error) {
+            XCTFail(@"Error %@", error.localizedDescription);
+        }
+        SNPCreditCardPayment *payment = [[SNPCreditCardPayment alloc] initWithToken:payToken
+                                                                    savedCreditCard:savedCard
+                                                                    customerDetails:customer];
+        [SNPClient chargePayment:payment completion:^(NSError *error, NSDictionary *response) {
+            if (error) {
+                XCTFail(@"Error %@", error.localizedDescription);
+            }
+            if (completion) completion();
+        }];
+    }];
+}
 
 - (void)performPaymentWithCard:(SNPCreditCard *)card
                   paymentToken:(SNPToken *)payToken
@@ -174,52 +260,6 @@
                 XCTFail(@"Error %@", error.localizedDescription);
             }
             if (completion) completion();
-        }];
-    }];
-}
-
-- (NSNumber *)grossAmountOfItems:(NSArray <SNPItemDetails *>*)items {
-    double amount = 0;
-    for (SNPItemDetails *item in items) {
-        amount += (item.quantity.integerValue*item.price.doubleValue);
-    }
-    return @(amount);
-}
-
-- (void)fetchPaymentInfoWithCompletion:(void(^)(SNPToken *token, SNPPaymentInfo *paymentInfo))completion {
-    SNPCustomerDetails *cust = [[SNPCustomerDetails alloc] initWithCustomerID:@"E477025C-8398-467B-8038-B6FB22BF725F"
-                                                                    firstName:@"nanang"
-                                                                     lastName:@"rafsanjani"
-                                                                        email:@"juki@ginanjar.com"
-                                                                        phone:@"9289319231231"];
-    SNPAddress *shipAddr = [[SNPAddress alloc] initWithFirstName:@"nanang"
-                                                        lastName:@"rafsanjani"
-                                                           email:@"juki@ginanjar.com"
-                                                           phone:@"9289319231231"
-                                                         address:@"lengkong"
-                                                      postalCode:@"477474"
-                                                            city:@"bandung"
-                                                     countryCode:@"IDN"];
-    SNPItemDetails *item = [[SNPItemDetails alloc] initWithItemID:@"NygBlZXhdWv5SNik0nIb"
-                                                             name:@"barang1"
-                                                            price:@1
-                                                         quantity:@1000];
-    NSArray *items = @[item];
-    SNPTransactionDetails *trx = [[SNPTransactionDetails alloc] initWithOrderID:@"wEnFKvcdFnWhOk6NwkDo"
-                                                                    grossAmount:[self grossAmountOfItems:items]];
-    SNPPaymentTokenizeRequest *request = [[SNPPaymentTokenizeRequest alloc] initWithTransactionDetails:trx
-                                                                                       customerDetails:cust
-                                                                                           itemDetails:items];
-    [SNPClient tokenizePaymentWithRequest:request completion:^(NSError *error, SNPToken *token) {
-        if (error) {
-            XCTFail(@"Error %@", error.localizedDescription);
-        }
-        SNPPaymentInfoRequest *request = [[SNPPaymentInfoRequest alloc] initWithToken:token];
-        [SNPClient fetchPaymentInfoWithRequest:request completion:^(NSError *error, SNPPaymentInfo *paymentInfo) {
-            if (error) {
-                XCTFail(@"Error %@", error.localizedDescription);
-            }
-            if (completion) completion(token, paymentInfo);
         }];
     }];
 }

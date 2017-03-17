@@ -9,7 +9,7 @@
 
 
 
-@interface SNPTerm : NSObject <NSCoding, NSCopying>
+@interface SNPTerm : NSObject
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSArray *installments;

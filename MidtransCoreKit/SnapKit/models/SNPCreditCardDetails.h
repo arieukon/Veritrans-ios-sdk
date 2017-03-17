@@ -9,7 +9,7 @@
 #import "SNPSavedCreditCard.h"
 #import "SNPInstallment.h"
 
-@interface SNPCreditCardDetails : NSObject <NSCoding, NSCopying>
+@interface SNPCreditCardDetails : NSObject
 
 @property (nonatomic, strong) NSArray *whitelistBins;
 @property (nonatomic, assign) BOOL saveCard;

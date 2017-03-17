@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNPSavedCreditCard : NSObject <NSCoding, NSCopying>
+@interface SNPSavedCreditCard : NSObject
 
 @property (nonatomic, strong) NSString *expiresAt;
 @property (nonatomic, strong) NSString *tokenType;

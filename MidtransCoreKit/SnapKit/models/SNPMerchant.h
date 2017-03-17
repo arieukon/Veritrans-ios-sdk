@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "SNPPreference.h"
 
-@interface SNPMerchant : NSObject <NSCoding, NSCopying>
+@interface SNPMerchant : NSObject
 
 @property (nonatomic, strong) NSArray *enabledPrinciples;
 @property (nonatomic, strong) SNPPreference *preference;

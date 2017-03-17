@@ -16,7 +16,7 @@
 #import "SNPEnabledPayment.h"
 #import "SNPItemDetails.h"
 
-@interface SNPPaymentInfo : NSObject <NSCoding, NSCopying>
+@interface SNPPaymentInfo : NSObject
 
 @property (nonatomic, strong) SNPTransactionDetails *transactionDetails;
 @property (nonatomic, strong) SNPExpiry *expiry;

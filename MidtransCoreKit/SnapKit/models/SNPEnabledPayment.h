@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNPEnabledPayment : NSObject <NSCoding, NSCopying>
+@interface SNPEnabledPayment : NSObject
 
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *category;

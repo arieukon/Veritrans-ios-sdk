@@ -83,33 +83,4 @@ NSString *const kSNPMerchantPointBanks = @"point_banks";
     return [object isEqual:[NSNull null]] ? nil : object;
 }
 
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    self.enabledPrinciples = [aDecoder decodeObjectForKey:kSNPMerchantEnabledPrinciples];
-    self.preference = [aDecoder decodeObjectForKey:kSNPMerchantPreference];
-    self.clientKey = [aDecoder decodeObjectForKey:kSNPMerchantClientKey];
-    self.pointBanks = [aDecoder decodeObjectForKey:kSNPMerchantPointBanks];
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:_enabledPrinciples forKey:kSNPMerchantEnabledPrinciples];
-    [aCoder encodeObject:_preference forKey:kSNPMerchantPreference];
-    [aCoder encodeObject:_clientKey forKey:kSNPMerchantClientKey];
-    [aCoder encodeObject:_pointBanks forKey:kSNPMerchantPointBanks];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    SNPMerchant *copy = [[SNPMerchant alloc] init];
-    if (copy) {
-        copy.enabledPrinciples = [self.enabledPrinciples copyWithZone:zone];
-        copy.preference = [self.preference copyWithZone:zone];
-        copy.clientKey = [self.clientKey copyWithZone:zone];
-        copy.pointBanks = [self.pointBanks copyWithZone:zone];
-    }
-    return copy;
-}
-
 @end

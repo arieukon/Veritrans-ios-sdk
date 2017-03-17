@@ -65,34 +65,4 @@ NSString *const kSNPTransactionDetailsGrossAmount = @"gross_amount";
     return [object isEqual:[NSNull null]] ? nil : object;
 }
 
-
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    
-    self.orderId = [aDecoder decodeObjectForKey:kSNPTransactionDetailsOrderId];
-    self.grossAmount = [aDecoder decodeObjectForKey:kSNPTransactionDetailsGrossAmount];
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    
-    [aCoder encodeObject:_orderId forKey:kSNPTransactionDetailsOrderId];
-    [aCoder encodeObject:_grossAmount forKey:kSNPTransactionDetailsGrossAmount];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    SNPTransactionDetails *copy = [[SNPTransactionDetails alloc] init];
-    
-    if (copy) {
-        
-        copy.orderId = [self.orderId copyWithZone:zone];
-        copy.grossAmount = [self.grossAmount copyWithZone:zone];
-    }
-    
-    return copy;
-}
-
-
 @end

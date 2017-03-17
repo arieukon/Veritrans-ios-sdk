@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "SNPTerm.h"
 
-@interface SNPInstallment : NSObject <NSCoding, NSCopying>
+@interface SNPInstallment : NSObject
 
 @property (nonatomic, strong) NSArray <SNPTerm*>*terms;
 @property (nonatomic, assign) BOOL required;

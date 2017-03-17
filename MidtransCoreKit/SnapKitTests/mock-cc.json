@@ -186,5 +186,263 @@
             "transaction_time": "2017-03-16 17:33:40"
         },
         "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "comment": "twoclicks checkout",
+        "body": {
+            "transaction_details": {
+                "order_id": "wEnFKvcdFnWhOk6NwkDo",
+                "gross_amount": 1000
+            },
+            "customer_details": {
+                "email": "juki@ginanjar.com",
+                "phone": "9289319231231",
+                "last_name": "rafsanjani",
+                "first_name": "nanang",
+                "billing_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                },
+                "shipping_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                }
+            },
+            "user_id": "E477025C-8398-467B-8038-B6FB22BF725F",
+            "item_details": [
+                {
+                    "quantity": 1000,
+                    "id": "NygBlZXhdWv5SNik0nIb",
+                    "name": "barang1",
+                    "price": 1
+                }
+            ],
+            "credit_card": {
+                "secure": false,
+                "save_card": true
+            }
+        },
+        "method": "POST",
+        "response": {
+            "token": "1cda5d90-8d4f-40ab-b76f-d2316530c45e"
+        },
+        "url": "https://rakawm-snap.herokuapp.com/installment/charge"
+    },
+    {
+        "comment": "twoclicks charge",
+        "body": {
+            "payment_type": "credit_card",
+            "payment_params": {
+                "masked_card": "481111-1114",
+                "save_card": true
+            },
+            "customer_details": {
+                "email": "juki@ginanjar.com",
+                "phone": "9289319231231",
+                "full_name": "nanang"
+            }
+        },
+        "method": "POST",
+        "response": {
+            "approval_code": "1489660420391",
+            "transaction_status": "capture",
+            "finish_redirect_url": "http:\/\/snap.rakawm.id\/finish_snap?order_id=T7jgE7i42anIS6BqjYTK&status_code=200&transaction_status=capture",
+            "transaction_id": "e5156a61-d830-4092-87f3-93564f1f0463",
+            "gross_amount": "10000.00",
+            "payment_type": "credit_card",
+            "order_id": "T7jgE7i42anIS6BqjYTK",
+            "masked_card": "410505-1467",
+            "status_message": "Success, Credit Card transaction is successful",
+            "bank": "bni",
+            "fraud_status": "accept",
+            "status_code": "200",
+            "transaction_time": "2017-03-16 17:33:40"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "comment": "twoclicks tokenize",
+        "body": null,
+        "method": "GET",
+        "response": {
+            "status_message": "OK, success request new token",
+            "token_id": "481111-1467-e5156a61-d830-4092-87f3-93564f1f0463",
+            "status_code": "200"
+        },
+        "url": "https://api.sandbox.midtrans.com/v2/token?card_cvv=123&two_click=true&client_key=VT-client-E4f1bsi1LpL1p5cF&gross_amount=10000&secure=false&token_id=481111vBpIHoyIWroYFzuHxwSPcA1114"
+    },
+    {
+        "comment": "migs checkout",
+        "body": {
+            "transaction_details": {
+                "order_id": "wEnFKvcdFnWhOk6NwkDo",
+                "gross_amount": 1000
+            },
+            "customer_details": {
+                "email": "juki@ginanjar.com",
+                "phone": "9289319231231",
+                "last_name": "rafsanjani",
+                "first_name": "nanang",
+                "billing_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                },
+                "shipping_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                }
+            },
+            "user_id": "E477025C-8398-467B-8038-B6FB22BF725F",
+            "item_details": [
+                {
+                    "quantity": 1000,
+                    "id": "NygBlZXhdWv5SNik0nIb",
+                    "name": "barang1",
+                    "price": 1
+                }
+            ],
+            "credit_card": {
+                "bank": "maybank",
+                "secure": false,
+                "save_card": false
+            }
+        },
+        "method": "POST",
+        "response": {
+            "token": "1cda5d90-8d4f-40ab-b76f-d2316530c45e"
+        },
+        "url": "https://rakawm-snap.herokuapp.com/installment/charge"
+    },
+    {
+        "comment": "migs tokenize",
+        "body": null,
+        "method": "GET",
+        "response": {
+            "status_message": "OK, success request new token",
+            "token_id": "481111-1467-e5156a61-d830-4092-87f3-93564f1f0463",
+            "status_code": "200"
+        },
+        "url": "https://api.sandbox.midtrans.com/v2/token?secure=false&channel=migs&two_click=true&client_key=VT-client-E4f1bsi1LpL1p5cF&gross_amount=10000&card_cvv=123&bank=maybank&token_id=481111vBpIHoyIWroYFzuHxwSPcA1114"
+    },
+    {
+        "comment": "migs charge",
+        "body": {
+            "payment_type": "credit_card",
+            "payment_params": {
+                "masked_card": "481111-1114",
+                "save_card": false
+            },
+            "customer_details": {
+                "email": "juki@ginanjar.com",
+                "phone": "9289319231231",
+                "full_name": "nanang"
+            }
+        },
+        "method": "POST",
+        "response": {
+            "approval_code": "1489660420391",
+            "transaction_status": "capture",
+            "finish_redirect_url": "http:\/\/snap.rakawm.id\/finish_snap?order_id=T7jgE7i42anIS6BqjYTK&status_code=200&transaction_status=capture",
+            "transaction_id": "e5156a61-d830-4092-87f3-93564f1f0463",
+            "gross_amount": "10000.00",
+            "payment_type": "credit_card",
+            "order_id": "T7jgE7i42anIS6BqjYTK",
+            "masked_card": "481111-1114",
+            "status_message": "Success, Credit Card transaction is successful",
+            "bank": "maybank",
+            "fraud_status": "accept",
+            "status_code": "200",
+            "transaction_time": "2017-03-16 17:33:40"
+        },
+        "url": "https://app.sandbox.midtrans.com/snap/v1/transactions/1cda5d90-8d4f-40ab-b76f-d2316530c45e/pay"
+    },
+    {
+        "comment": "preauth checkout",
+        "body": {
+            "transaction_details": {
+                "order_id": "wEnFKvcdFnWhOk6NwkDo",
+                "gross_amount": 1000
+            },
+            "customer_details": {
+                "email": "juki@ginanjar.com",
+                "phone": "9289319231231",
+                "last_name": "rafsanjani",
+                "first_name": "nanang",
+                "billing_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                },
+                "shipping_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                }
+            },
+            "user_id": "E477025C-8398-467B-8038-B6FB22BF725F",
+            "item_details": [
+                {
+                    "quantity": 1000,
+                    "id": "NygBlZXhdWv5SNik0nIb",
+                    "name": "barang1",
+                    "price": 1
+                }
+            ],
+            "credit_card": {
+                "type": "authorize",
+                "secure": false,
+                "save_card": false
+            }
+        },
+        "method": "POST",
+        "response": {
+            "token": "1cda5d90-8d4f-40ab-b76f-d2316530c45e"
+        },
+        "url": "https://rakawm-snap.herokuapp.com/installment/charge"
+    },
+    {
+        "comment": "preauth tokenize",
+        "body": null,
+        "method": "GET",
+        "response": {
+            "status_message": "OK, success request new token",
+            "token_id": "481111-1467-e5156a61-d830-4092-87f3-93564f1f0463",
+            "status_code": "200"
+        },
+        "url": "https://api.sandbox.midtrans.com/v2/token?secure=false&two_click=true&client_key=VT-client-E4f1bsi1LpL1p5cF&gross_amount=10000&card_cvv=123&type=authorize&token_id=481111vBpIHoyIWroYFzuHxwSPcA1114"
     }
 ]

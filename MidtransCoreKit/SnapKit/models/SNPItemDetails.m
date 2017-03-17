@@ -72,34 +72,4 @@ NSString *const kSNPItemDetailsPrice = @"price";
     return [object isEqual:[NSNull null]] ? nil : object;
 }
 
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    self.quantity = [aDecoder decodeObjectForKey:kSNPItemDetailsQuantity];
-    self.itemDetailsIdentifier = [aDecoder decodeObjectForKey:kSNPItemDetailsId];
-    self.name = [aDecoder decodeObjectForKey:kSNPItemDetailsName];
-    self.price = [aDecoder decodeObjectForKey:kSNPItemDetailsPrice];
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:_quantity forKey:kSNPItemDetailsQuantity];
-    [aCoder encodeObject:_itemDetailsIdentifier forKey:kSNPItemDetailsId];
-    [aCoder encodeObject:_name forKey:kSNPItemDetailsName];
-    [aCoder encodeObject:_price forKey:kSNPItemDetailsPrice];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    SNPItemDetails *copy = [[SNPItemDetails alloc] init];
-    if (copy) {
-        copy.quantity = self.quantity;
-        copy.itemDetailsIdentifier = [self.itemDetailsIdentifier copyWithZone:zone];
-        copy.name = [self.name copyWithZone:zone];
-        copy.price = self.price;
-    }
-    return copy;
-}
-
-
 @end

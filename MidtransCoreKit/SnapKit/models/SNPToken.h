@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNPToken : NSObject <NSCoding, NSCopying>
+@interface SNPToken : NSObject
 
 @property (nonatomic, strong) NSString *token;
 

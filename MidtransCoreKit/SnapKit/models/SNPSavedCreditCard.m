@@ -60,34 +60,4 @@ NSString *const kSNPSavedCreditCardMaskedCard = @"masked_card";
     return [object isEqual:[NSNull null]] ? nil : object;
 }
 
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    self.expiresAt = [aDecoder decodeObjectForKey:kSNPSavedCreditCardExpiresAt];
-    self.tokenType = [aDecoder decodeObjectForKey:kSNPSavedCreditCardTokenType];
-    self.token = [aDecoder decodeObjectForKey:kSNPSavedCreditCardToken];
-    self.maskedCard = [aDecoder decodeObjectForKey:kSNPSavedCreditCardMaskedCard];
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:_expiresAt forKey:kSNPSavedCreditCardExpiresAt];
-    [aCoder encodeObject:_tokenType forKey:kSNPSavedCreditCardTokenType];
-    [aCoder encodeObject:_token forKey:kSNPSavedCreditCardToken];
-    [aCoder encodeObject:_maskedCard forKey:kSNPSavedCreditCardMaskedCard];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    SNPSavedCreditCard *copy = [[SNPSavedCreditCard alloc] init];    
-    if (copy) {
-        copy.expiresAt = [self.expiresAt copyWithZone:zone];
-        copy.tokenType = [self.tokenType copyWithZone:zone];
-        copy.token = [self.token copyWithZone:zone];
-        copy.maskedCard = [self.maskedCard copyWithZone:zone];
-    }
-    return copy;
-}
-
-
 @end

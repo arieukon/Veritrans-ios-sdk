@@ -51,27 +51,4 @@ NSString *const kSNPCallbacksFinish = @"finish";
     return [object isEqual:[NSNull null]] ? nil : object;
 }
 
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    self.error = [aDecoder decodeObjectForKey:kSNPCallbacksError];
-    self.finish = [aDecoder decodeObjectForKey:kSNPCallbacksFinish];
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:_error forKey:kSNPCallbacksError];
-    [aCoder encodeObject:_finish forKey:kSNPCallbacksFinish];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    SNPCallbacks *copy = [[SNPCallbacks alloc] init];
-    if (copy) {
-        copy.error = [self.error copyWithZone:zone];
-        copy.finish = [self.finish copyWithZone:zone];
-    }
-    return copy;
-}
-
 @end

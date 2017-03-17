@@ -343,7 +343,27 @@
                 "email": "juki@ginanjar.com",
                 "phone": "9289319231231",
                 "last_name": "rafsanjani",
-                "first_name": "nanang"
+                "first_name": "nanang",
+                "billing_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                },
+                "shipping_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                }
             },
             "user_id": "E477025C-8398-467B-8038-B6FB22BF725F",
             "item_details": [
@@ -379,7 +399,27 @@
                 "email": "juki@ginanjar.com",
                 "phone": "9289319231231",
                 "last_name": "rafsanjani",
-                "first_name": "nanang"
+                "first_name": "nanang",
+                "billing_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                },
+                "shipping_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                }
             },
             "user_id": "E477025C-8398-467B-8038-B6FB22BF725F",
             "item_details": [
@@ -412,7 +452,27 @@
                 "email": "juki@ginanjar.com",
                 "phone": "9289319231231",
                 "last_name": "rafsanjani",
-                "first_name": "nanang"
+                "first_name": "nanang",
+                "billing_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                },
+                "shipping_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                }
             },
             "user_id": "E477025C-8398-467B-8038-B6FB22BF725F",
             "item_details": [
@@ -654,7 +714,27 @@
                 "email": "juki@ginanjar.com",
                 "phone": "9289319231231",
                 "last_name": "rafsanjani",
-                "first_name": "nanang"
+                "first_name": "nanang",
+                "billing_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                },
+                "shipping_address": {
+                    "address": "lengkong",
+                    "phone": "9289319231231",
+                    "city": "bandung",
+                    "postal_code": "477474",
+                    "last_name": "rafsanjani",
+                    "email": "juki@ginanjar.com",
+                    "country_code": "IDN",
+                    "first_name": "nanang"
+                }
             },
             "item_details": [
                 {

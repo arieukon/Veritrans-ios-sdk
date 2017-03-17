@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNPObtainedPromo : NSObject <NSCoding, NSCopying>
+@interface SNPObtainedPromo : NSObject
 
 @property (nonatomic, strong) id sponsorMessageEn;
 @property (nonatomic, strong) NSString *promoCode;

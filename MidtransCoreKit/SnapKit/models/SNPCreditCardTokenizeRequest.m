@@ -35,10 +35,6 @@
     return self;
 }
 
-- (NSString *)description {
-    return [NSString stringWithFormat:@"%@", [self parameter]];
-}
-
 - (NSDictionary *)parameter {
     NSMutableDictionary *result = [NSMutableDictionary new];
     result[@"client_key"] = SHAREDCONFIG.clientKey;
@@ -46,7 +42,6 @@
     result[@"gross_amount"] = self.transactionAmount;
     
     if (self.savedCreditCard) {
-        NSAssert([self.savedCreditCard.tokenType isEqualToString:SNPCreditCardPaymentTwoClicks], @"Saved card type should 2 clicks type");
         [result addEntriesFromDictionary:@{
                                            @"card_cvv":self.cvvNumber,
                                            @"two_click":@"true",

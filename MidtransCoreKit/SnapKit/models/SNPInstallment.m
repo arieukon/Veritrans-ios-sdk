@@ -62,27 +62,4 @@ NSString *const kSNPInstallmentRequired = @"required";
     return [object isEqual:[NSNull null]] ? nil : object;
 }
 
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    self.terms = [aDecoder decodeObjectForKey:kSNPInstallmentTerms];
-    self.required = [aDecoder decodeBoolForKey:kSNPInstallmentRequired];
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:_terms forKey:kSNPInstallmentTerms];
-    [aCoder encodeBool:_required forKey:kSNPInstallmentRequired];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    SNPInstallment *copy = [[SNPInstallment alloc] init];
-    if (copy) {
-        copy.terms = [self.terms copyWithZone:zone];
-        copy.required = self.required;
-    }
-    return copy;
-}
-
 @end

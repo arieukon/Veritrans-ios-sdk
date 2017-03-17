@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNPItemDetails : NSObject <NSCoding, NSCopying>
+@interface SNPItemDetails : NSObject
 
 @property (nonatomic, nullable) NSNumber *quantity;
 @property (nonatomic, nullable) NSString *itemDetailsIdentifier;

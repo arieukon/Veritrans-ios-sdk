@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNPPreference : NSObject <NSCoding, NSCopying>
+@interface SNPPreference : NSObject
 
 @property (nonatomic, strong) NSString *locale;
 @property (nonatomic, strong) NSString *finishUrl;

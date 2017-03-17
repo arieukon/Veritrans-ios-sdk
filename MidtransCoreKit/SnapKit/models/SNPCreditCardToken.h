@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNPCreditCardToken : NSObject <NSCoding, NSCopying>
+@interface SNPCreditCardToken : NSObject
 
 @property (nonatomic, strong) NSString *redirectUrl;
 @property (nonatomic, strong) NSString *statusMessage;

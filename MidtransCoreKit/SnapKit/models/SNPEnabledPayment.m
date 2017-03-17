@@ -51,27 +51,4 @@ NSString *const kSNPEnabledPaymentCategory = @"category";
     return [object isEqual:[NSNull null]] ? nil : object;
 }
 
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    self.type = [aDecoder decodeObjectForKey:kSNPEnabledPaymentType];
-    self.category = [aDecoder decodeObjectForKey:kSNPEnabledPaymentCategory];
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:_type forKey:kSNPEnabledPaymentType];
-    [aCoder encodeObject:_category forKey:kSNPEnabledPaymentCategory];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    SNPEnabledPayment *copy = [[SNPEnabledPayment alloc] init];
-    if (copy) {
-        copy.type = [self.type copyWithZone:zone];
-        copy.category = [self.category copyWithZone:zone];
-    }
-    return copy;
-}
-
 @end

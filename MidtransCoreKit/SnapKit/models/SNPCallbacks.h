@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNPCallbacks : NSObject <NSCoding, NSCopying>
+@interface SNPCallbacks : NSObject
 
 @property (nonatomic, strong) NSString *error;
 @property (nonatomic, strong) NSString *finish;

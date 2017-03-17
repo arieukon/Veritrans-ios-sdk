@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNPTransactionDetails : NSObject <NSCoding, NSCopying>
+@interface SNPTransactionDetails : NSObject
 
 @property (nonatomic, nonnull) NSString *orderId;
 @property (nonatomic, nonnull) NSNumber *grossAmount;

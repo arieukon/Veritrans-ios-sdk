@@ -47,34 +47,4 @@ NSString *const kSNPTermInstallments = @"installments";
     return [object isEqual:[NSNull null]] ? nil : object;
 }
 
-
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init];
-    
-    self.name = [aDecoder decodeObjectForKey:kSNPTermName];
-    self.installments = [aDecoder decodeObjectForKey:kSNPTermInstallments];
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    
-    [aCoder encodeObject:_name forKey:kSNPTermName];
-    [aCoder encodeObject:_installments forKey:kSNPTermInstallments];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    SNPTerm *copy = [[SNPTerm alloc] init];
-    
-    if (copy) {
-        
-        copy.name = [self.name copyWithZone:zone];
-        copy.installments = [self.installments copyWithZone:zone];
-    }
-    
-    return copy;
-}
-
-
 @end

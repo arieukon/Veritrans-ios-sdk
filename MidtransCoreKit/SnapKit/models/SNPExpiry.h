@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SNPExpiry : NSObject <NSCoding, NSCopying>
+@interface SNPExpiry : NSObject
 
 @property (nonatomic, strong) NSString *startTime;
 @property (nonatomic, assign) double duration;
