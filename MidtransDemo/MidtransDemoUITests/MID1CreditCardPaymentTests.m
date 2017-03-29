@@ -34,11 +34,11 @@
 }
     
 - (void)test1CCNormalTransaction {
+
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    
-    [MIDTestHelper configureRequiredData:app];
-    
-    [self setNormalCreditCardPaymentWithApp:app];
+    [app.buttons[@"Beli"] tap];
+    [[[[[app.otherElements containingType:XCUIElementTypeNavigationBar identifier:@"Order Review"] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element tap];
+    [app.buttons[@"Bayar Rp 20,000"] tap];
     
     [self enterCreditCardPaymentPageWithApp:app];
     
@@ -52,101 +52,145 @@
     [self waitUntilAvailableForElement:finishButton];
     [finishButton tap];
 }
+- (void)test1ClickPayment{
     
-- (void)test2CCTwoClicksTransaction {
     XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.navigationBars[@"Product Detail"].buttons[@"settings"] tap];
     
-    [self twoClickInitial:app];
-    
-    [self twoClickFollowingWithInstallment:NO andApp:app];
-}
-    
-- (void)test3CCOneClickTransaction {
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    
-    [self oneClickInitial:app];
-    
-    [app.tables.staticTexts[@"Normal Payment"] tap];
-    
-    XCUIElement *creditCardCell = app.tables.staticTexts[@"Pay With Visa, Mastercard, Jcb, Amex"];
-    [self waitUntilAvailableForElement:creditCardCell];
-    [creditCardCell tap];
-    
-    XCUIElement *saveCardCell = app.tables.staticTexts[@"Visa"];
-    [self waitUntilAvailableForElement:saveCardCell];
-    [saveCardCell tap];
-    
-    [app.buttons[@"Confirm"] tap];
-    
-    XCUIElement *finishButton = app.buttons[@"Finish"];
-    [self waitUntilAvailableForElement:finishButton];
-    [finishButton tap];
-}
-    
-- (void)test4OnlineInstallmentAndPoint {
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    
-    [self setNormalCreditCardPaymentWithApp:app];
-
-    [self setAcquiringBank:@"BNI" withApp:app];
-    [self enterCreditCardPaymentPageWithApp:app];
-    
-    [self inputCardNumber:@"4105058689481467" expDate:@"02 / 20" cvv:@"123" withApp:app];
-    
-    [self doInstallmentWith3DSEnabled:YES andApp:app];
-}
-    
-- (void)test5OfflineInstallment {
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    
-    [self setNormalCreditCardPaymentWithApp:app];
-    [self enterCreditCardPaymentPageWithApp:app];
-    [self inputCardNumber:@"4811111111111114" expDate:@"02 / 20" cvv:@"123" withApp:app];
-    [self doInstallmentWith3DSEnabled:YES andApp:app];
-}
-    
-- (void)test6TwoClicksOfflineInstallment {
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    
-    [self twoClickInitial:app];
-    
-    [self twoClickFollowingWithInstallment:YES andApp:app];
-}
-    
-#pragma mark - Helper
-    
-- (void)setAcquiringBank:(NSString *)bank withApp:(XCUIApplication *)app {
-    [app.navigationBars[@"Cart"].buttons[@"Setting"] tap];
-    [app.scrollViews.otherElements.buttons[@"acquiring_bank"] tap];
-    [app.tables.staticTexts[bank] tap];
-    [app.navigationBars[@"Customer Details"].buttons[@"Save"] tap];
-}
-    
-- (void)doInstallmentWith3DSEnabled:(BOOL)enable3ds andApp:(XCUIApplication *)app {
     XCUIElementQuery *scrollViewsQuery = app.scrollViews;
-    XCUIElementQuery *other = scrollViewsQuery.otherElements;
+    XCUIElementQuery *elementsQuery = scrollViewsQuery.otherElements;
+    [elementsQuery.staticTexts[@"Two Clicks Credit Card Payment"] tap];
+    [elementsQuery.tables.staticTexts[@"One Click"] tap];
+    [[[[scrollViewsQuery childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:1].images[@"arrow_down"] tap];
+    [app.buttons[@"Launch Demo App"] tap];
+    [app.buttons[@"Beli"] tap];
+    [app.buttons[@"Bayar Rp 20,000"] tap];
+    [self enterCreditCardPaymentPageWithApp:app];
     
-    XCUIElement *installmentPlusButton = [[[[[[other containingType:XCUIElementTypeTextField identifier:@"Card Number"] childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeButton] elementBoundByIndex:1];
-    [installmentPlusButton tap];
-    
+    [self inputCardNumber:@"4811111111111114" expDate:@"02 / 20" cvv:@"123" withApp:app];
     
     [app.buttons[@"Finish Payment"] tap];
     
-    if (enable3ds) {
-        [self input3DSecureOTP:app];
-    }
-    
-    XCUIElement *finishBNIPointButton = app.buttons[@"Finish Payment"];
-    [self waitUntilAvailableForElement:finishBNIPointButton];
-    [finishBNIPointButton tap];
+    [self input3DSecureOTP:app];
     
     XCUIElement *finishButton = app.buttons[@"Finish"];
     [self waitUntilAvailableForElement:finishButton];
     [finishButton tap];
     
-    [app.navigationBars[@"Choose your payment mode"].buttons[@"Cart"] tap];
 }
+
+- (void)test2ClicksCCPayment {
     
+    XCUIApplication *app =[[XCUIApplication alloc] init];
+    [app.navigationBars[@"Product Detail"].buttons[@"settings"] tap];
+    [app.scrollViews.otherElements.staticTexts[@"Two Clicks Credit Card Payment"] tap];
+    
+    XCUIApplication *app2 = app;
+    [app2.scrollViews.otherElements.tables.staticTexts[@"Two Clicks"] tap];
+    [app.buttons[@"Launch Demo App"] tap];
+    [app.buttons[@"Beli"] tap];
+    [app.buttons[@"Bayar Rp 20,000"] tap];
+    [self enterCreditCardPaymentPageWithApp:app];
+    
+    [self inputCardNumber:@"4811111111111114" expDate:@"02 / 20" cvv:@"123" withApp:app];
+    
+    [app.buttons[@"Finish Payment"] tap];
+    
+    [self input3DSecureOTP:app];
+    
+    XCUIElement *finishButton = app.buttons[@"Finish"];
+    [self waitUntilAvailableForElement:finishButton];
+    [finishButton tap];
+    
+}
+
+//    
+//- (void)test3CCOneClickTransaction {
+//    XCUIApplication *app = [[XCUIApplication alloc] init];
+//    
+//    [self oneClickInitial:app];
+//    
+//    [app.tables.staticTexts[@"Normal Payment"] tap];
+//    
+//    XCUIElement *creditCardCell = app.tables.staticTexts[@"Pay With Visa, Mastercard, Jcb, Amex"];
+//    [self waitUntilAvailableForElement:creditCardCell];
+//    [creditCardCell tap];
+//    
+//    XCUIElement *saveCardCell = app.tables.staticTexts[@"Visa"];
+//    [self waitUntilAvailableForElement:saveCardCell];
+//    [saveCardCell tap];
+//    
+//    [app.buttons[@"Confirm"] tap];
+//    
+//    XCUIElement *finishButton = app.buttons[@"Finish"];
+//    [self waitUntilAvailableForElement:finishButton];
+//    [finishButton tap];
+//}
+//    
+//- (void)test4OnlineInstallmentAndPoint {
+//    XCUIApplication *app = [[XCUIApplication alloc] init];
+//    
+//    [self setNormalCreditCardPaymentWithApp:app];
+//
+//    [self setAcquiringBank:@"BNI" withApp:app];
+//    [self enterCreditCardPaymentPageWithApp:app];
+//    
+//    [self inputCardNumber:@"4105058689481467" expDate:@"02 / 20" cvv:@"123" withApp:app];
+//    
+//    [self doInstallmentWith3DSEnabled:YES andApp:app];
+//}
+//    
+//- (void)test5OfflineInstallment {
+//    XCUIApplication *app = [[XCUIApplication alloc] init];
+//    
+//    [self setNormalCreditCardPaymentWithApp:app];
+//    [self enterCreditCardPaymentPageWithApp:app];
+//    [self inputCardNumber:@"4811111111111114" expDate:@"02 / 20" cvv:@"123" withApp:app];
+//    [self doInstallmentWith3DSEnabled:YES andApp:app];
+//}
+//    
+//- (void)test6TwoClicksOfflineInstallment {
+//    XCUIApplication *app = [[XCUIApplication alloc] init];
+//    
+//    [self twoClickInitial:app];
+//    
+//    [self twoClickFollowingWithInstallment:YES andApp:app];
+//}
+//    
+//#pragma mark - Helper
+//    
+//- (void)setAcquiringBank:(NSString *)bank withApp:(XCUIApplication *)app {
+//    [app.navigationBars[@"Cart"].buttons[@"Setting"] tap];
+//    [app.scrollViews.otherElements.buttons[@"acquiring_bank"] tap];
+//    [app.tables.staticTexts[bank] tap];
+//    [app.navigationBars[@"Customer Details"].buttons[@"Save"] tap];
+//}
+//    
+//- (void)doInstallmentWith3DSEnabled:(BOOL)enable3ds andApp:(XCUIApplication *)app {
+//    XCUIElementQuery *scrollViewsQuery = app.scrollViews;
+//    XCUIElementQuery *other = scrollViewsQuery.otherElements;
+//    
+//    XCUIElement *installmentPlusButton = [[[[[[other containingType:XCUIElementTypeTextField identifier:@"Card Number"] childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeButton] elementBoundByIndex:1];
+//    [installmentPlusButton tap];
+//    
+//    
+//    [app.buttons[@"Finish Payment"] tap];
+//    
+//    if (enable3ds) {
+//        [self input3DSecureOTP:app];
+//    }
+//    
+//    XCUIElement *finishBNIPointButton = app.buttons[@"Finish Payment"];
+//    [self waitUntilAvailableForElement:finishBNIPointButton];
+//    [finishBNIPointButton tap];
+//    
+//    XCUIElement *finishButton = app.buttons[@"Finish"];
+//    [self waitUntilAvailableForElement:finishButton];
+//    [finishButton tap];
+//    
+//    [app.navigationBars[@"Choose your payment mode"].buttons[@"Cart"] tap];
+//}
+//    
 - (void)inputCardNumber:(NSString *)cardNumber expDate:(NSString *)expDate cvv:(NSString *)cvv withApp:(XCUIApplication *)app {
     XCUIElementQuery *scrollViewsQuery = app.scrollViews;
     XCUIElementQuery *other = scrollViewsQuery.otherElements;
@@ -162,150 +206,147 @@
     
     [app.buttons[@"Done"] tap];
 }
-    
+
 - (void)input3DSecureOTP:(XCUIApplication *)app {
     XCUIElement *secureTextField = app.secureTextFields[@"112233"];
     [self waitUntilAvailableForElement:secureTextField];
     [secureTextField enterText:@"112233"];
     [app.buttons[@"OK"] tap];
 }
-    
-- (void)oneClickInitial:(XCUIApplication *)app {
-    XCUIElementQuery *scrollViewsQuery = app.scrollViews;
-    XCUIElementQuery *other = scrollViewsQuery.otherElements;
-    
-    [app.navigationBars[@"Cart"].buttons[@"Setting"] tap];
-    [other.buttons[@"1-Click"] tap];
-    
-    XCUIElement *secureSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:0];
-    if ([secureSwitch.value isEqualToString:@"0"]) {
-        [secureSwitch tap];
-    }
-    XCUIElement *storageSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:1];
-    if ([storageSwitch.value isEqualToString:@"0"]) {
-        [storageSwitch tap];
-    }
-    XCUIElement *saveCardSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:2];
-    if ([saveCardSwitch.value isEqualToString:@"0"]) {
-        [saveCardSwitch tap];
-    }
-    
-    [app.navigationBars[@"Customer Details"].buttons[@"Save"] tap];
-    
-    [self enterCreditCardPaymentPageWithApp:app];
-    
-    [self inputCardNumber:@"4811111111111114" expDate:@"02 / 20" cvv:@"123" withApp:app];
-    
-    [app.buttons[@"Finish Payment"] tap];
-    
-    [self input3DSecureOTP:app];
-    
-    XCUIElement *finishButton = app.buttons[@"Finish"];
-    [self waitUntilAvailableForElement:finishButton];
-    [finishButton tap];
-}
-    
-- (void)twoClickInitial:(XCUIApplication *)app {
-    XCUIElementQuery *scrollViewsQuery = app.scrollViews;
-    XCUIElementQuery *other = scrollViewsQuery.otherElements;
-    
-    [app.navigationBars[@"Cart"].buttons[@"Setting"] tap];
-    [other.buttons[@"2-Clicks"] tap];
-    
-    XCUIElement *secureSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:0];
-    if ([secureSwitch.value isEqualToString:@"0"]) {
-        [secureSwitch tap];
-    }
-    XCUIElement *storageSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:1];
-    if ([storageSwitch.value isEqualToString:@"0"]) {
-        [storageSwitch tap];
-    }
-    XCUIElement *saveCardSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:2];
-    if ([saveCardSwitch.value isEqualToString:@"0"]) {
-        [saveCardSwitch tap];
-    }
-    
-    [app.navigationBars[@"Customer Details"].buttons[@"Save"] tap];
-    
-    [self enterCreditCardPaymentPageWithApp:app];
-    
-    [self inputCardNumber:@"4811111111111114" expDate:@"02 / 20" cvv:@"123" withApp:app];
-    
-    [app.buttons[@"Finish Payment"] tap];
-    
-    [self input3DSecureOTP:app];
-    
-    XCUIElement *finishButton = app.buttons[@"Finish"];
-    [self waitUntilAvailableForElement:finishButton];
-    [finishButton tap];
-}
-    
-- (void)twoClickFollowingWithInstallment:(BOOL)withInstallment andApp:(XCUIApplication *)app {
-    XCUIElementQuery *scrollViewsQuery = app.scrollViews;
-    XCUIElementQuery *other = scrollViewsQuery.otherElements;
-    
-    [app.tables.staticTexts[@"Normal Payment"] tap];
-    
-    XCUIElement *creditCardCell = app.tables.staticTexts[@"Pay With Visa, Mastercard, Jcb, Amex"];
-    [self waitUntilAvailableForElement:creditCardCell];
-    [creditCardCell tap];
-    
-    XCUIElement *saveCardCell = app.tables.staticTexts[@"Visa"];
-    [self waitUntilAvailableForElement:saveCardCell];
-    [saveCardCell tap];
-    
-    XCUIElement *cvvNumberSecureTextField = other.secureTextFields[@"CVV"];
-    [cvvNumberSecureTextField enterText:@"123"];
-    
-    [app.buttons[@"Done"] tap];
-    
-    if (withInstallment) {
-        XCUIElement *installmentPlusButton = [[[[[[other containingType:XCUIElementTypeTextField identifier:@"Card Number"] childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeButton] elementBoundByIndex:1];
-        [installmentPlusButton tap];
-    }
-    
-    [app.buttons[@"Finish Payment"] tap];
-    
-    [self input3DSecureOTP:app];
-    
-    XCUIElement *finishButton = app.buttons[@"Finish"];
-    [self waitUntilAvailableForElement:finishButton];
-    [finishButton tap];
-}
-    
-- (void)setNormalCreditCardPaymentWithApp:(XCUIApplication *)app {
-    XCUIElementQuery *scrollViewsQuery = app.scrollViews;
-    XCUIElementQuery *other = scrollViewsQuery.otherElements;
-    
-    [app.navigationBars[@"Cart"].buttons[@"Setting"] tap];
-    [other.buttons[@"Normal"] tap];
-    
-    XCUIElement *secureSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:0];
-    if ([secureSwitch.value isEqualToString:@"0"]) {
-        [secureSwitch tap];
-    }
-    XCUIElement *storageSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:1];
-    if ([storageSwitch.value isEqualToString:@"1"]) {
-        [storageSwitch tap];
-    }
-    XCUIElement *saveCardSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:2];
-    if ([saveCardSwitch.value isEqualToString:@"1"]) {
-        [saveCardSwitch tap];
-    }
-    
-    [app.navigationBars[@"Customer Details"].buttons[@"Save"] tap];
-    
-}
-    
+//
+//- (void)oneClickInitial:(XCUIApplication *)app {
+//    XCUIElementQuery *scrollViewsQuery = app.scrollViews;
+//    XCUIElementQuery *other = scrollViewsQuery.otherElements;
+//    
+//    [app.navigationBars[@"Cart"].buttons[@"Setting"] tap];
+//    [other.buttons[@"1-Click"] tap];
+//    
+//    XCUIElement *secureSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:0];
+//    if ([secureSwitch.value isEqualToString:@"0"]) {
+//        [secureSwitch tap];
+//    }
+//    XCUIElement *storageSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:1];
+//    if ([storageSwitch.value isEqualToString:@"0"]) {
+//        [storageSwitch tap];
+//    }
+//    XCUIElement *saveCardSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:2];
+//    if ([saveCardSwitch.value isEqualToString:@"0"]) {
+//        [saveCardSwitch tap];
+//    }
+//    
+//    [app.navigationBars[@"Customer Details"].buttons[@"Save"] tap];
+//    
+//    [self enterCreditCardPaymentPageWithApp:app];
+//    
+//    [self inputCardNumber:@"4811111111111114" expDate:@"02 / 20" cvv:@"123" withApp:app];
+//    
+//    [app.buttons[@"Finish Payment"] tap];
+//    
+//    [self input3DSecureOTP:app];
+//    
+//    XCUIElement *finishButton = app.buttons[@"Finish"];
+//    [self waitUntilAvailableForElement:finishButton];
+//    [finishButton tap];
+//}
+//    
+//- (void)twoClickInitial:(XCUIApplication *)app {
+//    XCUIElementQuery *scrollViewsQuery = app.scrollViews;
+//    XCUIElementQuery *other = scrollViewsQuery.otherElements;
+//    
+//    [app.navigationBars[@"Cart"].buttons[@"Setting"] tap];
+//    [other.buttons[@"2-Clicks"] tap];
+//    
+//    XCUIElement *secureSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:0];
+//    if ([secureSwitch.value isEqualToString:@"0"]) {
+//        [secureSwitch tap];
+//    }
+//    XCUIElement *storageSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:1];
+//    if ([storageSwitch.value isEqualToString:@"0"]) {
+//        [storageSwitch tap];
+//    }
+//    XCUIElement *saveCardSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:2];
+//    if ([saveCardSwitch.value isEqualToString:@"0"]) {
+//        [saveCardSwitch tap];
+//    }
+//    
+//    [app.navigationBars[@"Customer Details"].buttons[@"Save"] tap];
+//    
+//    [self enterCreditCardPaymentPageWithApp:app];
+//    
+//    [self inputCardNumber:@"4811111111111114" expDate:@"02 / 20" cvv:@"123" withApp:app];
+//    
+//    [app.buttons[@"Finish Payment"] tap];
+//    
+//    [self input3DSecureOTP:app];
+//    
+//    XCUIElement *finishButton = app.buttons[@"Finish"];
+//    [self waitUntilAvailableForElement:finishButton];
+//    [finishButton tap];
+//}
+//    
+//- (void)twoClickFollowingWithInstallment:(BOOL)withInstallment andApp:(XCUIApplication *)app {
+//    XCUIElementQuery *scrollViewsQuery = app.scrollViews;
+//    XCUIElementQuery *other = scrollViewsQuery.otherElements;
+//    
+//    [app.tables.staticTexts[@"Normal Payment"] tap];
+//    
+//    XCUIElement *creditCardCell = app.tables.staticTexts[@"Pay With Visa, Mastercard, Jcb, Amex"];
+//    [self waitUntilAvailableForElement:creditCardCell];
+//    [creditCardCell tap];
+//    
+//    XCUIElement *saveCardCell = app.tables.staticTexts[@"Visa"];
+//    [self waitUntilAvailableForElement:saveCardCell];
+//    [saveCardCell tap];
+//    
+//    XCUIElement *cvvNumberSecureTextField = other.secureTextFields[@"CVV"];
+//    [cvvNumberSecureTextField enterText:@"123"];
+//    
+//    [app.buttons[@"Done"] tap];
+//    
+//    if (withInstallment) {
+//        XCUIElement *installmentPlusButton = [[[[[[other containingType:XCUIElementTypeTextField identifier:@"Card Number"] childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeButton] elementBoundByIndex:1];
+//        [installmentPlusButton tap];
+//    }
+//    
+//    [app.buttons[@"Finish Payment"] tap];
+//    
+//    [self input3DSecureOTP:app];
+//    
+//    XCUIElement *finishButton = app.buttons[@"Finish"];
+//    [self waitUntilAvailableForElement:finishButton];
+//    [finishButton tap];
+//}
+//    
+//- (void)setNormalCreditCardPaymentWithApp:(XCUIApplication *)app {
+//    XCUIElementQuery *scrollViewsQuery = app.scrollViews;
+//    XCUIElementQuery *other = scrollViewsQuery.otherElements;
+//    
+//    [app.navigationBars[@"Cart"].buttons[@"Setting"] tap];
+//    [other.buttons[@"Normal"] tap];
+//    
+//    XCUIElement *secureSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:0];
+//    if ([secureSwitch.value isEqualToString:@"0"]) {
+//        [secureSwitch tap];
+//    }
+//    XCUIElement *storageSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:1];
+//    if ([storageSwitch.value isEqualToString:@"1"]) {
+//        [storageSwitch tap];
+//    }
+//    XCUIElement *saveCardSwitch = [[other childrenMatchingType:XCUIElementTypeSwitch] elementBoundByIndex:2];
+//    if ([saveCardSwitch.value isEqualToString:@"1"]) {
+//        [saveCardSwitch tap];
+//    }
+//    
+//    [app.navigationBars[@"Customer Details"].buttons[@"Save"] tap];
+//    
+//}
+//    
 - (void)enterCreditCardPaymentPageWithApp:(XCUIApplication *)app {
-    [app.navigationBars[@"Cart"].buttons[@"Checkout"] tap];
-    [app.sheets[@"Select Demo you want to see"].buttons[@"UI-FLOW Demo"] tap];
-    [app.tables.staticTexts[@"Normal Payment"] tap];
     
     XCUIElement *creditCardCell = app.tables.staticTexts[@"Pay With Visa, Mastercard, Jcb, Amex"];
     [self waitUntilAvailableForElement:creditCardCell];
     
     [creditCardCell tap];
 }
-    
+
     @end
