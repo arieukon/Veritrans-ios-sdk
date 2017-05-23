@@ -473,7 +473,7 @@
 					E56436F11E83A72F008726D0 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = G92YEQF267;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					E5C751651E8B912F001F47D9 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -789,12 +789,15 @@
 			baseConfigurationReference = 43E258C4808D9947B420F8BB /* Pods-MidtransDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = G92YEQF267;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MidtransDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.midtrans.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2eee1aa4-b69b-43de-9cb5-808910e0c6eb";
+				PROVISIONING_PROFILE_SPECIFIER = "MidtransMobileDemo-adhoc";
 			};
 			name = Debug;
 		};
@@ -803,12 +806,15 @@
 			baseConfigurationReference = C3B4ED61247674E371E11702 /* Pods-MidtransDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = G92YEQF267;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MidtransDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.midtrans.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2eee1aa4-b69b-43de-9cb5-808910e0c6eb";
+				PROVISIONING_PROFILE_SPECIFIER = "MidtransMobileDemo-adhoc";
 			};
 			name = Release;
 		};
