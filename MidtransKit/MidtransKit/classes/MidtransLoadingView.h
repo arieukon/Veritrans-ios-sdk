@@ -12,4 +12,5 @@
 
 - (void)hide;
 - (void)showInView:(UIView *)view withText:(NSString *)text;
+- (void)showStatusInView:(UIView *)view withText:(NSString *)text withImage:(NSString *)imageName;
 @end

@@ -79,7 +79,6 @@
         [self.delegate webPaymentController:self transactionError:error];
     }
 }
-
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     NSString *requestURL = webView.request.URL.absoluteString;
     

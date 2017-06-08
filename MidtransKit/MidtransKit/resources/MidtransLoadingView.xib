@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pco-FU-cLp">
-                    <rect key="frame" x="116" y="266" width="143.5" height="135"/>
+                    <rect key="frame" x="116" y="266.5" width="143.5" height="135"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading payment page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcB-Mj-47a">
                             <rect key="frame" x="0.0" y="116" width="143.5" height="19"/>
@@ -57,14 +57,24 @@
                                 <constraint firstAttribute="height" constant="100" id="yWD-lJ-m17"/>
                             </constraints>
                         </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wVf-oM-9Hj">
+                            <rect key="frame" x="-1" y="-0.5" width="144" height="106"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="106" id="8bs-wK-bUB"/>
+                                <constraint firstAttribute="width" constant="144" id="UFI-iJ-sfK"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="EcB-Mj-47a" firstAttribute="top" secondItem="wVf-oM-9Hj" secondAttribute="bottom" constant="10.5" id="04P-39-rSE"/>
                         <constraint firstItem="lZX-2m-rHg" firstAttribute="centerX" secondItem="Pco-FU-cLp" secondAttribute="centerX" id="0xe-J0-Mtj"/>
                         <constraint firstItem="lZX-2m-rHg" firstAttribute="top" secondItem="Pco-FU-cLp" secondAttribute="top" id="4F2-Le-nfW"/>
                         <constraint firstAttribute="trailing" secondItem="EcB-Mj-47a" secondAttribute="trailing" id="F1k-wZ-ut0"/>
                         <constraint firstItem="EcB-Mj-47a" firstAttribute="top" secondItem="lZX-2m-rHg" secondAttribute="bottom" constant="16" id="Seq-Jg-waU"/>
+                        <constraint firstItem="wVf-oM-9Hj" firstAttribute="centerY" secondItem="Pco-FU-cLp" secondAttribute="centerY" constant="-15" id="XPl-P0-AZS"/>
                         <constraint firstAttribute="bottom" secondItem="EcB-Mj-47a" secondAttribute="bottom" id="dgQ-pP-0Mf"/>
+                        <constraint firstItem="wVf-oM-9Hj" firstAttribute="centerX" secondItem="Pco-FU-cLp" secondAttribute="centerX" id="fXI-DM-ups"/>
                         <constraint firstItem="EcB-Mj-47a" firstAttribute="leading" secondItem="Pco-FU-cLp" secondAttribute="leading" id="mWi-oD-oXq"/>
                     </constraints>
                 </view>
@@ -75,9 +85,11 @@
                 <constraint firstItem="Pco-FU-cLp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YIP-Le-7fz"/>
             </constraints>
             <connections>
+                <outlet property="iconImageView" destination="wVf-oM-9Hj" id="Ai8-g6-oK4"/>
                 <outlet property="indicatorLeft" destination="eeP-ss-D2A" id="dUb-le-qwf"/>
                 <outlet property="indicatorMid" destination="1iY-lb-j95" id="1Ra-eR-jfJ"/>
                 <outlet property="indicatorRight" destination="yKz-dk-GxV" id="LGb-JN-9Bx"/>
+                <outlet property="loadinViewContainer" destination="lZX-2m-rHg" id="CBV-kM-wb1"/>
                 <outlet property="loadingTitleLabel" destination="EcB-Mj-47a" id="uHK-EE-tvA"/>
             </connections>
             <point key="canvasLocation" x="-184.5" y="-7.5"/>

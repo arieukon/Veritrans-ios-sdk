@@ -14,14 +14,15 @@
 @property (nonatomic) IBOutlet UIImageView *indicatorLeft;
 @property (nonatomic) IBOutlet UIImageView *indicatorMid;
 @property (nonatomic) IBOutlet UIImageView *indicatorRight;
+@property (weak, nonatomic) IBOutlet UIView *loadinViewContainer;
 @property (nonatomic) IBOutlet UILabel *loadingTitleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @end;
 
 @implementation MidtransLoadingView
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
     self.indicatorLeft.alpha = 0;
     self.indicatorMid.alpha = 0;
     self.indicatorRight.alpha = 0;
@@ -64,12 +65,24 @@
     [UIView animateWithDuration:0.15f animations:^{
         self.alpha = 0.0f;
     } completion:^(BOOL finished) {
+        self.iconImageView.image = nil;
         [self stopAnimating];
         [self.superview sendSubviewToBack:self];
     }];
 }
+- (void)showStatusInView:(UIView *)view withText:(NSString *)text withImage:(NSString *)imageName {
+    self.alpha = 0;
+    self.loadinViewContainer.hidden = YES;
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    [view addSubview:self];
+    self.loadingTitleLabel.text = text?text:@"Loading";
+    [self.iconImageView setImage:[UIImage imageNamed:imageName inBundle:VTBundle compatibleWithTraitCollection:nil]];
+    
+}
 - (void)showInView:(UIView *)view withText:(NSString *)text {
     self.alpha = 0;
+    self.loadinViewContainer.hidden = NO;
+    self.iconImageView.image = nil;
     self.translatesAutoresizingMaskIntoConstraints = NO;
     [view addSubview:self];
     [view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[loading]-0-|" options:0 metrics:0 views:@{@"loading":self}]];
